@@ -16,8 +16,7 @@ function solve(array) {
                 bottles[fruit]++;
             }
             else {
-                bottles[fruit] = 0;
-                bottles[fruit]++;
+                bottles[fruit] = 1;
             }
             juices[fruit] -= 1000;
         }
