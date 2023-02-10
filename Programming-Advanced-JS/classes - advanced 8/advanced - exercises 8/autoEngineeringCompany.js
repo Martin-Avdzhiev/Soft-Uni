@@ -5,7 +5,7 @@ function solve(array){
         const model = line.split(' | ')[1];
         const quantity = Number(line.split(' | ')[2]);
         if(brands[brand]){
-            if(brands[brand][model]){
+            if(brands[brand][model]){       
                 brands[brand][model] += quantity;
             }
             else{
