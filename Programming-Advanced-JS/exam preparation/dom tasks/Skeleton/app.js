@@ -55,18 +55,18 @@ function solve() {
 			divButtons.appendChild(progressSecondButton);
 			article.appendChild(divButtons);
 		});
+
+
+
+
+
+
 		secondButton.addEventListener('click',()=> {
 			article.remove();
 		});
 		progressSecondButton.addEventListener('click',(e)=> {
 			divButtons.remove();
-			
 			completeArea.appendChild(article);
-			const completeArticle = document.querySelectorAll('section')[3].querySelectorAll('div')[1].querySelectorAll('article')[0];
-			//console.log(completeArticle)
-			const completeH3 = document.createElement('h3');
-			const completeP1 = document.createElement('p');
-			const completeP2 = document.createElement('p');
 		})
 		progressFirstButton.addEventListener('click',()=> {
 			article.remove();
