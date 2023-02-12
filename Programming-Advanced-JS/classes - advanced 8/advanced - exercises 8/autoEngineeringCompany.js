@@ -23,9 +23,6 @@ function solve(array){
         
     }
    let entries = Object.entries(brands);
-   entries.sort((a,b)=> {
-    return a[0] - b[0]
-   })
 
    for (const entry of entries){
     const currentBrand = entry[0];
