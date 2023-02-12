@@ -57,10 +57,6 @@ function solve() {
 		});
 
 
-
-
-
-
 		secondButton.addEventListener('click',()=> {
 			article.remove();
 		});
