@@ -23,13 +23,13 @@ describe("Tests …", function() {
      });
      describe("tests with moneySpent ", () => {
         it("invalid input", ()=> {
-            expect(()=> movieTheater.moneySpent('1', [], [])).to.throw();       //`All ages admitted to watch the movie`
+            expect(()=> movieTheater.moneySpent('1', [], [])).to.throw(Error,'Invalid input');       //`All ages admitted to watch the movie`
         });
         it("invalid input", ()=> {
-            expect(()=> movieTheater.moneySpent('1', [], [])).to.throw();       //`All ages admitted to watch the movie`
+            expect(()=> movieTheater.moneySpent('1', [], [])).to.throw(Error,'Invalid input');       //`All ages admitted to watch the movie`
         });
         it("invalid input", ()=> {
-            expect(()=> movieTheater.moneySpent(1, 1, [])).to.throw();       //`All ages admitted to watch the movie`
+            expect(()=> movieTheater.moneySpent(1, 1, [])).to.throw(Error,'Invalid input');       //`All ages admitted to watch the movie`
         });
         it("invalid input", ()=> {
             expect(()=> movieTheater.moneySpent(1, [], true)).to.throw(Error,'Invalid input');       //`All ages admitted to watch the movie`
