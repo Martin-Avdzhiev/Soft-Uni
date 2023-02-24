@@ -5,7 +5,7 @@ function attachEvents() {
     const forecast = document.getElementById('forecast');
     const current  = document.getElementById('current');
     const upcomming = document.getElementById('upcoming');
-    button.addEventListener('click', async function clicked() {
+    button.addEventListener('click', async ()=> {
         try {
             const response = await fetch(url);
             const data = await response.json();
