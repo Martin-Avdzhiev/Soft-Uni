@@ -43,6 +43,3 @@ function solve() {
 }
 
 let result = solve();
-
-
-
