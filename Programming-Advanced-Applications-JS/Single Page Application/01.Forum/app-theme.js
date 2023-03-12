@@ -1,4 +1,5 @@
 import { getTime } from "./getTime.js";
+import { getDate } from "./getTime.js";
 const postUrl = 'http://localhost:3030/jsonstore/collections/myboard/posts';
 const commentUrl = 'http://localhost:3030/jsonstore/collections/myboard/comments';
 const homePage = document.querySelector('nav a');
@@ -10,10 +11,13 @@ window.addEventListener('load', createTitle);
 window.addEventListener('load', loadAllComments);
 const postButton = document.querySelector('button');
 postButton.addEventListener('click', postComment);
-
+const id = localStorage.getItem('id');
 async function createTitle() {
-    const id = localStorage.getItem('id');
+
     const response = await fetch(`http://localhost:3030/jsonstore/collections/myboard/posts/${id}`);
+    if (response.status == 204) {
+        return;
+    }
     const data = await response.json();
     const h2 = document.querySelector('.theme-name h2');
     h2.innerText = data.title;
@@ -54,21 +58,27 @@ async function postComment(e) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name: comentator.value, text: currentComment.value })
+        body: JSON.stringify({ name: comentator.value, text: currentComment.value, postId: id })
     })
+    comentator.value = '';
+    currentComment.value = '';
 };
 
 async function loadAllComments() {
+    comment.replaceChildren();
     const response = await fetch(commentUrl);
     const data = await response.json();
     for (const value of Object.values(data)) {
         const name = value.name;
         const text = value.text;
-        dom(name,text);
+        if (value.postId == id) {
+            dom(name, text);
+        }
+
     }
 }
 
-function dom(name, text){
+function dom(name, text) {
     const divComment = document.createElement('div');
     divComment.setAttribute('id', 'user-comment');
     const nameWrapper = document.createElement('div');
@@ -77,11 +87,12 @@ function dom(name, text){
     topicName.classList.add('topic-name');
     const paragraph = document.createElement('p');
     const strong = document.createElement('strong');
-    strong.innerText = name;
+    
     paragraph.appendChild(strong);
+    strong.innerText = name;
     paragraph.innerText += ' commented on ';
     const time = document.createElement('time');
-    time.innerText = getTime();
+    time.innerText = getDate();
     paragraph.appendChild(time);
     const divContent = document.createElement('div');
     divContent.classList.add('post-content');
