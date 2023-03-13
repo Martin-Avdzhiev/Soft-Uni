@@ -88,12 +88,13 @@ function dom(name, text) {
     const paragraph = document.createElement('p');
     const strong = document.createElement('strong');
     
-    paragraph.appendChild(strong);
+   // paragraph.appendChild(strong);
     strong.innerText = name;
-    paragraph.innerText += ' commented on ';
     const time = document.createElement('time');
     time.innerText = getDate();
-    paragraph.appendChild(time);
+   // paragraph.appendChild(time);
+   paragraph.innerHTML = `<strong>${strong.innerText}</strong> commented on <time> ${time.innerText}</time>`;
+   //paragraph.innerText += ' commented on ';
     const divContent = document.createElement('div');
     divContent.classList.add('post-content');
     const secondP = document.createElement('p');
