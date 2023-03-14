@@ -11,12 +11,12 @@ function onClick(e){
     renderring(data);
     clear(input);
 }
-const template = (data) => 
- html `
+const template = (data) => {
+ return html `
     <ul>
     ${data.map(item => html`<li>${item}</li>`)};
     </ul>
     `;
-
+}
 
 const renderring = (data) => render(template(data), root);
