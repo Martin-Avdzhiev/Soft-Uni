@@ -1,6 +1,7 @@
 import { render, html } from "../node_modules/lit-html/lit-html.js";
 import { get } from '../api.js';
 import { onClick } from "./deleteView.js";
+import { editView } from "./editView.js";
 //import page from "../node_modules/lit-html/lit-html.mjs";
 const furnitureTemplate = (furniture) => html`
 <div class="row space-top">
@@ -30,11 +31,13 @@ const furnitureTemplate = (furniture) => html`
 </div>
 `
 export async function detailsView(context) {
+    //console.log(context.params)
     const furniture = await getDetails(context.params.id);
 
     render(furnitureTemplate(furniture), document.querySelector('body div.container'));
 
     if (document.querySelectorAll('.btn')[1]) {
+        document.querySelectorAll('.btn')[0].addEventListener('click', editView);
         document.querySelectorAll('.btn')[1].addEventListener('click', onClick);
     }
 }
@@ -44,12 +47,11 @@ async function getDetails(id) {
 }
 
 function details(furniture) {
-    console.log('asdsa', furniture)
     if (sessionStorage.getItem('userData')) {
         return furniture._ownerId === JSON.parse(sessionStorage.getItem('userData')).id ?
             html`
-        <a href="/edit" class="btn btn-info">Edit</a>
-        <a href="javascript:void(0)" class="btn btn-red" id="delete-${furniture._id}" >Delete</a>`
+        <a href="/edit" class="btn btn-info" id="edit-${furniture._id}">Edit</a>
+        <a href="javascript:void(0)" class="btn btn-red" id="${furniture._id}">Delete</a>`
             : null
     }
 }

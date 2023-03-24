@@ -18,11 +18,11 @@ const createTemplate = () => html`
         </div>
         <div class="form-group has-success">
             <label class="form-control-label" for="new-model">Model</label>
-            <input class="form-control is-valid" id="new-model" type="text" name="model">
+            <input class="form-control" id="new-model" type="text" name="model">
         </div>
         <div class="form-group has-danger">
             <label class="form-control-label" for="new-year">Year</label>
-            <input class="form-control is-invalid" id="new-year" type="number" name="year">
+            <input class="form-control" id="new-year" type="number" name="year">
         </div>
         <div class="form-group">
             <label class="form-control-label" for="new-description">Description</label>
