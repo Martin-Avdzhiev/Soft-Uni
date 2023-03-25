@@ -1,8 +1,12 @@
 import { html, render } from './node_modules/lit-html/lit-html.js';
 import page from './node_modules/page/page.mjs';
+import { renderCreate } from './templates/create.js';
 import { dashboardRender } from './templates/dashboard.js';
+import { getDetails } from './templates/details.js';
+import { editPost } from './templates/edit.js';
 import { loginRender } from './templates/login.js';
 import { logout } from './templates/logout.js';
+import { renderMyPosts } from './templates/myPosts.js';
 import { updateNav } from './templates/nav.js';
 import { registerRender } from './templates/register.js';
 
@@ -12,4 +16,8 @@ page('/',dashboardRender);
 page('/login',loginRender);
 page('/register',registerRender);
 page('/logout',logout);
+page('/myPosts', renderMyPosts);
+page('/create',renderCreate);
+page('/details/:id',getDetails);
+page('/details/:id/edit',editPost);
 page.start();
