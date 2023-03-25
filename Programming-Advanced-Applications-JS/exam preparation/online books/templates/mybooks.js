@@ -8,16 +8,10 @@ const main = document.querySelector('main');
 export async function renderMyBooks(){
     const user = JSON.parse(sessionStorage.getItem('userData'));
     const id = user._id;
-    const books = await get('/data/books?sortBy=_createdOn%20desc');
-    const myBooks = [];
-    for (const book of books){
-        if(book._ownerId == id){
-            myBooks.push(book);
-        }
-    }
+    const books = await get(`/data/books?where=_ownerId%3D%22${id}%22&sortBy=_createdOn%20desc`);
     updateNav();
-    if(myBooks.length > 0){
-        render(template(myBooks),main);
+    if(books.length > 0){
+        render(template(books),main);
     }
     else {
         render(noBooks(),main)
