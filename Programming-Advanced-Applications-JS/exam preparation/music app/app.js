@@ -1,0 +1,25 @@
+import { html, render } from '../node_modules/lit-html/lit-html.js';
+import page from '../node_modules/page/page.mjs';
+import { getAlbums } from './templates/catalog.js';
+import { renderCreate } from './templates/create.js';
+import { getDetails } from './templates/details.js';
+import { renderEdit } from './templates/edit.js';
+import { renderHome } from './templates/home.js';
+import { renderLogin } from './templates/login.js';
+import { logout } from './templates/logout.js';
+import { updateNav } from './templates/nav.js';
+import { renderRegister } from './templates/register.js';
+const main = document.querySelector('main');
+const header = document.querySelector('header');
+
+page(updateNav);
+page('/index.html','/');
+page('/login',renderLogin);
+page('/',renderHome);
+page('/logout',logout);
+page('/register',renderRegister);
+page('/catalog',getAlbums);
+page('/create',renderCreate);
+page('/details/:id',getDetails);
+page('/details/:id/edit',renderEdit);
+page.start();
