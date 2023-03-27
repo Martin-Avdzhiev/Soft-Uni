@@ -15,6 +15,7 @@ export async function getDetails(context){
         }
         else{
             const isLiked = await get(`/data/likes?where=theaterId%3D%22${id}%22%20and%20_ownerId%3D%22${user._id}%22&count`);
+            console.log(isLiked)
             render(notOwnerTemplate(details,likes,isLiked),main);
         }
     }
@@ -25,8 +26,9 @@ export async function getDetails(context){
 
 async function like(e){
     e.preventDefault();
-    const id = e.target.parentNode.parentNode.getAttribute('item');
+    const id = e.target.parentNode.parentNode.parentNode.getAttribute('item');
     const response = await post('/data/likes', {"theaterId" : id});
+    e.target.display = 'none';
     page.redirect(`/details/${id}`);
 }
 
@@ -71,8 +73,8 @@ const notOwnerTemplate = (details,likes,isLiked) => html`
         <p>${details.description}</p>
         <h4>Date: ${details.date}</h4>
         <h4>Author: ${details.author}</h4>
-        <div class="buttons>
-        ${isLiked == 0 ? html`<a class="btn-like" href="#" @click=${like}>Like</a>`: null}
+        <div class="buttons">
+        ${isLiked == 0 ? html`<a class="btn-like" href="#" @click="${like}">Like</a>`: null}
         </div>
         <p class="likes">Likes: ${likes}</p>
     </div>

@@ -1,0 +1,24 @@
+import { html, render } from './node_modules/lit-html/lit-html.js';
+import page from './node_modules/page/page.mjs';
+import { renderCreate } from './templates/create.js';
+import { renderDashboard } from './templates/dashboard.js';
+import { deleteAlbum, getDetails } from './templates/details.js';
+import { renderEdit } from './templates/edit.js';
+import { renderHome } from './templates/home.js';
+import { renderLogin } from './templates/login.js';
+import { logout } from './templates/logout.js';
+import { updateNav } from './templates/nav.js';
+import { renderRegister } from './templates/register.js';
+
+page(updateNav);
+page('/index.html','/');
+page('/',renderHome);
+page('/dashboard',renderDashboard);
+page('/login',renderLogin);
+page('/register',renderRegister);
+page('/logout',logout);
+page('/create',renderCreate);
+page('/details/:id',getDetails);
+page('/details/:id/edit',renderEdit);
+page('/delete',deleteAlbum);
+page.start();
