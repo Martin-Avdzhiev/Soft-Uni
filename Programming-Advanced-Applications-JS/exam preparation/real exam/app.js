@@ -1,0 +1,23 @@
+import { render, html } from './node_modules/lit-html/lit-html.js';
+import page from './node_modules/page/page.mjs';
+import { createFruit } from './views/createFruit.js';
+import { getFruits } from './views/fruits.js';
+import { fruitDetails } from './views/detailsForFruit.js';
+import { fruitEdit } from './views/editFruit.js';
+import { home } from './views/home.js';
+import { loginPage } from './views/login.js';
+import { navigation } from './views/navigation.js';
+import { registerPage } from './views/register.js';
+import { searchPage } from './views/searchBar.js';
+
+page(navigation);
+page('/index.html','/');
+page('/',home);
+page('/register', registerPage);
+page('/login',loginPage);
+page('/fruits', getFruits);
+page('/create',createFruit);
+page('/details/:id',fruitDetails);
+page('/details/:id/edit',fruitEdit);
+page('/searchFruit',searchPage);
+page.start();
