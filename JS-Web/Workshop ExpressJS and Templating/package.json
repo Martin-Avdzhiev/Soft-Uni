@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "node ./src/index.js",
+    "start": "SET node_env=production&& node ./src/index.js",
     "dev": "nodemon ./src/index.js"
   },
   "keywords": [],
@@ -14,6 +14,7 @@
     "nodemon": "^2.0.22"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7"
   }
 }
