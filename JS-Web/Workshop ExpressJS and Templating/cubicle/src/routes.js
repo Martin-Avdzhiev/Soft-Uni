@@ -12,9 +12,7 @@ router.get('/about', (req, res) => {
 router.get('/cubes/:id/details', async (req, res) => {
     const paramsObj = req.params;
     const id = paramsObj.id;
-    let cubes = await Cube.find().lean();
-    const cube = cubes.filter(x => x["_id"] == id)[0];
-    console.log(cube)
+    const cube = await Cube.findById(id).lean();
     res.render('details', cube);
 })
 router.get('/create', cubeController.getCreateCube);
