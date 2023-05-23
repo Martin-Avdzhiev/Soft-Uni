@@ -1,8 +1,8 @@
-const db = require('../database/cubes.json');
+const Cube = require('../models/Cube');
 
-exports.getHomePage = (req,res)=> {
+exports.getHomePage = async (req,res)=> {
     const { search, from: difficultyFrom, to: difficultyTo } = req.query;
-    let cubes = db.cubes;
+    let cubes = await Cube.find().lean();
 
     if (search) {
         cubes = cubes.filter(cube => cube.name.toLowerCase().includes(search.toLowerCase()));
