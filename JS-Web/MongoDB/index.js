@@ -33,11 +33,11 @@ async function saveCat(name, age, breed) {
         breed
     });
 
-    await cat.save();
+    //await cat.save();
 }
 async function readCats() {
     const cats = await Cat.find();
-    console.log(cats);
+   // console.log(cats);
     return cats;
 }
 
