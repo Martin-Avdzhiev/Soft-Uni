@@ -6,17 +6,16 @@ const Cube = require('./models/Cube');
 
 router.get('/', homeController.getHomePage);
 
-router.get('/about', (req, res) => {
-    res.render('about');
-});
+router.get('/about', (req, res) => res.render('about'));
 
 router.get('/cubes/:id/details', cubeController.getDetails);
-router.get('/create', cubeController.getCreateCube);
-router.post('/create', cubeController.postCreateCube);
-router.use('/accessories', accessoryController);
-
+router.get('/cubes/create', cubeController.getCreateCube);
+router.post('/cubes/create', cubeController.postCreateCube);
 router.get('/cubes/:id/attach', cubeController.getAttachAccessory);
 router.post('/cubes/:id/attach', cubeController.postAttachAccessory);
+
+router.use('/accessories', accessoryController);
+
 router.get('*', (req, res) => {
     res.render('404');
 });
