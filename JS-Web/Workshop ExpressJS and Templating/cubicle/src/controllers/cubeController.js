@@ -8,7 +8,6 @@ exports.postCreateCube = async (req, res) => {
     try {
         const { name, description, imageUrl, difficultyLevel } =  req.body;
         let cube = new Cube({ name, description, imageUrl, difficultyLevel });
-       // console.log(cube)
         await cube.save();
         res.redirect('/');      
     } catch (error) {
