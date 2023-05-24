@@ -1,11 +1,13 @@
 <main>
-    <h1>Rubiks Cube</h1>
-    <img class="cube" src="https://images-na.ssl-images-amazon.com/images/I/71WS9kb-JFL._SL1300_.jpg">
-    <div class="details">
-        <p><span>Description:</span>Some Description....</p>
-        <p><span>Difficulty level:</span> 6</p>
-        <a class="btn" href="#">Back</a>
-    </div>
+  <h1>{{name}}</h1>
+  <img class="cube"
+    src="{{imageUrl}}">
+  <div class="details">
+    <p><span>Description:</span> {{description}}</p>
+    <p><span>Difficulty level:</span> {{difficultyLevel}}</p>
+    <a class="btn" href="/">Back</a>
+    <a class="btn" href="/cubes/{{_id}}/attach">Attach</a>
+  </div>
     <h2>Accessories</h2>
     <div class="accessories">
         <div class="accessory">

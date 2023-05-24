@@ -15,7 +15,7 @@ router.get('/cubes/details/:id', async (req, res) => {
     const id = paramsObj.id;
     try {
         const cube = await Cube.findById(id).lean();
-        res.render('details', cube);
+        res.render('updatedDetailsPage', cube);
     } catch (error) {
         res.redirect('/404');
     }
@@ -24,14 +24,11 @@ router.get('/create', cubeController.getCreateCube);
 router.post('/create', cubeController.postCreateCube);
 router.use('/accessories', accessoryController);
 
-
-
+router.get('/cubes/:id/attach', cubeController.getAttachAccessory);
 
 router.get('*', (req, res) => {
     res.render('404');
 });
-
-
 
 module.exports = router;
 
