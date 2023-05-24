@@ -50,7 +50,7 @@ exports.postAttachAccessory = async (req, res) => {
             }
         }
         cube.accessories.push(accessoryId);
-        cube.save();
+        await cube.save();
         res.redirect(`/cubes/${id}/details`);
     } catch (error) {
         console.log(error);
