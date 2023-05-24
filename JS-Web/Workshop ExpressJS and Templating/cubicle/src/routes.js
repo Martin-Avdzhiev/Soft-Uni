@@ -10,7 +10,7 @@ router.get('/about', (req, res) => {
     res.render('about');
 });
 
-router.get('/cubes/details/:id', async (req, res) => {
+router.get('/cubes/:id/details', async (req, res) => {
     const paramsObj = req.params;
     const id = paramsObj.id;
     try {
@@ -25,7 +25,7 @@ router.post('/create', cubeController.postCreateCube);
 router.use('/accessories', accessoryController);
 
 router.get('/cubes/:id/attach', cubeController.getAttachAccessory);
-
+router.post('/cubes/:id/attach', cubeController.postAttachAccessory);
 router.get('*', (req, res) => {
     res.render('404');
 });

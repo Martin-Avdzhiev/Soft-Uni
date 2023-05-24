@@ -26,3 +26,18 @@ exports.getAttachAccessory = async (req, res) => {
         console.log(error);
     }
 }
+
+exports.postAttachAccessory = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const cube = await Cube.findById(id);
+        const accessoryId = req.body.accessory;
+        cube.accessories.push(accessoryId);
+
+        cube.save();
+        res.redirect(`/cubes/${id}/details`)
+    } catch (error) {
+        console.log(error);
+
+    }
+}
