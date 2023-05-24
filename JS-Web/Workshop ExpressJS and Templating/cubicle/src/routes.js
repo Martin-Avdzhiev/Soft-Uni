@@ -9,11 +9,15 @@ router.get('/about', (req, res) => {
     res.render('about');
 });
 
-router.get('/cubes/:id/details', async (req, res) => {
+router.get('/cubes/details/:id', async (req, res) => {
     const paramsObj = req.params;
     const id = paramsObj.id;
-    const cube = await Cube.findById(id).lean();
-    res.render('details', cube);
+    try {
+        const cube = await Cube.findById(id).lean();
+        res.render('details', cube);
+    } catch (error) {
+        res.redirect('/404');
+    }
 })
 router.get('/create', cubeController.getCreateCube);
 router.post('/create', cubeController.postCreateCube);
