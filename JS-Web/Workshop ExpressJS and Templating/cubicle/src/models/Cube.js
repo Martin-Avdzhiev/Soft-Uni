@@ -12,7 +12,8 @@ const cubeSchema = new Schema({
     },
     imageUrl: {
         type: String,
-        required: true
+        required: true,
+        match: /^https?:\/\//
     },
     difficultyLevel: {
         type: Number,

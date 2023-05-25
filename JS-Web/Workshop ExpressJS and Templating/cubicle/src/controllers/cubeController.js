@@ -17,11 +17,12 @@ exports.getDetails = async (req, res) => {
 
 exports.postCreateCube = async (req, res) => {
     try {
-        const { name, description, imageUrl, difficultyLevel } =  req.body;
+        const { name, description, imageUrl, difficultyLevel } = req.body;
         let cube = new Cube({ name, description, imageUrl, difficultyLevel });
         await cube.save();
-        res.redirect('/');      
+        res.redirect('/');
     } catch (error) {
+        res.redirect('/');
         console.log(error);
     }
 }
@@ -30,9 +31,9 @@ exports.getAttachAccessory = async (req, res) => {
     try {
         const id = req.params.id;
         const cube = await Cube.findById(id).lean();
-        const accessories = await Accessory.find().lean();
-       // console.log(accessories)
-        res.render('attachAccessory', { cube, accessories } );
+        const accessories = await Accessory.find({ _id: { $nin: cube.accessories } }).lean();
+        // console.log(accessories)
+        res.render('attachAccessory', { cube, accessories });
     } catch (error) {
         console.log(error);
     }
@@ -44,8 +45,8 @@ exports.postAttachAccessory = async (req, res) => {
         const cube = await Cube.findById(id);
         const accessoryId = req.body.accessory;
 
-        for(const currentId of cube.accessories){
-            if(accessoryId == currentId.toString()){
+        for (const currentId of cube.accessories) {
+            if (accessoryId == currentId.toString()) {
                 return res.redirect(`/cubes/${id}/details`);
             }
         }
