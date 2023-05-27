@@ -1,14 +1,35 @@
 const router = require('express').Router();
-
-router.get('/login', (req,res) => {
+const authService = require('../services/authService');
+router.get('/login', (req, res) => {
     res.render('auth/login');
 });
 
-router.get('/register', (req,res) => {
+router.post('/login', async(req, res) => {
+    try {
+        const { username, password } = req.body;
+        await authService.login(username, password);   
+    } catch (error) {
+        res.redirect('/');
+    }
+})
+router.get('/register', (req, res) => {
     res.render('auth/register');
 });
 
-router.get('/logout', (req,res) => {
+router.post('/register', async (req, res) => {
+    const { username, password, repeatPassword } = req.body;
+    if (password !== repeatPassword) {
+        return res.status(404).end();
+    }
+    const existingUser = await authService.getUserByUsername(username);
+    if (existingUser) {
+        return res.status(404).end();
+    }
+    const user = await authService.register(username, password);
+
+    res.redirect('/auth/login');
+})
+router.get('/logout', (req, res) => {
     res.redirect('/')
 });
 
