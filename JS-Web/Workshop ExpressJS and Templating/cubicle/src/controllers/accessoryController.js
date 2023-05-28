@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const Accessory = require('../models/Accessory');
-router.get('/create', (req, res) => {
-    res.render('createAccessory');
+const { isAuthenticated } = require('../middlewares/authMiddlewares');
+router.get('/create',isAuthenticated, (req, res) => {
+    res.render('accessory/createAccessory');
 });
 // URL: http://localhost:5000/accessories
 router.post('/create', async (req, res) => {

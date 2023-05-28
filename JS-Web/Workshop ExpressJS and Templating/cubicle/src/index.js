@@ -5,13 +5,14 @@ const routes = require('./routes');
 const config = require('./config');
 const setupViewEngine = require('./config/viewEngine');
 const initDatabase = require('./config/databaseInit');
-
+const authMiddlewares = require('./middlewares/authMiddlewares');
 const app = express();
 setupViewEngine(app);
 
 app.use(express.static('src/public'));
 app.use(cookieParser());
 app.use(express.urlencoded({extended: false})); 
+app.use(authMiddlewares.authentication);
 app.use(routes);
 
 initDatabase()
