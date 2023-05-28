@@ -9,8 +9,10 @@ router.post('/login', async(req, res) => {
         const { username, password } = req.body;
         await authService.login(username, password);   
     } catch (error) {
+        console.log(error);
         res.redirect('/');
     }
+    res.redirect('/cubes/create')
 })
 router.get('/register', (req, res) => {
     res.render('auth/register');
