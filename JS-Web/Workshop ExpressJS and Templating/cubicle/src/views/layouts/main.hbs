@@ -10,20 +10,26 @@
 
 <body>
     <div class="container">
-  <header>
+        <header>
             <ul>
                 <li><img class="logo" src="/images/logo.png"></li>
                 <li><a href="/">Browse</a></li>
+                <li><a href="/about">About</a></li>
+                {{#if isAuthenticated}}
                 <li><a href="/cubes/create">Add a Cube</a></li>
                 <li><a href="/accessories/create">Add an Accessory</a></li>
-                <li><a href="/about">About</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+                <li><a href="#">{{username}}</a></li>
+              
+                {{else}}
                 <li><a href="/auth/login">Login</a></li>
                 <li><a href="/auth/register">Register</a></li>
-                <li><a href="/auth/logout">Logout</a></li>
+                {{/if}}
             </ul>
         </header>
         {{{body}}}
     </div>
 </body>
 <footer>@Cubicle: Exercise for Express.js and Handlebars</footer>
+
 </html>
