@@ -4,17 +4,16 @@ router.get('/login', (req, res) => {
     res.render('auth/login');
 });
 
-router.post('/login', async(req, res) => {
+router.post('/login', async (req, res) => {
     try {
         const { username, password } = req.body;
-       const token =  await authService.login(username, password);   
-       console.log(token);
-
+        const token = await authService.login(username, password);
+        res.cookie('auth', token, { httpOnly: true });
+        res.redirect('/')
     } catch (error) {
         console.log(error);
-        res.redirect('/');
+        res.redirect('/404');
     }
-    res.redirect('/cubes/create')
 })
 router.get('/register', (req, res) => {
     res.render('auth/register');
