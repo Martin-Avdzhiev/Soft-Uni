@@ -12,6 +12,7 @@ router.get('/about', (req, res) => res.render('about'));
 router.use('/auth', authController);
 router.get('/cubes/:id/details', cubeController.getDetails);
 router.get('/cubes/:id/edit', cubeController.getEditCube);
+router.post('/cubes/:id/edit', cubeController.postEditCube);
 router.get('/cubes/:id/delete', cubeController.getDeleteCube);
 router.get('/cubes/create', isAuthenticated, cubeController.getCreateCube);
 router.post('/cubes/create', isAuthenticated, cubeController.postCreateCube);
