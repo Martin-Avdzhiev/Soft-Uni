@@ -75,3 +75,8 @@ exports.getDeleteCube = async (req, res) => {
     const difficultyLevels = cubeUtils.generateDifficultyLevels(cube.difficultyLevel);
     res.render('cube/deleteCubePage', { cube, difficultyLevels });
 }
+
+exports.postDeleteCube = async(req,res) =>{
+    await Cube.findByIdAndDelete(req.params.id);
+    res.redirect(`/`);
+}
