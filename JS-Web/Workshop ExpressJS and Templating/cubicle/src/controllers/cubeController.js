@@ -12,7 +12,8 @@ exports.getDetails = async (req, res) => {
     const id = paramsObj.id;
     try {
         const cube = await Cube.findById(id).populate('accessories').lean();
-        res.render('cube/updatedDetailsPage', cube);
+        const isOwner = cube.owner == req.user._id;
+        res.render('cube/updatedDetailsPage', {cube, isOwner});
     } catch (error) {
         res.redirect('/404');
     }
@@ -21,7 +22,12 @@ exports.getDetails = async (req, res) => {
 exports.postCreateCube = async (req, res) => {
     try {
         const { name, description, imageUrl, difficultyLevel } = req.body;
-        let cube = new Cube({ name, description, imageUrl, difficultyLevel });
+        let cube = new Cube({ name,
+             description,
+             imageUrl,
+             difficultyLevel,
+             owner: req.user._id
+         });
         await cube.save();
         res.redirect('/');
     } catch (error) {
@@ -62,6 +68,9 @@ exports.postAttachAccessory = async (req, res) => {
 exports.getEditCube = async (req, res) => {
     const cube = await cubeService.getOne(req.params.id).lean();
     const difficultyLevels = cubeUtils.generateDifficultyLevels(cube.difficultyLevel);
+    if(!cubeUtils.isOwner(req.user, cube)){
+        return res.redirect('/404');
+    }
     res.render('cube/editCubePage', { cube, difficultyLevels });
 }
 

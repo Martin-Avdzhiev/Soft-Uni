@@ -10,7 +10,7 @@ exports.login = async (username, password) => {
     if (!user || !isValid) {
         throw 'Invalid username or password!';
     }
-    const payload = { username: user.username };
+    const payload = { username: user.username, _id: user._id };
     const token = await jwt.sign(payload, config.SECRET, {expiresIn: '2h'});
     return token;
 }
