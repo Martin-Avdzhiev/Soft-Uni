@@ -25,4 +25,22 @@
 9. Install bcrypt and cookie-parser and configure
 10. Register user
     * validate repeat password
-    *use bcrypt to hash password
+    * check if user exists
+    * use bcrypt to hash password
+11. Login
+    * check if user exists
+    * check if password is valid
+12. Generate jwt token
+    * OPTIONAL: user util.promisify to use async
+    * generate token with payload
+    * add token to cookie
+13. Add authentication middleware
+    * add decoded token to request
+    * use authentication middleware
+14. Logout
+15. Authorization middleware    
+16. Dynamic navigation
+17. Error handling
+18. Add notification to main layout
+19. Login automatically after register
+20. Parse errors
