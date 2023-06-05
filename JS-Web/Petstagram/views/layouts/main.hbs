@@ -25,11 +25,11 @@
             <div class="container">
                 <div class="logo">
                     <!-- Link to Home Page -->
-                    <a href="#">
+                    <a href="/">
                         <img width="50px" src="/static/images/free-30-instagram-stories-icons23_122570.png" alt="img1">
                     </a>
                     <!-- Link to Home Page -->
-                    <a class="home" href="#">
+                    <a class="home" href="/">
                         <i>Petstagram</i>
                     </a>
                 </div>
@@ -38,68 +38,54 @@
                     <ul class="nav-group">
                         <li class="nav-item">
                             <!-- Link to Catalog Page -->
-                            <a href="#">
+                            <a href="/catalog">
                                 <i>Catalog</i>
                             </a>
                         </li>
-
-                        <!--For Guest User-->
-                        <li class="nav-item">
-                            <!-- Link to Login Page -->
-                            <a href="#">
-                                <i>Login</i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- Link to Register Page -->
-                            <a href="#">
-                                <i>Register</i>
-                            </a>
-                        </li>
-
+                        {{#if isAuthenticated}}
                         <!--For login users-->
                         <li class="nav-item">
                             <!-- Link to Add Photo Page -->
-                            <a href="#">
+                            <a href="/create">
                                 <i>Add Photo</i>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <!-- Link to Profile Page -->
-                            <a href="#">
+                            <a href="/profile">
                                 <i>Profile</i>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <!-- Link to Logout Page -->
-                            <a href="#">
+                            <a href="/logout">
                                 <i>Logout</i>
                             </a>
                         </li>
+                        {{else}}
+                        <!--For Guest User-->
+                        <li class="nav-item">
+                            <!-- Link to Login Page -->
+                            <a href="/login">
+                                <i>Login</i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Link to Register Page -->
+                            <a href="/register">
+                                <i>Register</i>
+                            </a>
+                        </li>
+                        {{/if}}
+
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-
-    <!-- Starts Main Section -->
-    <main>
-        <!--Welcome Page-->
-        <section class="welcome-content">
-            <article class="welcome-content-text">
-                <h1>Place for Your</h1>
-                <h1 class="bold-welcome">Pets photos</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-            </article>
-            <article class="welcome-content-image">
-                <img src="/static/images/header-dog.png" alt="dog">
-            </article>
-        </section>
-
-    </main>
-
+    {{{body}}}
     <!-- Starts Footer Section -->
     <div class="footer">
         <span class="footer-section">
