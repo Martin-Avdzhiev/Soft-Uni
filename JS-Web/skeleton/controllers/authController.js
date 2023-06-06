@@ -2,7 +2,7 @@ const router = require('express').Router();
 const authService = require('../services/authService');
 const { authentication } = require('../middlewares/authMiddleware');
 router.get('/login', (req, res) => {
-    res.render('auth/login');
+    res.render('login');
 });
 
 router.post('/login', async (req, res) => {
@@ -12,13 +12,13 @@ router.post('/login', async (req, res) => {
         res.cookie('auth', token);
         res.redirect('/');
     } catch (error) {
-        const message = Object.values(error.errors)[0].message;
-        return res.status(404).render('auth/login', { message });
+       // const message = Object.values(error.errors)[0].message;
+        return res.status(404).render('login'); // {message}
     }
 });
 
 router.get('/register', (req, res) => {
-    res.render('auth/register');
+    res.render('register');
 });
 
 router.post('/register', async (req, res) => {
@@ -29,8 +29,8 @@ router.post('/register', async (req, res) => {
         res.cookie('auth', token);
         res.redirect('/');
     } catch (error) {
-        const message = Object.values(error.errors)[0].message;
-        return res.status(404).render('auth/register', { message });
+        // const message = Object.values(error.errors)[0].message;
+        return res.status(404).render('register'); // {message}
     }
 
 });
