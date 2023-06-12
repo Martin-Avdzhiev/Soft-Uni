@@ -1,0 +1,54 @@
+<main>
+
+    <!-- In case of error, display the following div-->
+    <!--
+
+            <div class="error-box">
+                <p>Show each error in a separate paragraph</p>
+            </div>
+
+            -->
+
+    <!-- Browse Page -->
+    {{#if error}}
+    <div class="error-box">
+        <p>{{error.message}}</p>
+    </div>
+    {{/if}}
+    <section id="catalog-section" class="spaced">
+
+        <h1 class="item">Auctions</h1>
+        {{#if items}}
+        {{#each items}}
+        <!-- List of available auctions -->
+        <ul class="catalog cards">
+            <li class="item">
+                <header class="pad-med">
+                    <h2>{{title}}</h2>
+                </header>
+
+                <div class="align-center">
+                    <img class="img-thumb" src="{{imageUrl}}">
+                </div>
+
+                <footer class="align-center pad-med">
+                    <p>Current price: <strong>${{price}}</strong></p>
+                    <a class="action" href="/browse/{{_id}}/details">See details</a>
+                </footer>
+            </li>
+
+        </ul>
+        {{/each}}
+        {{else}}
+        <!-- If there are no auctions to display -->
+        <div class="item pad-large align-center">
+            <p>Nothing has been listed yet. Be the first!</p>
+            <div>
+                <a class="action" href="/publish">Publish Auction</a>
+            </div>
+        </div>
+        {{/if}}
+
+    </section>
+
+</main>

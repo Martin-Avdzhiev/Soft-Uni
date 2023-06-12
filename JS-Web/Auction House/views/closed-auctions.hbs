@@ -1,0 +1,50 @@
+
+        <main>
+                {{#if eror}}
+            <!-- In case of error, display the following div-->
+            
+
+            <div class="error-box">
+                <p>{{error.message}}</p>
+            </div>
+
+            {{/if}}
+
+            <!-- Closed Auctions Page -->
+            <section id="catalog-section" class="spaced">
+
+                <h1 class="item">Closed Auctions</h1>
+
+                <!-- List of closed auctions for the current user -->
+                {{#if closedAuctions}}
+                {{#each closedAuctions}}
+                <ul class="catalog cards">
+                    <li class="item">
+                        <header class="pad-med">
+                            <h2>{{title}}</h2>
+                        </header>
+
+                        <div class="align-center">
+
+                            <img class="img-thumb" src="{{imageUrl}}">
+
+                        </div>
+
+                        <footer class="align-center pad-med">
+                            <p>Closing price: <strong>${{price}}</strong></p>
+                            from {{lastBidder}}
+                        </footer>
+                    </li>
+                </ul>
+                {{/each}}
+                {{else}}
+                <!-- If the current user doesn't have closed auctions -->
+                <div class="item pad-large align-center">
+                    <p>You haven't closed any auctions yet.</p>
+                </div>
+                {{/if}}
+
+            </section>
+
+        </main>
+

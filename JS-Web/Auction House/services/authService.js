@@ -6,18 +6,18 @@ const { SECRET } = require('../constants');
 exports.findByUsername = (username) => User.findOne({ username });
 exports.findByEmail = (email) => User.findOne({email});
 
-exports.register = async (username, email, password, repeatPassword) => {
+exports.register = async (firstName, lastName, email, password, repeatPassword) => {
     if (password !== repeatPassword) {
         throw new Error('Password missmatch!');
     }
-    const existingUser = await this.findByUsername(username) || await this.findByEmail(email);
+    const existingUser = await this.findByEmail(email);
     
     if (existingUser) {
         throw new Error('This user already exists!')
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    await User.create({ username, email, hashedPassword });
+    await User.create({ firstName,lastName, email, hashedPassword });
 }
 
 exports.login = async(email, password) => {
@@ -33,7 +33,8 @@ exports.login = async(email, password) => {
     const payload = {
         _id: user._id,
         email,
-        username: user.username
+        firstName: user.firstName,
+        lastName: user.lastName
     }
     const token = await jwt.sign(payload, SECRET);
     return token;

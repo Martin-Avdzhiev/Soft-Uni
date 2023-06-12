@@ -20,23 +20,23 @@
             <nav class="main-nav nav-mid">
                 <ul>
                     <li>
-                        <a href="#">Browse</a>
+                        <a href="/browse">Browse</a>
                     </li>
                     {{#if isAuthenticated}}
                     <!-- User actions -->
                     <li class="user">
-                        <a href="#">Publish</a>
+                        <a href="/publish">Publish</a>
                     </li>
 
                     <!-- Bonus action -->
-                    <!--
+                    
                     <li class="user">
-                        <a href="#">Closed Auctions</a>
+                        <a href="/closed">Closed Auctions</a>
                     </li>
-                    -->
+                    
 
                     <li class="user">
-                        <a href="#">Logout</a>
+                        <a href="/logout">Logout</a>
                     </li>
                     {{else}}
                     <!-- Guest actions -->
