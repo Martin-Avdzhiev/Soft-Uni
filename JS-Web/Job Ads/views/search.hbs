@@ -1,0 +1,31 @@
+<main>
+
+    <form class="search" method="POST">
+        <input type="search" name="email" value="" placeholder="Search email...">
+        <button type="submit" class="btn-search">
+            <!-- Do not forget to change the path to the image -->
+            <img src="/static/img/search-icon.png" alt="search-icon">
+            Search
+        </button>
+    </form>
+    {{#if result}}
+    {{#each result}}
+    <section id="search-page">
+
+        <h2>Search result:</h2>
+        <!--If there are a search matches, show each ad-->
+        <article class="search-page-result">
+            <p class="search-page-result-headline">Headline: {{headline}}</p>
+            <p class="search-page-result-companyName">Company Name: {{companyName}}</p>
+        </article>
+        {{/each}}
+        {{else}}
+        {{#if isSearched}}
+        <!--If not show:-->
+        <article class="search-page-no-result">
+            <p class="search-page-no-result-message">No match found.</p>
+        </article>
+    </section>
+    {{/if}}
+    {{/if}}
+</main>
