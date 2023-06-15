@@ -4,7 +4,12 @@ const Trip = require('../models/Trip');
 const { isAuth } = require('../middlewares/authMiddleware');
 
 router.get('/', (req, res) => {
-    res.render('home');
+    if(req.query.error){
+        res.render('home', { message: req.query.error });
+    }
+    else{
+        res.render('home');
+    }
 })
 
 router.get('/profile', isAuth, async (req, res) => {
@@ -96,7 +101,7 @@ router.get('/trips/:id/edit', isAuth, async (req, res) => {
         res.render('trip-edit', { trip });
     } catch (error) {
         const message = error.message;
-        res.redirect('/');
+        res.redirect('/?error=' + encodeURIComponent(message));
     }
 
 })
@@ -112,6 +117,7 @@ router.post('/trips/:id/edit', isAuth, async (req, res) => {
         res.redirect(`/trips/${req.params.id}/details`);
     } catch (error) {
         const message = error.message;
+        req.session.error = message;
         res.redirect('/');
     }
 })
@@ -126,6 +132,7 @@ router.get('/trips/:id/delete', isAuth, async (req, res) => {
         res.redirect(`/trips`);
     } catch (error) {
         const message = error.message;
+        req.session.error = message;
         res.redirect('/');
     }
 })
