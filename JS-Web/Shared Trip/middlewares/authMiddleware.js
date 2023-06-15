@@ -10,9 +10,11 @@ exports.authentication = async (req, res, next) => {
             req.user = decodedToken;
             res.locals.isAuthenticated = true;
             res.locals.user = decodedToken;
+            res.locals.email = decodedToken.email;
        } catch (error) {
+        console.log(error.message)
             res.clearCookie('auth');
-           return res.status(401).render('home/404');
+           return res.status(401).render('404');
         }
     }
     next();
@@ -22,4 +24,5 @@ exports.isAuth = (req, res, next)=> {
     if(!req.user){
         return res.redirect('/login');
     }
+    next()
 }

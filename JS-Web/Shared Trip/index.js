@@ -15,13 +15,13 @@ app.engine('hbs', handlebars.engine({
 app.set('view engine', 'hbs');
 
 app.use('/static',express.static('public'));
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(authMiddleware.authentication);
 app.use(routes);
 
 //TODO: change database name on exam
-mongoose.connect(`mongodb://127.0.0.1:27017/book`);
+mongoose.connect(`mongodb://127.0.0.1:27017/trip`);
 mongoose.set('strictQuery', false);
 
 app.listen(3000, () => console.log('Server is running ot port 3000...'));
