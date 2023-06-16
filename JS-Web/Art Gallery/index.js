@@ -21,7 +21,7 @@ app.use(authMiddleware.authentication);
 app.use(routes);
 
 //TODO: change database name on exam
-mongoose.connect(`mongodb://127.0.0.1:27017/book`);
+mongoose.connect(`mongodb://127.0.0.1:27017/publication`);
 mongoose.set('strictQuery', false);
 
 app.listen(3000, () => console.log('Server is running ot port 3000...'));

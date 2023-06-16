@@ -3,42 +3,53 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page - Crypto Web</title>
-    <link rel="stylesheet" href="./static/css/styles.css">
+    <title>Home Page</title>
+
+    <!-- Do not forget to change the path to the css file -->
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
 <body>
-    <header class="header">
+
+    <div id="box">
+        {{#if message}}
+        <div class="error-box">
+            <p>{{message}}</p>
+        </div>
+        {{/if}}
+        <!-- In case of error, you should display div with class "error-box" -->
+        <!-- You can choose to display the first error or all of them (error message/s in your opinion) -->
+        <!--<div class="error-box">
+            <p>Error</p>
+        </div>-->
+
         <nav>
-            <img src="./static/images/logo.png" class="logo">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">All Crypto</a></li>
-                <li><a href="#">Search</a></li>
+
+            <!-- Do not forget to change the path to the image -->
+            <img src="/static/img/art-logo.png" alt="logo">
+            <a href="/">ArtGallery</a>
+
+            <ul class="menu">
+                <li><a href="/gallery">Gallery</a></li>
                 {{#if isAuthenticated}}
-                <li><a href="#">Create Offer</a></li>
+                <!-- Logged users -->
+                <li><a href="/create">Create Publication</a></li>
+                <li><a href="/profile">Profile</a></li>
                 <li><a href="/logout">Logout</a></li>
                 {{else}}
+                <!-- Guest users -->
                 <li><a href="/login">Login</a></li>
                 <li><a href="/register">Register</a></li>
                 {{/if}}
             </ul>
-        </nav>
-    </header>
-    {{#if message}}
-    <div>
-        <div class="errorContainer">
-            <p>{{message}}</p>
-        </div>
-    </div>
-    {{/if}}
-    {{{body}}}
-    <footer>
-        <p>Back-End 2022</p>
-    </footer>
 
+        </nav>
+
+{{{body}}}
+        <footer>
+            © Js Back-End Retake Exam 2021
+        </footer>
+    </div>
 </body>
 
 </html>
