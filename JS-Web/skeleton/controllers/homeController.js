@@ -1,5 +1,6 @@
 const router = require('express').Router();
-
+const { isAuth } = require('../middlewares/authMiddleware');
+const User = require('../models/User');
 router.get('/', (req, res) => {
     if (req.query) {
         if (req.query.error) {

@@ -3,11 +3,13 @@ const mongoose = require('mongoose');
 const publicationSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: [true, 'Title is required!']
+        required: [true, 'Title is required!'],
+        minLength: 6
     },
     paintingTechnique: {
         type: String,
-        required: [true, 'Painting Technique is required!']
+        required: [true, 'Painting Technique is required!'],
+        maxLength: 15
     },
     artPicture: {
         type: String,
