@@ -5,22 +5,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true,'Username is required!']
     },
-    email: {
-        type: String,
-        required: [true,'Email is required!'],
-        match : /[\d+A-Z+a-z+]+/
-    },
     hashedPassword: {
         type: String,
         required: [true,'Password is required!']
     },
-    bookedHotels: [{
+    enrolledCourses: [{
         type: mongoose.Types.ObjectId,
-        ref: 'Hotel'
-    }],
-    offeredHotels: [{
-        type: mongoose.Types.ObjectId,
-        ref: 'Hotel'
+        ref: 'Course'
     }]
 });
 
