@@ -7,6 +7,6 @@ export interface IUser {
     username: string;
     password: string;
     created_at: string;
-    updatedAt: string;
+   updatedAt: string;
     __v: number;
 }
