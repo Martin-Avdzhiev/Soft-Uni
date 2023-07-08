@@ -11,6 +11,7 @@ import { AuthService } from "src/app/auth/auth.service";
 export class AuthActivate implements CanActivate {
 
     constructor(private authService: AuthService, private router: Router){}
+    
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
         const loginRequired = route.data['loginRequired'];
         if (loginRequired === undefined || this.authService.isLoggedIn === loginRequired) { return true; }

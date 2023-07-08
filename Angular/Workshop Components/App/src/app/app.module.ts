@@ -1,33 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CoreModule } from './core/core.module';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ThemeListComponent } from './theme/theme-list/theme-list.component';
-import { RecentPostsComponent } from './theme/recent-posts/recent-posts.component';
-import { HttpClientModule } from '@angular/common/http';
-import { MainComponent } from './theme/main/main.component';
+import { CoreModule } from './core/core.module';
+import { MainComponent } from './main/main.component';
 import { SharedModule } from './shared/shared.module';
-import { AuthRoutingModule } from './auth/auth-routing-module';
-import { RouterModule } from '@angular/router';
-import { routes } from './app-routing.module';
-import { AuthModule } from './auth/auth.module';
-import { ThemeModule } from './theme/theme.module';
-
-
+import {HttpClientModule} from '@angular/common/http';
+import { ThemeListComponent } from './theme-list/theme-list.component';
+import { PostListComponent } from './post-list/post-list.component'
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    ThemeListComponent,
+    PostListComponent
   ],
   imports: [
-    AuthModule,
-    ThemeModule,
     BrowserModule,
+    AppRoutingModule,
     CoreModule,
-    HttpClientModule,
     SharedModule,
-    AuthRoutingModule,
-    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
