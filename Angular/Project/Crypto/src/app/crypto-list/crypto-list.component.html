@@ -1,0 +1,53 @@
+<main>
+  <div *ngIf="isLoading">
+    <div class="crypto-card">
+    <h2>BTC...</h2>
+      <div>
+        <span>Price: </span><span>Loading...</span>
+        <p><span>Market Cap: </span> <span>Loading...</span></p>
+      </div>
+    </div>
+
+    <div class="crypto-card">
+    <h2>ETH...</h2>
+      <div>
+        <span>Price: </span><span>Loading...</span>
+        <p><span>Market Cap: </span> <span>Loading...</span></p>
+      </div>
+    </div>
+
+    <div class="crypto-card">
+    <h2>XRP...</h2>
+      <div>
+        <span>Price: </span><span>Loading...</span>
+        <p><span>Market Cap: </span> <span>Loading...</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="crypto-card" *ngFor="let crypto of processedDataArray">
+    <h2><a>{{crypto.name}} ({{crypto.symbol}})</a></h2>
+    <div *ngIf="isLoading">
+      <p>Loading...</p>
+    </div>
+    <div *ngIf="crypto.isPumping && !isLoading">
+      <span>Price: </span><span class="green"> ${{crypto.price}} &#8593;</span>
+      <p><span>Market Cap: </span> <span  class="green"> ${{crypto.marketCap}} &#8593;</span></p>
+    </div>
+    <div *ngIf="!crypto.isPumping && !isLoading">
+    <p><span>Price: </span><span class="red"> ${{crypto.price}} &#8595;</span></p>
+      <p><span>Market Cap: </span>  <span class="red"> ${{crypto.marketCap}} &#8595;</span></p>
+    </div>
+  </div>
+
+  <!-- <div class="crypto-card">
+    <h2>Ethereum (ETH)</h2>
+    <p>Price: $2,500</p>
+    <p>Market Cap: $300 billion</p>
+  </div>
+
+  <div class="crypto-card">
+    <h2>Ripple (XRP)</h2>
+    <p>Price: $0.75</p>
+    <p>Market Cap: $30 billion</p>
+  </div> -->
+</main>
