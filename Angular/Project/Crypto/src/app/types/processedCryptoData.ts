@@ -6,6 +6,8 @@ export class processedCryptoData {
     symbol: string = '';
     oldMarketCap: number = 0;
     changePercent24Hr: number = 0;
+    id: string = '';
+    routerLinkVariable: string = '';
 }
 
 export class processedCryptoDataClass implements processedCryptoData {
@@ -16,4 +18,6 @@ export class processedCryptoDataClass implements processedCryptoData {
     symbol: string = '';
     oldMarketCap: number = 0;
     changePercent24Hr: number = 0;
+    id: string = '';
+    routerLinkVariable: string = '';
 }

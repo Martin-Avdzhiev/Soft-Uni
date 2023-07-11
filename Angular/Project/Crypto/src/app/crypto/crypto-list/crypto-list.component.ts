@@ -15,6 +15,7 @@ export class CryptoListComponent implements OnInit /*, AfterVieInit */ {
   isPumping: boolean = false;
   isLoading: boolean = true;
   marketCap: string = '';
+  
   cryptos: any = [{name: 'bitcoin', oldPrice: 0}, {name: 'ethereum', oldPrice: 0}, {name: 'xrp', oldPrice: 0}];
   processedDataArray: processedCryptoData[] = [];
   processedData = new processedCryptoDataClass();
@@ -34,9 +35,10 @@ export class CryptoListComponent implements OnInit /*, AfterVieInit */ {
           if (Number(this.data.changePercent24Hr) >= 0) {
             this.isPumping = true;
           }
-          else {
+          else{
             this.isPumping = false;
           }
+          this.processedData.routerLinkVariable = `/cryptos/${this.data.id}`;
           this.processedData.marketCap = this.marketCap;
           this.processedData.price = this.price.toFixed(2);
           this.processedData.isPumping = this.isPumping;
@@ -44,6 +46,7 @@ export class CryptoListComponent implements OnInit /*, AfterVieInit */ {
           this.processedData.symbol = this.data.symbol;
           this.processedData.oldMarketCap = Number(this.data.marketCapUsd);
           this.processedData.changePercent24Hr = Number(Number(this.data.changePercent24Hr).toFixed(3));
+          this.processedData.id = this.data.id;
           this.processedDataArray.push(this.processedData);
           this.cryptoService.sortByMarketCap(this.processedDataArray);
           this.isLoading = false;
