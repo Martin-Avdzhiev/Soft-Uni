@@ -5,6 +5,7 @@ const posts = require('./posts');
 const likes = require('./likes');
 const test = require('./test');
 const { authController } = require('../controllers');
+const crypto = require('../models/crypto');
 
 router.post('/register', authController.register);
 router.post('/login', authController.login);
@@ -15,5 +16,7 @@ router.use('/themes', themes);
 router.use('/posts', posts);
 router.use('/likes', likes);
 router.use('/test', test);
+
+
 
 module.exports = router;

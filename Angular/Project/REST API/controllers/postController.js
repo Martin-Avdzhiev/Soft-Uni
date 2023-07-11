@@ -16,7 +16,7 @@ function getLatestsPosts(req, res, next) {
     postModel.find()
         .sort({ created_at: -1 })
         .limit(limit)
-        .populate('themeId userId')
+        .populate('themeId userId') //  !!!
         .then(posts => {
             res.status(200).json(posts)
         })

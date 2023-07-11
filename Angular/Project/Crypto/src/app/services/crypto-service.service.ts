@@ -19,7 +19,7 @@ export class CryptoService {
   }
 
   getCryptoData(crypto: string) {
-    return this.http.get<CryptoData>(`${cryptoApiUrl}/${crypto}`);
+    return this.http.get<{data: CryptoData[]}>(`${cryptoApiUrl}?ids=${crypto}`);
   }
 
   transformMarketCap(marketCap: string): string {

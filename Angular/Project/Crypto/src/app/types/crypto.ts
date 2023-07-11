@@ -1,5 +1,4 @@
 export interface CryptoData {
-    data: {
       id: string;
       rank: string;
       symbol: string;
@@ -12,7 +11,6 @@ export interface CryptoData {
       changePercent24Hr: string;
       vwap24Hr: string;
       explorer: string;
-    };
     timestamp: number;
   }
   
