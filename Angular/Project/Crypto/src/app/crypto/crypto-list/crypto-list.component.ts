@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { CryptoService } from '../services/crypto-service.service';
-import { CryptoInfo } from '../types/crypto';
-import { processedCryptoData, processedCryptoDataClass } from '../types/processedCryptoData';
+import { CryptoService } from '../../services/crypto-service.service';
+import { CryptoInfo } from '../../types/crypto';
+import { processedCryptoData, processedCryptoDataClass } from '../../types/processedCryptoData';
+import { CryptoDirectiveDirective } from '../crypto-directive.directive';
 @Component({
   selector: 'app-crypto-list',
   templateUrl: './crypto-list.component.html',
   styleUrls: ['./crypto-list.component.css']
 })
-export class CryptoListComponent implements OnInit {
+export class CryptoListComponent implements OnInit /*, AfterVieInit */ {
   data: CryptoInfo | undefined;
   price: number = 0;
   interval: any;
@@ -20,6 +21,7 @@ export class CryptoListComponent implements OnInit {
   processedData = new processedCryptoDataClass();
       constructor(private cryptoService: CryptoService){}
   ngOnInit() {
+
     //this.interval = setInterval(() => {  
         this.processedDataArray = [];
     for (const crypto of this.cryptos) {
@@ -49,6 +51,12 @@ export class CryptoListComponent implements OnInit {
         }
       })
     }
-  //  }, 8000);
+  //   this.interval = setInterval(() => { 
+  //     this.cryptoDirective.getColorPrice(this.oldPrice,this.price)
+  //  }, 3000);
   }
+
+//  ngAfterViewInit(){
+ //   this.span.nativeElement.setAttribute('highlight', '');
+ // } 
 }

@@ -13,9 +13,13 @@ const removePassword = (data) => {
 }
 
 function register(req, res, next) {
-    const { tel, email, username, password, repeatPassword } = req.body;
+    const {email, username, password, repeatPassword } = req.body;
 
-    return userModel.create({ tel, email, username, password })
+    if(password != repeatPassword){
+        return res.send({ message: 'Passwords must be the same!' });
+    }
+
+    return userModel.create({ email, username, password })
         .then((createdUser) => {
             createdUser = bsonToJson(createdUser);
             createdUser = removePassword(createdUser);
@@ -44,16 +48,16 @@ function register(req, res, next) {
 }
 
 function login(req, res, next) {
-    const { email, password } = req.body;
+    const { username, password } = req.body;
 
-    userModel.findOne({ email })
+    userModel.findOne({ username })
         .then(user => {
             return Promise.all([user, user ? user.matchPassword(password) : false]);
         })
         .then(([user, match]) => {
             if (!match) {
                 res.status(401)
-                    .send({ message: 'Wrong email or password' });
+                    .send({ message: 'Wrong username or password' });
                 return
             }
             user = bsonToJson(user);
@@ -94,9 +98,9 @@ function getProfileInfo(req, res, next) {
 
 function editProfileInfo(req, res, next) {
     const { _id: userId } = req.user;
-    const { tel, username, email } = req.body;
+    const { username, email } = req.body;
 
-    userModel.findOneAndUpdate({ _id: userId }, { tel, username, email }, { runValidators: true, new: true })
+    userModel.findOneAndUpdate({ _id: userId }, { username, email }, { runValidators: true, new: true })
         .then(x => { res.status(200).json(x) })
         .catch(next);
 }

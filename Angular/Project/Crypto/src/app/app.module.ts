@@ -5,16 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { MainComponent } from './main/main.component';
-import { CryptoListComponent } from './crypto-list/crypto-list.component';
+import { CryptoListComponent } from './crypto/crypto-list/crypto-list.component';
 import { MainDescriptionListComponent } from './main-description-list/main-description-list.component';
 import { UserModule } from './user/user.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CryptoModule } from './crypto/crypto.module';
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    CryptoListComponent,
     MainDescriptionListComponent,
     WelcomeComponent
   ],
@@ -23,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     CoreModule,
     UserModule,
-    HttpClientModule
+    HttpClientModule,
+    CryptoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
