@@ -31,14 +31,15 @@
     </div>
     <div *ngIf="crypto.isPumping && !isLoading">
       <span>Price: </span><span class="green"> ${{crypto.price}} &#8593;</span>
-      <p><span>Market Cap: </span> <span  class="green"> ${{crypto.marketCap}} &#8593;</span></p>
+      <p><span>Market Cap: </span> <span  class="green"> ${{crypto.marketCap}} &#8593;</span>
+         <p><span>Change 24h: <span class="green">{{crypto.changePercent24Hr}}% &#8593;</span></span></p>
     </div>
     <div *ngIf="!crypto.isPumping && !isLoading">
-    <p><span>Price: </span><span class="red"> ${{crypto.price}} &#8595;</span></p>
-      <p><span>Market Cap: </span>  <span class="red"> ${{crypto.marketCap}} &#8595;</span></p>
+      <span>Price: </span><span class="red"> ${{crypto.price}} &#8595;</span>
+      <p><span>Market Cap: </span> <span  class="red"> ${{crypto.marketCap}} &#8595;</span>
+         <p><span>Change 24h: <span class="red">{{crypto.changePercent24Hr}}% &#8595;</span></span></p>
     </div>
   </div>
-
   <!-- <div class="crypto-card">
     <h2>Ethereum (ETH)</h2>
     <p>Price: $2,500</p>
