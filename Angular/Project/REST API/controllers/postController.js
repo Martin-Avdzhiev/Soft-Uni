@@ -12,7 +12,6 @@ function newPost(text, userId, themeId) {
 
 function getLatestsPosts(req, res, next) {
     const limit = Number(req.query.limit) || 0;
-
     postModel.find()
         .sort({ created_at: -1 })
         .limit(limit)

@@ -23,15 +23,8 @@ const CryptoSchema = new mongoose.Schema({
         required: true
     },
     maxSupply: {
-        type: String,
-        required: true
+        type: String
     },
-
-    priceUsd: {
-        type: String,
-        required: true
-    },
-
     explorer: {
         type: String,
         required: true

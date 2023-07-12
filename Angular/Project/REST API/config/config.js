@@ -8,8 +8,8 @@ const config = {
     },
     production: {
         port: process.env.PORT || 3000,
-        dbURL: process.env.DB_URL_CREDENTIALS,
-        origin: []
+        dbURL: 'mongodb://127.0.0.1:27017/crypto',
+        origin: ['http://localhost:5555', 'http://localhost:4200']
     }
 };
 

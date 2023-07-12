@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges, SimpleChanges, AfterViewInit } from '@angular/core';
 import { CryptoService } from '../../services/crypto-service.service';
-import { CryptoInfo } from '../../types/crypto';
+import { CryptoData } from '../../types/crypto';
 import { processedCryptoData, processedCryptoDataClass } from '../../types/processedCryptoData';
 
 @Component({
@@ -11,7 +11,7 @@ import { processedCryptoData, processedCryptoDataClass } from '../../types/proce
 
 
 export class CryptoListComponent implements OnInit, OnChanges,AfterViewInit {
-  data: CryptoInfo | undefined;
+  data: CryptoData | undefined;
   price: number = 0;
   interval: any;
   isPumping: boolean = false;
@@ -39,8 +39,7 @@ ngAfterViewInit(): void {
   // },30000)
 }
   ngOnInit() {
-   //  this.interval = setInterval(() => {
-
+    
     this.cryptoService.getCryptoData(this.cryptos).subscribe({
       next: (result) => {
           this.processedDataArray = result?.data.map((value) => {
@@ -64,7 +63,7 @@ ngAfterViewInit(): void {
       }
     });
     this.oldArray = this.processedDataArray;
-    //  }, 3000);
+
   }
 }
 //  ngAfterViewInit(){

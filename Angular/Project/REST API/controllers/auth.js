@@ -14,7 +14,7 @@ const removePassword = (data) => {
 
 function register(req, res, next) {
     const {email, username, password, repeatPassword } = req.body;
-
+        console.log('hi')
     if(password != repeatPassword){
         return res.send({ message: 'Passwords must be the same!' });
     }
