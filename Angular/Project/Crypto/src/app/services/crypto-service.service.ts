@@ -9,24 +9,26 @@ const localApiUrl = 'http://localhost:3000/api'
   providedIn: 'root'
 })
 export class CryptoService {
-
-  constructor(private http: HttpClient) { }
   transformedMarketCap: number = 0;
   stringMarketCap: string = '';
+
+  constructor(private http: HttpClient) { }
+
+
+
+  
+  getCryptoData(crypto: string) {
+    return this.http.get<{ data: CryptoData[] }>(`${cryptoApiUrl}?ids=${crypto}`);
+  }
+  
+  getSingleCryptoData(crypto: string) {
+    return this.http.get<PostCryptoData>(`${localApiUrl}/cryptos/${crypto}`);
+  }
 
   sortByMarketCap(array: processedCryptoDataClass[]) {
     return array.sort((a: processedCryptoDataClass, b: processedCryptoDataClass) => b.oldMarketCap - a.oldMarketCap);
   }
-
-  getCryptoData(crypto: string) {
-    return this.http.get<{ data: CryptoData[] }>(`${cryptoApiUrl}?ids=${crypto}`);
-  }
-
-  getSingleCryptoData(crypto: string) {
-    return this.http.get<{ data: CryptoData }>(`${cryptoApiUrl}/${crypto}`);
-
-  }
-
+  
   postSingleCryptoData(data: PostCryptoData, id: string) {
     console.log(`${localApiUrl}/cryptos/${id}`)
     return this.http.post(`${localApiUrl}/cryptos/${id}`, data).subscribe({
@@ -65,5 +67,22 @@ export class CryptoService {
 
     }
     return this.stringMarketCap
+  }
+
+  transformPrice(price: string, crypto: string): string {
+    let [integer, float] = price.split('.');
+    if (!float) {
+      if (crypto == 'XRP') { return integer + '.000' }
+      else { return integer + '.00' }
+    }
+    if (float?.length < 2 && crypto != 'XRP') {
+      if (float?.length < 2) { return integer + '.' + float + '0' }
+      return integer
+    }
+    else if (float?.length < 3 && crypto == 'XRP') {
+      if (float?.length < 2) { return integer + '.' + float + '00' }
+      else if (float?.length < 3) { return integer + '.' + float + '0' }
+    }
+    return price
   }
 }

@@ -22,5 +22,5 @@ export class PostCryptoData {
   supply: string = '';
   maxSupply: string = '';
   explorer: string = '';
-  descripton: string = '';
+  description: string = '';
 }

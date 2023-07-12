@@ -10,27 +10,30 @@ import { CryptoData, PostCryptoData } from 'src/app/types/crypto';
 export class CurrentCryptoComponent implements OnInit {
   constructor(private cryptoService: CryptoService, private route: ActivatedRoute){}
   id: string| undefined;
-  data: CryptoData | undefined;
-  price: number | undefined;
+  price: string | undefined;
   postData = new PostCryptoData()
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['cryptoId'];
     if(this.id){
+      this.cryptoService.getCryptoData(this.id).subscribe({
+        next: (value)=> this.price = Number(value?.data[0].priceUsd).toFixed(2),
+        error: (error) => console.log(error)
+      });
       this.cryptoService.getSingleCryptoData(this.id).subscribe({
         next: (value)=> {
-          this.data = value?.data;
-          this.price = Number(Number(this.data.priceUsd).toFixed(2));
+         // this.price = Number(this.data.priceUsd).toFixed(2);
           this.postData = new PostCryptoData();
-          if(this.data){
-            this.postData.id = this.data?.id
-            this.postData.rank = this.data?.rank
-            this.postData.symbol = this.data?.symbol
-            this.postData.name = this.data?.name
-            this.postData.supply = this.data?.supply
-            this.postData.maxSupply = this.data?.maxSupply
-            this.postData.explorer = this.data?.explorer
-            this.postData.descripton = 'some description'
+          if(value){
+            this.postData.id = value?.id;
+            this.postData.rank = value?.rank;
+            this.postData.symbol = value?.symbol;
+            this.postData.name = value?.name;
+            this.postData.supply = value?.supply;
+            this.postData.maxSupply = value?.maxSupply;
+            this.postData.explorer = value?.explorer;
+            this.postData.description = value?.description;
+            this.price = this.cryptoService.transformPrice(this.price!,this.postData.name);
           }
         }, error: (error)=> console.log(error)
       })
