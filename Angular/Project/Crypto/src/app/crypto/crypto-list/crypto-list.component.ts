@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges, AfterViewInit } from '@angular/core';
 import { CryptoService } from '../../services/crypto-service.service';
 import { CryptoInfo } from '../../types/crypto';
 import { processedCryptoData, processedCryptoDataClass } from '../../types/processedCryptoData';
@@ -10,7 +10,7 @@ import { processedCryptoData, processedCryptoDataClass } from '../../types/proce
 })
 
 
-export class CryptoListComponent implements OnInit /*, AfterVieInit */ {
+export class CryptoListComponent implements OnInit, OnChanges,AfterViewInit {
   data: CryptoInfo | undefined;
   price: number = 0;
   interval: any;
@@ -29,8 +29,17 @@ export class CryptoListComponent implements OnInit /*, AfterVieInit */ {
     return item?.id;
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes)
+  }
+
+ngAfterViewInit(): void {
+  // setInterval(()=> {
+  //   this.ngOnInit();
+  // },30000)
+}
   ngOnInit() {
-    // this.interval = setInterval(() => {
+   //  this.interval = setInterval(() => {
 
     this.cryptoService.getCryptoData(this.cryptos).subscribe({
       next: (result) => {
@@ -55,7 +64,7 @@ export class CryptoListComponent implements OnInit /*, AfterVieInit */ {
       }
     });
     this.oldArray = this.processedDataArray;
-     // }, 3000);
+    //  }, 3000);
   }
 }
 //  ngAfterViewInit(){

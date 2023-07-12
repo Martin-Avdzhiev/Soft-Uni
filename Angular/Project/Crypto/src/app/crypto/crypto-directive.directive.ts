@@ -12,15 +12,15 @@ export class CryptoDirectiveDirective {
 
   constructor(private elementRef: ElementRef, private renderer: Renderer2, private cryptoService: CryptoService) { }
 
-  // loadPriceColor(price:number){
-  //   if(this.oldPrice < price){
-  //     this.renderer.addClass(this.elementRef.nativeElement,'green');
-  //   }
-  //   else{
-  //     this.renderer.addClass(this.elementRef.nativeElement,'red');
-  //   }
-  //   this.oldPrice = price;
-  // }
+  loadPriceColor(price:number){
+    if(this.oldPrice < price){
+      this.renderer.addClass(this.elementRef.nativeElement,'green');
+    }
+    else{
+      this.renderer.addClass(this.elementRef.nativeElement,'red');
+    }
+    this.oldPrice = price;
+  }
 
   
   }
