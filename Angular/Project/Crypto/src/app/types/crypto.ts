@@ -12,9 +12,10 @@ export interface CryptoData {
   vwap24Hr: string;
   explorer: string;
   timestamp: number;
+  miniDescription: string;
 }
 
-export class PostCryptoData {
+export class LocalCryptoData {
   id: string = '';
   rank: string = '';
   symbol: string = '';
@@ -23,4 +24,6 @@ export class PostCryptoData {
   maxSupply: string = '';
   explorer: string = '';
   description: string = '';
+  image: string = '';
+  miniDescription: string = '';
 }

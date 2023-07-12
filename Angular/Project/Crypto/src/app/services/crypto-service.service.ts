@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CryptoData, PostCryptoData } from '../types/crypto';
+import { CryptoData, LocalCryptoData } from '../types/crypto';
 import { processedCryptoDataClass } from '../types/processedCryptoData'
-const cryptoApiUrl = 'https://api.coincap.io/v2/assets'
-const localApiUrl = 'http://localhost:3000/api'
+const cryptoApiUrl = 'https://api.coincap.io/v2/assets';
+const localApiUrl = 'http://localhost:3000/api';
+const bitcoinNewsApiUrl = 'https://newsapi.org/v2/everything?q=bitcoin&apiKey=11a117fc8dce43a6a79d7d6c8a77a83a';
 
 @Injectable({
   providedIn: 'root'
@@ -21,15 +22,19 @@ export class CryptoService {
     return this.http.get<{ data: CryptoData[] }>(`${cryptoApiUrl}?ids=${crypto}`);
   }
   
-  getSingleCryptoData(crypto: string) {
-    return this.http.get<PostCryptoData>(`${localApiUrl}/cryptos/${crypto}`);
+  getLocalSingleCryptoData(crypto: string) {
+    return this.http.get<LocalCryptoData>(`${localApiUrl}/cryptos/${crypto}`);
+  }
+
+  getLocalAllCryptoData(){
+    return this.http.get<LocalCryptoData[]>(`${localApiUrl}/cryptos/all`);
   }
 
   sortByMarketCap(array: processedCryptoDataClass[]) {
     return array.sort((a: processedCryptoDataClass, b: processedCryptoDataClass) => b.oldMarketCap - a.oldMarketCap);
   }
   
-  postSingleCryptoData(data: PostCryptoData, id: string) {
+  postSingleCryptoData(data: LocalCryptoData, id: string) {
     console.log(`${localApiUrl}/cryptos/${id}`)
     return this.http.post(`${localApiUrl}/cryptos/${id}`, data).subscribe({
       next: (res) => {
@@ -69,19 +74,18 @@ export class CryptoService {
     return this.stringMarketCap
   }
 
-  transformPrice(price: string, crypto: string): string {
+  transformPrice(price: string): string {
     let [integer, float] = price.split('.');
     if (!float) {
-      if (crypto == 'XRP') { return integer + '.000' }
+      if (Number(integer)<100) { return price + '.000' }
       else { return integer + '.00' }
     }
-    if (float?.length < 2 && crypto != 'XRP') {
-      if (float?.length < 2) { return integer + '.' + float + '0' }
-      return integer
+    if (float?.length < 2 && Number(integer)>=100) {
+      if (float?.length < 2) { return price + '0' }
     }
-    else if (float?.length < 3 && crypto == 'XRP') {
-      if (float?.length < 2) { return integer + '.' + float + '00' }
-      else if (float?.length < 3) { return integer + '.' + float + '0' }
+    else if (Number(integer)<100) {
+      if (float?.length < 2) { return price + '00' }
+      else if (float?.length < 3) { return price + '0' }
     }
     return price
   }

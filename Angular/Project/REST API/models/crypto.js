@@ -32,6 +32,10 @@ const CryptoSchema = new mongoose.Schema({
     descripton: {
         type:String,
         required: true
+    },
+    miniDescription: {
+        type: String,
+        required:true
     }
 });
 

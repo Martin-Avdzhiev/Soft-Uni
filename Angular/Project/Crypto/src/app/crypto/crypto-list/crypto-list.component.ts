@@ -10,7 +10,7 @@ import { processedCryptoData, processedCryptoDataClass } from '../../types/proce
 })
 
 
-export class CryptoListComponent implements OnInit, OnChanges,AfterViewInit {
+export class CryptoListComponent implements OnInit, OnChanges, AfterViewInit {
   data: CryptoData | undefined;
   price: string | undefined;
   interval: any;
@@ -33,23 +33,26 @@ export class CryptoListComponent implements OnInit, OnChanges,AfterViewInit {
     console.log(changes)
   }
 
-ngAfterViewInit(): void {
-  // setInterval(()=> {
-  //   this.ngOnInit();
-  // },30000)
-}
+  ngAfterViewInit(): void {
+    // setInterval(()=> {
+    //   this.ngOnInit();
+    // },30000)
+  }
   ngOnInit() {
     this.cryptoService.getCryptoData(this.cryptos).subscribe({
       next: (result) => {
-          this.processedDataArray = result?.data.map((value) => {
+        this.processedDataArray = result?.data.map((value) => {
           this.processedData = new processedCryptoDataClass();
           this.marketCap = this.cryptoService.transformMarketCap(value.marketCapUsd);
-          this.price = Number(value.priceUsd).toFixed(2);
+          console.log(value.priceUsd)
+          if (Number(value.priceUsd) <= 100) { this.price = Number(value.priceUsd).toFixed(3); }
+          else { this.price = Number(value.priceUsd).toFixed(2); }
+          console.log(this.price)
           this.isPumping = Number(value.changePercent24Hr) >= 0;
           this.processedData.routerLinkVariable = `/cryptos/${value.id}`;
           this.processedData.marketCap = this.marketCap;
           this.processedData.name = value.name;
-          this.processedData.price = this.cryptoService.transformPrice(this.price,this.processedData.name);
+          this.processedData.price = this.cryptoService.transformPrice(this.price);
           this.processedData.isPumping = this.isPumping;
           this.processedData.symbol = value?.symbol;
           this.processedData.oldMarketCap = Number(value.marketCapUsd);

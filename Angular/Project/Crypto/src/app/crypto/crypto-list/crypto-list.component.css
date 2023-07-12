@@ -3,9 +3,12 @@
   .crypto-card {
     background-color: #f2f2f2;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 32px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 3px;
+    border-radius: 15px;
+    
   }
   
   h2,span{
@@ -21,6 +24,8 @@
   .main-h2{
     font-family: system-ui;
     font-weight: 800;
+    margin-bottom: 5px;
+
   }
   .crypto-card h2, a {
     margin-top: 0;
@@ -29,6 +34,7 @@
   
   .crypto-card p {
     margin: 5px 0;
+
   }
 
   .red{
@@ -44,14 +50,18 @@
   }
 .link {
   color:black;
-  border: 1px solid black;
-  background-color: white;
+  
+  background-color: #f2f2f2;
   padding: 2px;
   font-family:sans-serif;
+  border-radius: 20px;
+  box-shadow: 0,0,0,0.2;
+
 }
 .link:hover{
   color: white;
   border: 1px solid white;
   background-color: black;
   padding: 7px;
+  border-radius: 20px;
 }

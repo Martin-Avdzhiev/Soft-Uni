@@ -8,6 +8,7 @@ export class processedCryptoData {
     changePercent24Hr: number = 0;
     id: string = '';
     routerLinkVariable: string = '';
+    miniDescription: string = '';
 }
 
 export class processedCryptoDataClass implements processedCryptoData {
@@ -20,4 +21,18 @@ export class processedCryptoDataClass implements processedCryptoData {
     changePercent24Hr: number = 0;
     id: string = '';
     routerLinkVariable: string = '';
+    miniDescription: string = '';
+}
+
+export class processedLocalCryptoDataClass {
+    id: string = '';
+    rank: string = '';
+    symbol: string = '';
+    name: string = '';
+    supply: string = '';
+    maxSupply: string = '';
+    explorer: string = '';
+    description: string = '';
+    image: string = '';
+    miniDescription: string = '';
 }

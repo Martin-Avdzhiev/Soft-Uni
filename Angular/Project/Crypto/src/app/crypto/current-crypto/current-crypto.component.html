@@ -1,12 +1,10 @@
-<div class="crypto-page" *ngIf="postData" >
-  <p>image</p>
-  <h2>{{ postData.name}}</h2>
-  <!-- <img [src]="cryptoImage" alt="{{ cryptoData.data.name }} Image" /> -->
+<div class="crypto-page" *ngIf="localData" >
+  <img [src]="localData.image" [alt]="alt"/> 
+  <h2>{{ localData.name}}</h2>
   <div class="price">
     <h3>Price: {{ price }} USD</h3>
   </div>
   <div class="description">
-    <!-- <p>{{ cryptoDescription }}</p> -->
-    <p>{{postData.description}}</p>
+    <p>{{localData.description}}</p>
   </div>
 </div>
