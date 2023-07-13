@@ -75,6 +75,7 @@ export class CryptoService {
   }
 
   transformPrice(price: string): string {
+
     let [integer, float] = price.split('.');
     if (!float) {
       if (Number(integer)<100) { return price + '.000' }
