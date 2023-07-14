@@ -39,7 +39,7 @@
 
       <div *ngIf="crypto.isPumping && !isLoading">
         <div>
-          <span>Price: </span><span appCryptoDirective [symbol]="crypto.id"> ${{crypto.price}} </span>
+          <span>Price: </span><span appCryptoDirective [currentPrice]="crypto.price" appCryptoDirective> ${{crypto.price}} </span>
           <p><span>Market Cap: </span> <span> ${{crypto.marketCap}} </span>
           <p><span>Change 24h: <span class="green">{{crypto.changePercent24Hr}}% &#8599;</span></span></p>
         </div>
@@ -48,7 +48,7 @@
 
 
     <div *ngIf="!crypto.isPumping && !isLoading">
-      <span>Price: </span><span appCryptoDirective [symbol]="crypto.id"> ${{crypto.price}}</span>
+      <span>Price: </span><span appCryptoDirective [currentPrice]="crypto.price" appCryptoDirective> ${{crypto.price}}</span>
       <p><span>Market Cap: </span> <span> ${{crypto.marketCap}}</span>
       <p><span>Change 24h: <span class="red">{{crypto.changePercent24Hr}}% &#8600;</span></span></p>
     </div>

@@ -8,7 +8,10 @@ import { CurrentCryptoComponent } from './current-crypto/current-crypto.componen
 
 
 @NgModule({
-  declarations: [CryptoListComponent, CryptoDirectiveDirective, CurrentCryptoComponent],
+  declarations: [CryptoListComponent,
+    CryptoDirectiveDirective,
+    CurrentCryptoComponent
+  ],
   imports: [
     CommonModule,
     CryptoRoutingModule
