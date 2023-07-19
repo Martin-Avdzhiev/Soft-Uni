@@ -11,6 +11,7 @@ import { UserModule } from './user/user.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CryptoModule } from './crypto/crypto.module';
+import {CookieService} from 'ngx-cookie-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +25,9 @@ import { CryptoModule } from './crypto/crypto.module';
     CoreModule,
     UserModule,
     HttpClientModule,
-    CryptoModule
+    CryptoModule,
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

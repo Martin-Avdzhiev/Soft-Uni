@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
 
 @Component({
   selector: 'app-register',
@@ -7,7 +8,10 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+  constructor(private authService: AuthServiceService){}
 register(form: NgForm):void{
-  console.log(form.value)
+  if(form.invalid) return;
+  this.authService.postRegister(form.value);
+  //console.log(form.value)
 }
 }

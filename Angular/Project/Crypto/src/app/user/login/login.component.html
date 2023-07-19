@@ -3,8 +3,11 @@
 
   <form #form="ngForm" (ngSubmit)="login(form)">
     <label for="username">Username:</label>
-    <input type="text" id="username" name="username" placeholder="Enter your username" ngModel required>
-
+    <input type="text" id="username" name="username" placeholder="Enter your username" ngModel required minlength="6"
+      #username="ngModel">
+    <ng-container *ngIf="username.touched">
+      <p class="error" *ngIf="username.errors?.['required']">Username is required</p>
+    </ng-container>
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" placeholder="Enter your password" ngModel required>
 

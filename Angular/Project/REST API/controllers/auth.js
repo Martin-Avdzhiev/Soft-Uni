@@ -14,7 +14,6 @@ const removePassword = (data) => {
 
 function register(req, res, next) {
     const {email, username, password, repeatPassword } = req.body;
-        console.log('hi')
     if(password != repeatPassword){
         return res.send({ message: 'Passwords must be the same!' });
     }
@@ -49,7 +48,7 @@ function register(req, res, next) {
 
 function login(req, res, next) {
     const { username, password } = req.body;
-
+    console.log('hi')
     userModel.findOne({ username })
         .then(user => {
             return Promise.all([user, user ? user.matchPassword(password) : false]);

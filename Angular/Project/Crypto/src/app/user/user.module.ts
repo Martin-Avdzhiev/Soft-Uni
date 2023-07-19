@@ -4,7 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserRoutingModule } from './user-routing.module';
 import { FormsModule } from '@angular/forms';
-
+import {CookieService} from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -16,6 +16,9 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     UserRoutingModule,
     FormsModule
+  ],
+  providers:[
+    CookieService
   ],
   exports: [
     LoginComponent,
