@@ -14,7 +14,9 @@
       <label for="confirm-password">Confirm Password:</label>
       <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" ngModel required>
       
-      <input type="submit" value="Register">
+      
+      <input type="submit" value="Register" *ngIf="!form.invalid">
+      <input type="submit" value="Register" *ngIf="form.invalid" disabled style="background-color: grey;">
       <button class="login-button" routerLink="/login">Login</button>
     </form>
   </div>

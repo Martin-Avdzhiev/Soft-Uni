@@ -6,7 +6,7 @@ const CryptoModel = require('../models/crypto');
 
  router.get('/all', async (req ,res)=> {
 
-    console.log('hiasd')
+
     const currentCrypto = await CryptoModel.find();
 
     res.json(currentCrypto)
