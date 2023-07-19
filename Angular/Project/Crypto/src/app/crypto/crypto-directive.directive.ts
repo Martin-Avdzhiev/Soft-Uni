@@ -1,4 +1,4 @@
-import { Directive, ElementRef, OnInit, Renderer2, AfterViewInit, OnChanges, SimpleChanges, Input } from '@angular/core';
+import { Directive, ElementRef, Renderer2, OnChanges, SimpleChanges, Input } from '@angular/core';
 import { CryptoService } from '../services/crypto-service.service';
 @Directive({
   selector: '[appCryptoDirective]'
@@ -13,22 +13,20 @@ export class CryptoDirectiveDirective implements OnChanges {
   ngOnChanges(SimpleChanges: SimpleChanges): void {
     this.previousValue = SimpleChanges['currentPrice']?.previousValue;
     if (this.previousValue) {
-      if (Number(this.currentPrice) > Number(this.previousValue)) {
+      if (Number(this.currentPrice) < Number(this.previousValue)) {
         this.renderer.addClass(this.elementRef.nativeElement, 'red');
         setTimeout(()=>{
           this.renderer.removeClass(this.elementRef.nativeElement, 'red');
-        },3500);
+        },5000);
       }
       else {
         this.renderer.addClass(this.elementRef.nativeElement, 'green');
         setTimeout(()=>{
           this.renderer.removeClass(this.elementRef.nativeElement, 'green');
-        },3500);
+        },5000);
       }
     }
   }
-
-
 
 }
 

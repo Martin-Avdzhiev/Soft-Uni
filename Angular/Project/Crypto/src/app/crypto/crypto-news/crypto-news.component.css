@@ -1,0 +1,36 @@
+
+  .news-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .news-article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .news-image {
+    flex: 0 0 200px;
+    margin-right: 20px;
+  }
+  
+  .news-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .news-content {
+    flex: 1;
+  }
+  
+  .news-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .news-description {
+    font-size: 14px;
+  }

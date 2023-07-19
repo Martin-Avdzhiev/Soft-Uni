@@ -1,0 +1,18 @@
+<div class="news-container" *ngIf="data">
+  <div class="news-image">
+    <img src="{{data.urlToImage}}" alt="Image" />
+  </div>
+
+  <div class="news-content">
+    <h2 class="news-title">{{data.title}}</h2>
+    <p class="news-author" *ngIf="data.author">Author - {{data.author}}</p>
+
+    <p>{{data.content}}</p>
+    <p class="news-link">
+      <a href="{{data.url}}" target="_blank">Read the full article here</a>
+    </p>
+  </div>
+
+  <p class="news-date">{{data.publishedAt}}</p>
+
+</div>

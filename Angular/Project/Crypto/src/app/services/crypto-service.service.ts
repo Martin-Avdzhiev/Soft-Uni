@@ -2,10 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CryptoData, LocalCryptoData } from '../types/crypto';
 import { processedCryptoDataClass } from '../types/processedCryptoData'
+import { CryptoNew } from '../types/crypto-new';
 const cryptoApiUrl = 'https://api.coincap.io/v2/assets';
 const localApiUrl = 'http://localhost:3000/api';
-const bitcoinNewsApiUrl = 'https://newsapi.org/v2/everything?q=bitcoin&apiKey=11a117fc8dce43a6a79d7d6c8a77a83a';
-
+const cryptoNewsApiUrl = 'https://newsapi.org/v2/everything?q=bitcoin&pageSize=3&apiKey=11a117fc8dce43a6a79d7d6c8a77a83a';
+const fisrtPartCryptoNewApiUrl = 'https://newsapi.org/v2/everything?q=' //between the two parts will be description
+const secondPartCryptoNewApiUrl = '&apiKey=11a117fc8dce43a6a79d7d6c8a77a83a'
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +17,19 @@ export class CryptoService {
 
   constructor(private http: HttpClient) { }
 
+  getSingleCryptoNewByDescription(description:string){
+    if(description) {
+      const removeLastWord = description.split(' ');
+      removeLastWord.pop();
+      description = removeLastWord.join(' ');
+    }
+    console.log(description)
+    return this.http.get<{articles: CryptoNew[]}>(fisrtPartCryptoNewApiUrl + description + secondPartCryptoNewApiUrl);
+  }
 
+  getThreeCryptoNews(){
+    return this.http.get<{ articles: CryptoNew[]}>(cryptoNewsApiUrl);
+  }
 
   
   getCryptoData(crypto: string) {
