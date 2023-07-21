@@ -5,7 +5,7 @@
         <img src="{{cryptoNew.urlToImage}}" alt="Image" [routerLink]="[cryptoNew.routerLinkVariable]"/>
       </div>
       <div class="news-content">
-        <h2 class="news-title">{{cryptoNew.title}}</h2>
+        <h2 class="news-title" [routerLink]="[cryptoNew.routerLinkVariable]">{{cryptoNew.title}}</h2>
         <p class="news-description">{{cryptoNew.description}}</p>
       </div>
     </div>
