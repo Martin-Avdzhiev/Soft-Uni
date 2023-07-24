@@ -17,37 +17,37 @@ export class CryptoService {
 
   constructor(private http: HttpClient) { }
 
-  getSingleCryptoNewByDescription(description:string){
-    if(description) {
+  getSingleCryptoNewByDescription(description: string) {
+    if (description) {
       const removeLastWord = description.split(' ');
       removeLastWord.pop();
       description = removeLastWord.join(' ');
     }
     console.log(description)
-    return this.http.get<{articles: CryptoNew[]}>(fisrtPartCryptoNewApiUrl + description + secondPartCryptoNewApiUrl);
+    return this.http.get<{ articles: CryptoNew[] }>(fisrtPartCryptoNewApiUrl + description + secondPartCryptoNewApiUrl);
   }
 
-  getThreeCryptoNews(){
-    return this.http.get<{ articles: CryptoNew[]}>(cryptoNewsApiUrl);
+  getThreeCryptoNews() {
+    return this.http.get<{ articles: CryptoNew[] }>(cryptoNewsApiUrl);
   }
 
-  
+
   getCryptoData(crypto: string) {
     return this.http.get<{ data: CryptoData[] }>(`${cryptoApiUrl}?ids=${crypto}`);
   }
-  
+
   getLocalSingleCryptoData(crypto: string) {
     return this.http.get<LocalCryptoData>(`${localApiUrl}/cryptos/${crypto}`);
   }
 
-  getLocalAllCryptoData(){
+  getLocalAllCryptoData() {
     return this.http.get<LocalCryptoData[]>(`${localApiUrl}/cryptos/all`);
   }
 
   sortByMarketCap(array: processedCryptoDataClass[]) {
     return array.sort((a: processedCryptoDataClass, b: processedCryptoDataClass) => b.oldMarketCap - a.oldMarketCap);
   }
-  
+
   postSingleCryptoData(data: LocalCryptoData, id: string) {
     console.log(`${localApiUrl}/cryptos/${id}`)
     return this.http.post(`${localApiUrl}/cryptos/${id}`, data).subscribe({
@@ -91,17 +91,9 @@ export class CryptoService {
   transformPrice(price: string): string {
 
     let [integer, float] = price.split('.');
-    if (!float) {
-      if (Number(integer)<100) { return price + '.000' }
-      else { return integer + '.00' }
+    if (Number(integer) < 100) {
+      return Number(price).toFixed(3);
     }
-    if (float?.length < 2 && Number(integer)>=100) {
-      if (float?.length < 2) { return price + '0' }
-    }
-    else if (Number(integer)<100) {
-      if (float?.length < 2) { return price + '00' }
-      else if (float?.length < 3) { return price + '0' }
-    }
-    return price
+    else { return Number(price).toFixed(2) };
   }
 }
