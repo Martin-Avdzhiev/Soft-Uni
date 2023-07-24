@@ -38,7 +38,7 @@ function register(req, res, next) {
                 field = field.split(" dup key")[0];
                 field = field.substring(0, field.lastIndexOf("_"));
 
-                res.status(409)
+                res.status(401)
                     .send({ message: `This ${field} is already registered!` });
                 return;
             }

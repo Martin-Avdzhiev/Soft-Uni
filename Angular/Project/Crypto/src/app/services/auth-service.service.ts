@@ -14,16 +14,16 @@ export class AuthServiceService {
   postRegister(data: Register) {
     this.http.post(registerUrl, data).subscribe({
       next: (res) => {
-        console.log(res)
         this.cookieService.set('username', data.username);
+        this.cookieService.delete('error');
       }, error: (error) => this.cookieService.set('error', error.error.message)
     });
   }
   postLogin(data: Login): string | void {
     this.http.post(loginUrl, data).subscribe({
       next: (res) => {
-        console.log(res)
         this.cookieService.set('username', data.username);
+        this.cookieService.delete('error');
       }, error: (error) => {
         this.cookieService.set('error', error.error.message);
       }

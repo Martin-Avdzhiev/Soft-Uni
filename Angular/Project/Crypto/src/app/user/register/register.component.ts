@@ -13,7 +13,9 @@ export class RegisterComponent {
 register(form: NgForm):void{
   if(form.invalid) return;
   this.authService.postRegister(form.value);
-  const isError = this.cookieService.get('error');
-    if (isError) this.error = isError;
+  setTimeout(()=>{
+    const isError = this.cookieService.get('error');
+    this.error = isError;
+  },400);
 }
 }
