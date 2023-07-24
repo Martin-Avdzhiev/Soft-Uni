@@ -6,7 +6,6 @@ import { CryptoService } from '../services/crypto-service.service';
 export class CryptoDirectiveDirective implements OnChanges {
   @Input() currentPrice: string = '';
   previousValue: string | undefined;
-  // cryptoData$ = interval(3000).pipe(switchMap(() => this.cryptoService.getCryptoData(this.symbol)));
 
   constructor(private elementRef: ElementRef, private renderer: Renderer2, private cryptoService: CryptoService,) { }
 

@@ -19,6 +19,7 @@
   .news-image img {
     width: 100%;
     height: auto;
+    cursor: pointer;
   }
   
   .news-content {
@@ -29,6 +30,7 @@
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    cursor: pointer;
   }
   
   .news-description {
