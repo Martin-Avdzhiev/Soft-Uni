@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Register, Login } from '../types/user';
-import { CookieService } from 'ngx-cookie-service'
+import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 const registerUrl = 'http://localhost:3000/api/register'; //POST
 const loginUrl = 'http://localhost:3000/api/login'; //POST
 
@@ -10,12 +11,13 @@ const loginUrl = 'http://localhost:3000/api/login'; //POST
 })
 export class AuthServiceService {
 
-  constructor(private http: HttpClient, private cookieService: CookieService) { }
+  constructor(private http: HttpClient, private cookieService: CookieService, private router: Router) { }
   postRegister(data: Register) {
     this.http.post(registerUrl, data).subscribe({
       next: (res) => {
         this.cookieService.set('username', data.username);
         this.cookieService.delete('error');
+        this.router.navigate(['/']);
       }, error: (error) => this.cookieService.set('error', error.error.message)
     });
   }
@@ -24,6 +26,7 @@ export class AuthServiceService {
       next: (res) => {
         this.cookieService.set('username', data.username);
         this.cookieService.delete('error');
+        this.router.navigate(['/']);
       }, error: (error) => {
         this.cookieService.set('error', error.error.message);
       }
