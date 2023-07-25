@@ -8,6 +8,7 @@ import {CookieService} from 'ngx-cookie-service';
 import { ProfileComponent } from './profile/profile.component';
 
 
+
 @NgModule({
   declarations: [
     LoginComponent,
@@ -17,7 +18,7 @@ import { ProfileComponent } from './profile/profile.component';
   imports: [
     CommonModule,
     UserRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers:[
     CookieService

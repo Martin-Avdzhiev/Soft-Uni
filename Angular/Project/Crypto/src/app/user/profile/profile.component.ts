@@ -6,8 +6,11 @@ import { AuthServiceService } from 'src/app/services/auth-service.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit{
+  email: string | undefined;
+  username: string | undefined;
   constructor(private authService : AuthServiceService){};
   ngOnInit(): void {
-    this.authService.getProfileInfo('MartotoBG')
+   [this.email, this.username] = this.authService.getProfileInfo();
+
   }
 }

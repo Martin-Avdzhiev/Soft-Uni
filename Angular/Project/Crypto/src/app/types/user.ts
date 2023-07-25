@@ -10,6 +10,9 @@ export interface Login{
 }
 
 export interface Profile{
-    username: string;
+    created_at: string;
     email: string;
+    updatedAt: string;
+    username: string;
+    _id: string;
 }

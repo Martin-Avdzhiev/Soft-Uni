@@ -8,7 +8,8 @@ const {
 function auth(redirectUnauthenticated = true) {
 
     return function (req, res, next) {
-        const token = req.cookies[authCookieName] || '';
+        const token = req.cookies[authCookieName] || 'asd';
+        console.log(token)
         Promise.all([
             jwt.verifyToken(token),
             tokenBlacklistModel.findOne({ token })

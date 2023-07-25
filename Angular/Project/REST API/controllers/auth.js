@@ -48,6 +48,7 @@ function register(req, res, next) {
 
 function login(req, res, next) {
     const { username, password } = req.body;
+    console.log(username, password)
     userModel.findOne({ username })
         .then(user => {
             return Promise.all([user, user ? user.matchPassword(password) : false]);
@@ -69,7 +70,7 @@ function login(req, res, next) {
                 res.cookie(authCookieName, token, { httpOnly: true })
             }
             res.status(200)
-                .send([user, token]);
+                .send(user);
         })
         .catch(next);
 }
@@ -88,7 +89,7 @@ function logout(req, res) {
 
 function getProfileInfo(req, res, next) {
     const { username: username } = req.user;
-
+    console.log(username)
     userModel.findOne({ username: username }, { password: 0, __v: 0 }) //finding by Id and returning without password and __v
         .then(user => { res.status(200).json(user) })
         .catch(next);

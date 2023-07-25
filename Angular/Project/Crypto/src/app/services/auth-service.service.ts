@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams, HttpResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Register, Login } from '../types/user';
 import { CookieService } from 'ngx-cookie-service';
@@ -19,9 +19,8 @@ export class AuthServiceService {
   postRegister(data: Register) {
     this.http.post(registerUrl, data).subscribe({
       next: (res: any) => {
-        const jwt = res[1];
-        this.cookieService.set('username', data.username);
-        this.cookieService.set('jwt', jwt);
+        this.cookieService.set('username', res.username);
+        this.cookieService.set('email', res.email);
         this.cookieService.delete('error');
         this.router.navigate(['/']);
       }, error: (error) => this.cookieService.set('error', error.error.message)
@@ -30,24 +29,20 @@ export class AuthServiceService {
   postLogin(data: Login): string | void {
     this.http.post(loginUrl, data).subscribe({
       next: (res: any) => {
-        const jwt = res[1];
-        this.cookieService.set('username', data.username);
-        this.cookieService.set('jwt', jwt);
+        this.cookieService.set('username', res.username);
+        this.cookieService.set('email', res.email);
         this.cookieService.delete('error');
         this.router.navigate(['/']);
       }, error: (error) => {
+        console.log(error)
         this.cookieService.set('error', error.error.message);
       }
     });
   }
 
-  getProfileInfo(username: string): void {
-    const usernameHttp = new HttpParams().set('username', username);
-    this.http.get(profileUrl, { params: usernameHttp }).subscribe({
-      next: (profile) => {
-        console.log(profile)
-        //return profile
-      }, error: (error) => console.log(error)
-    })
+  getProfileInfo(): string[] {
+    const email = this.cookieService.get('email');
+    const username = this.cookieService.get('username');
+    return [email, username]
   }
 }
