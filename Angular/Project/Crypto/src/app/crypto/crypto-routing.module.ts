@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CurrentCryptoComponent } from './current-crypto/current-crypto.component';
 import { CryptoNewsComponent } from './crypto-news/crypto-news.component';
 import { CurrentCryptoNewComponent } from './current-crypto-new/current-crypto-new.component';
+import { NotFoundComponent } from '../not-found/not-found.component';
 
 
 const routes: Routes = [{
@@ -16,6 +17,9 @@ const routes: Routes = [{
 {
   path: 'crypto-news/:description',
   component: CurrentCryptoNewComponent
+},
+{
+  path: '**', component: NotFoundComponent
 }
 ];
 

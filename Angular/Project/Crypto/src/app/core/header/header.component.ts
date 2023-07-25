@@ -1,5 +1,6 @@
-import { Component, OnInit, OnChanges, SimpleChanges, DoCheck } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,7 +8,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class HeaderComponent implements OnInit, DoCheck{
     username: string | undefined;
-    constructor(private cookieService: CookieService){}
+    constructor(private cookieService: CookieService, private router: Router){}
    ngOnInit(): void {
      this.username = this.cookieService.get('username');
    }
@@ -16,5 +17,6 @@ export class HeaderComponent implements OnInit, DoCheck{
    }
    logout():void{
     this.cookieService.delete('username');
+    this.router.navigate(['/']);
    }
 }

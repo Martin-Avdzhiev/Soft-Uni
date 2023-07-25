@@ -12,12 +12,14 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CryptoModule } from './crypto/crypto.module';
 import {CookieService} from 'ngx-cookie-service';
+import { NotFoundComponent } from './not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     MainDescriptionListComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
