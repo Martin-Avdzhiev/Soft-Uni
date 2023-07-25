@@ -11,6 +11,5 @@ export class ProfileComponent implements OnInit{
   constructor(private authService : AuthServiceService){};
   ngOnInit(): void {
    [this.email, this.username] = this.authService.getProfileInfo();
-
   }
 }

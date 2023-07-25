@@ -13,3 +13,27 @@
     font-size: 18px;
 
   }
+
+  /* .login{
+    padding-right: 15px;
+  }
+  .register{
+    margin-left: 15px;
+  } */
+
+  .buttons{
+    display: flex;
+    justify-content: space-around;
+  }
+  button{
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+  }
+
+  a{
+    color: black;
+  }
+  .button>p {
+    font-size: 18px;
+  }

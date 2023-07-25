@@ -4,20 +4,24 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthActivate } from '../core/guards/auth.activate';
+import { AntiAuthActivate } from '../core/guards/antiAuth.activate';
 
-const routes: Routes = [{
-  path: 'login',
-  component: LoginComponent
-},
-{
+const routes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent,
+    canActivate: [AntiAuthActivate]
+  },
+  {
     path: 'register',
-    component: RegisterComponent
-},
-{
+    component: RegisterComponent,
+    canActivate: [AntiAuthActivate]
+  },
+  {
     path: 'profile',
     component: ProfileComponent,
     canActivate: [AuthActivate]
-}
+  }
 ];
 
 @NgModule({
