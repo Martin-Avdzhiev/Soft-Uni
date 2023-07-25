@@ -19,7 +19,7 @@ export class CurrentCryptoComponent implements OnInit, AfterViewInit {
     if (this.id) {
       this.cryptoService.getCryptoData(this.id).subscribe({
         next: (value) => {
-          this.price = this.cryptoService.transformPrice(Number(value?.data[0].priceUsd).toFixed(2));
+          this.price = this.cryptoService.transformPrice(value?.data[0].priceUsd);
         },
         error: (error) => console.log(error)
       });
@@ -47,7 +47,7 @@ export class CurrentCryptoComponent implements OnInit, AfterViewInit {
     //  setInterval(()=> {
     if (this.id) {
       this.cryptoService.getCryptoData(this.id).subscribe({
-        next: (value) => this.price = this.cryptoService.transformPrice(Number(value?.data[0].priceUsd).toFixed(2)),
+        next: (value) => this.price = this.cryptoService.transformPrice(value?.data[0].priceUsd),
         error: (error) => console.log(error)
       });
     }

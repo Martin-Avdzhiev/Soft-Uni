@@ -89,7 +89,6 @@ export class CryptoService {
   }
 
   transformPrice(price: string): string {
-
     let [integer, float] = price.split('.');
     if (Number(integer) < 100) {
       return Number(price).toFixed(3);
