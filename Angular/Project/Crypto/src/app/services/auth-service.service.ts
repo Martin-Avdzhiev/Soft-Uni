@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Register, Login } from '../types/user';
 import { CookieService } from 'ngx-cookie-service';
@@ -18,8 +18,10 @@ export class AuthServiceService {
 
   postRegister(data: Register) {
     this.http.post(registerUrl, data).subscribe({
-      next: (res) => {
+      next: (res: any) => {
+        const jwt = res[1];
         this.cookieService.set('username', data.username);
+        this.cookieService.set('jwt', jwt);
         this.cookieService.delete('error');
         this.router.navigate(['/']);
       }, error: (error) => this.cookieService.set('error', error.error.message)
@@ -27,8 +29,10 @@ export class AuthServiceService {
   }
   postLogin(data: Login): string | void {
     this.http.post(loginUrl, data).subscribe({
-      next: (res) => {
+      next: (res: any) => {
+        const jwt = res[1];
         this.cookieService.set('username', data.username);
+        this.cookieService.set('jwt', jwt);
         this.cookieService.delete('error');
         this.router.navigate(['/']);
       }, error: (error) => {

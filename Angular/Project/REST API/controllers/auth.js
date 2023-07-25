@@ -69,7 +69,7 @@ function login(req, res, next) {
                 res.cookie(authCookieName, token, { httpOnly: true })
             }
             res.status(200)
-                .send(user);
+                .send([user, token]);
         })
         .catch(next);
 }
