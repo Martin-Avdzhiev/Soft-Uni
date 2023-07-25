@@ -22,7 +22,9 @@ export class CryptoService {
       const removeLastWord = description.split(' ');
       removeLastWord.pop();
       description = removeLastWord.join(' ');
+   
     }
+   // console.log(fisrtPartCryptoNewApiUrl + description + secondPartCryptoNewApiUrl)
     return this.http.get<{ articles: CryptoNew[] }>(fisrtPartCryptoNewApiUrl + description + secondPartCryptoNewApiUrl);
   }
 
@@ -61,7 +63,6 @@ export class CryptoService {
   transformMarketCap(marketCap: string): string {
     this.transformedMarketCap = Math.trunc(Number(marketCap));
     this.stringMarketCap = '';
-    // 12 345 678 900
     for (let i = 1; i <= this.transformedMarketCap.toString().length; i += 1) {
       this.stringMarketCap += this.transformedMarketCap.toString()[i - 1];
 

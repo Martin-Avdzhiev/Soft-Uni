@@ -13,12 +13,15 @@ export class CurrentCryptoNewComponent implements OnInit, AfterViewInit {
   constructor(private cryptoService: CryptoService, private route: ActivatedRoute) { }
   ngOnInit(): void {
     this.route.params.subscribe({
-      next: (value) => this.description = value['description'],
+      next: (value) => {
+        this.description = value['description'];
+    },
       error: (error) => console.log(error)
     })
     if (!this.description) return;
     this.cryptoService.getSingleCryptoNewByDescription(this.description).subscribe({
       next: (value) => {
+        console.log(value)
         this.data = value.articles[0];
       },
       error: (error) => console.log(error)
