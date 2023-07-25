@@ -12,6 +12,9 @@ const loginUrl = 'http://localhost:3000/api/login'; //POST
 export class AuthServiceService {
 
   constructor(private http: HttpClient, private cookieService: CookieService, private router: Router) { }
+
+
+
   postRegister(data: Register) {
     this.http.post(registerUrl, data).subscribe({
       next: (res) => {

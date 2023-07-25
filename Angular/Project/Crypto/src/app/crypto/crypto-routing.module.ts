@@ -4,6 +4,7 @@ import { CurrentCryptoComponent } from './current-crypto/current-crypto.componen
 import { CryptoNewsComponent } from './crypto-news/crypto-news.component';
 import { CurrentCryptoNewComponent } from './current-crypto-new/current-crypto-new.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
+import { AuthActivate } from '../core/guards/auth.activate';
 
 
 const routes: Routes = [{
@@ -16,7 +17,8 @@ const routes: Routes = [{
 },
 {
   path: 'crypto-news/:description',
-  component: CurrentCryptoNewComponent
+  component: CurrentCryptoNewComponent,
+  canActivate: [AuthActivate]
 },
 {
   path: '**', component: NotFoundComponent
