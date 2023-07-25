@@ -1,11 +1,12 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Register, Login } from '../types/user';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
+import { Profile } from '../types/user';
 const registerUrl = 'http://localhost:3000/api/register'; //POST
 const loginUrl = 'http://localhost:3000/api/login'; //POST
-
+const profileUrl = 'http://localhost:3000/api/users/profile'; //GET
 @Injectable({
   providedIn: 'root'
 })
@@ -34,5 +35,15 @@ export class AuthServiceService {
         this.cookieService.set('error', error.error.message);
       }
     });
+  }
+
+  getProfileInfo(username: string): void {
+    const usernameHttp = new HttpParams().set('username', username);
+    this.http.get(profileUrl, { params: usernameHttp }).subscribe({
+      next: (profile) => {
+        console.log(profile)
+        //return profile
+      }, error: (error) => console.log(error)
+    })
   }
 }
