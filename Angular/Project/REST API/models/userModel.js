@@ -8,13 +8,13 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique : true
+        unique: true
     },
     username: {
         type: String,
         required: true,
         minlength: [6, 'Username should be at least 6 characters'],
-        unique : true
+        unique: true
         // validate: {
         //     validator: function (v) {
         //         return /[a-zA-Z0-9]+/g.test(v);
@@ -25,13 +25,16 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-     //   minlength: [5, 'Password should be at least 5 characters'],
+        //   minlength: [5, 'Password should be at least 5 characters'],
         // validate: {
         //     validator: function (v) {
         //         return /[a-zA-Z0-9]+/g.test(v);
         //     },
         //     message: props => `${props.value} must contains only latin letters and digits!`
         // },
+    },
+    imageUrl: {
+        type: String,
     }
 }, { timestamps: { createdAt: 'created_at' } });
 

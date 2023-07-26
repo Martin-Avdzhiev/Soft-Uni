@@ -29,3 +29,25 @@
   p.about-me {
     margin-top: 15px;
   }
+
+  .change{
+    border-radius: 15px;
+    font-size: large;
+    margin-top: 13px;
+    cursor: pointer;
+  }
+
+  .change:hover{
+    background-color: rgb(195, 188, 188);
+  }
+
+  .avatar{
+    display: flex;
+    justify-content: center;
+    margin-top: 13px;
+  }
+  
+  input{
+    width: 400px;
+    height: 40px;
+  }

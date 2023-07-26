@@ -8,6 +8,7 @@
     <ng-container *ngIf="username.touched">
       <p class="error" *ngIf="username.errors?.['required']">Username is required</p>
     </ng-container>
+    
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" placeholder="Enter your password" ngModel required>
 

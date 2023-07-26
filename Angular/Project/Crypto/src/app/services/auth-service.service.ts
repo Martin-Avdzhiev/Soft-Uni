@@ -7,6 +7,7 @@ import { Profile } from '../types/user';
 const registerUrl = 'http://localhost:3000/api/register'; //POST
 const loginUrl = 'http://localhost:3000/api/login'; //POST
 const profileUrl = 'http://localhost:3000/api/users/profile'; //GET
+const updateProfileUrl = 'http://localhost:3000/api/users/profile'; //PUT
 @Injectable({
   providedIn: 'root'
 })
@@ -43,6 +44,25 @@ export class AuthServiceService {
   getProfileInfo(): string[] {
     const email = this.cookieService.get('email');
     const username = this.cookieService.get('username');
+    this.http.get(profileUrl).subscribe({
+      next: (res) => {
+        console.log(res)
+      }, error: (error) => console.log(error)
+    })
     return [email, username]
+  }
+  updateProfileInfo(imageUrl: string) {
+    const email = this.cookieService.get('email');
+    const username = this.cookieService.get('username');
+    const data = {
+      username,
+      email,
+      imageUrl
+    }
+    this.http.put(updateProfileUrl, data).subscribe({
+      next: (res) => {
+      },
+      error: (error) => console.log(error)
+    })
   }
 }
