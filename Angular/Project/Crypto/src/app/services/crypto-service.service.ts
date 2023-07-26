@@ -18,13 +18,15 @@ export class CryptoService {
   constructor(private http: HttpClient) { }
 
   getSingleCryptoNewByDescription(description: string) {
-    if (description) {
+
+    if (description.includes('.com')) { }
+    else if (description) {
       const removeLastWord = description.split(' ');
       removeLastWord.pop();
       description = removeLastWord.join(' ');
-   
+
     }
-   // console.log(fisrtPartCryptoNewApiUrl + description + secondPartCryptoNewApiUrl)
+    console.log(fisrtPartCryptoNewApiUrl + description + secondPartCryptoNewApiUrl)
     return this.http.get<{ articles: CryptoNew[] }>(fisrtPartCryptoNewApiUrl + description + secondPartCryptoNewApiUrl);
   }
 

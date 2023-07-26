@@ -5,7 +5,7 @@
   <p>Email: {{email}}</p>
   <button class="change" (click)="showDiv()">Change Avatar</button>
 </div>
-<div *ngIf="displayChangeAvatarDiv" class="avatar">
+<div *ngIf="displayChangeAvatarDiv" class="avatar" @fadeIn @fadeOut>
   <input type="text" placeholder="Enter image URL starting with http or https" ngModel required #imageUrl>
   <button (click)="changeAvatar(imageUrl.value)" class="changeButton">Change</button>
 </div>

@@ -6,6 +6,7 @@ import { UserRoutingModule } from './user-routing.module';
 import { FormsModule } from '@angular/forms';
 import {CookieService} from 'ngx-cookie-service';
 import { ProfileComponent } from './profile/profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -19,6 +20,7 @@ import { ProfileComponent } from './profile/profile.component';
     CommonModule,
     UserRoutingModule,
     FormsModule,
+    BrowserAnimationsModule
   ],
   providers:[
     CookieService

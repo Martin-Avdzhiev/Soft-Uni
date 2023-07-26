@@ -11,8 +11,9 @@ import { UserModule } from './user/user.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CryptoModule } from './crypto/crypto.module';
-import {CookieService} from 'ngx-cookie-service';
+import { CookieService } from 'ngx-cookie-service';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     UserModule,
     HttpClientModule,
     CryptoModule,
+    BrowserAnimationsModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

@@ -1,11 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthServiceService } from 'src/app/services/auth-service.service';
-import { Profile } from 'src/app/types/user';
 import { CookieService } from 'ngx-cookie-service';
+import { animate, state, style, transition, trigger, } from '@angular/animations';
+
+const enterTransition = transition(':enter', [
+  style({
+    opacity: 0,
+  }),
+  animate('1s ease-in', style({ opacity: 1 })),
+]);
+const exitTransition = transition(':leave', [
+  style({
+    opacity: 1,
+  }),
+  animate('1s ease-out', style({ opacity: 0 })),
+]);
+const fadeIn = trigger('fadeIn', [enterTransition]);
+const fadeOut = trigger('fadeOut', [exitTransition]);
+
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: ['./profile.component.css'],
+  animations: [fadeIn, fadeOut]
 })
 export class ProfileComponent implements OnInit {
   email: string | undefined;
@@ -20,7 +38,7 @@ export class ProfileComponent implements OnInit {
     this.imageUrl = this.cookieService.get('imageUrl');
     this.email = this.cookieService.get('email');
     this.username = this.cookieService.get('username');
-    if(!this.imageUrl) this.imageUrl = this.defaultImage;
+    if (!this.imageUrl) this.imageUrl = this.defaultImage;
   }
 
   showDiv(): void {
@@ -33,7 +51,7 @@ export class ProfileComponent implements OnInit {
     if (match) this.isValidImageUrl = true;
     else {
       this.isValidImageUrl = false;
-      this.error = 'The image URL must start with http//: or https//:'
+      this.error = 'The image URL must start with http:// or https://';
       return
     }
     const input = match.input;
