@@ -7,6 +7,6 @@
 </div>
 <div *ngIf="displayChangeAvatarDiv" class="avatar">
   <input type="text" placeholder="Enter image URL starting with http or https" ngModel required #imageUrl>
-  <button (click)="changeAvatar(imageUrl.value)">Change</button>
+  <button (click)="changeAvatar(imageUrl.value)" class="changeButton">Change</button>
 </div>
 <p *ngIf="error" class="error">{{error}}</p>

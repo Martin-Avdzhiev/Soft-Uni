@@ -35,6 +35,7 @@
     font-size: large;
     margin-top: 13px;
     cursor: pointer;
+    
   }
 
   .change:hover{
@@ -50,6 +51,7 @@
   input{
     width: 400px;
     height: 40px;
+    border-radius: 10px;
   }
 
   p.error {
@@ -59,4 +61,13 @@
     padding-top: 0;
     display: flex;
     justify-content: center;
+  }
+
+  .changeButton{
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .changeButton:hover{
+    background-color: rgb(195, 188, 188);
   }

@@ -18,6 +18,8 @@ export class ProfileComponent implements OnInit {
   constructor(private authService: AuthServiceService, private cookieService: CookieService) { };
   ngOnInit(): void {
     this.imageUrl = this.cookieService.get('imageUrl');
+    this.email = this.cookieService.get('email');
+    this.username = this.cookieService.get('username');
     if(!this.imageUrl) this.imageUrl = this.defaultImage;
   }
 
