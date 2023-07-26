@@ -21,7 +21,6 @@ export class CurrentCryptoNewComponent implements OnInit, AfterViewInit {
     if (!this.description) return;
     this.cryptoService.getSingleCryptoNewByDescription(this.description).subscribe({
       next: (value) => {
-        console.log(value)
         this.data = value.articles[0];
       },
       error: (error) => console.log(error)

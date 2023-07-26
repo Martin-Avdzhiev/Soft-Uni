@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit, DoCheck{
     this.username = this.cookieService.get('username');
    }
    logout():void{
-    this.cookieService.delete('username');
+    this.cookieService.deleteAll();
     this.router.navigate(['/']);
    }
 }

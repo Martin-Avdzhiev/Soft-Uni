@@ -9,7 +9,7 @@
         <a routerLink="/crypto-news">Crypto News</a>
     </div>
     <div class="nav-right" *ngIf="username">
-        <a routerLink="/profile">{{username}}'s profile</a>
+        <a routerLink="/profile/{{username}}">{{username}}'s profile</a>
         <a routerLink="/logout" (click)="logout()">Logout</a>
     </div>
     <div class="nav-right" *ngIf="!username">

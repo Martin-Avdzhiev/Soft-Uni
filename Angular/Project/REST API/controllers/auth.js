@@ -87,8 +87,8 @@ function logout(req, res) {
 }
 
 function getProfileInfo(req, res, next) {
-    const { id: userId } = req.user;
-    userModel.findOne({ id: userId }, { password: 0, __v: 0 }) //finding by Id and returning without password and __v
+    const username = req.params.username
+    userModel.findOne({ username: username }, { password: 0, __v: 0 }) //finding by Id and returning without password and __v
         .then(user => { res.status(200).json(user) })
         .catch(next);
 }

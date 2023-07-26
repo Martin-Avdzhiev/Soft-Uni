@@ -1,5 +1,5 @@
 <div class="profile">
-  <img src="https://content.fortune.com/wp-content/uploads/2021/02/Elon-Musk-with-Bitcoin_web.jpg"
+  <img src="{{imageUrl}}"
     alt="Profile Picture">
   <h1>{{username}}</h1>
   <p>Email: {{email}}</p>
@@ -9,3 +9,4 @@
   <input type="text" placeholder="Enter image URL starting with http or https" ngModel required #imageUrl>
   <button (click)="changeAvatar(imageUrl.value)">Change</button>
 </div>
+<p *ngIf="error" class="error">{{error}}</p>

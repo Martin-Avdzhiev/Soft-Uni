@@ -18,7 +18,7 @@ const routes: Routes = [
     canActivate: [AntiAuthActivate]
   },
   {
-    path: 'profile',
+    path: 'profile/:username',
     component: ProfileComponent,
     canActivate: [AuthActivate]
   }

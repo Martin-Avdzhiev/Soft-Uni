@@ -17,6 +17,8 @@ export class LoginComponent {
       const isError = this.cookieService.get('error');
       this.error = isError;
     }, 100);
-
+    setTimeout(() => {
+      this.authService.getProfileInfo();
+    }, 1000)
   }
 }

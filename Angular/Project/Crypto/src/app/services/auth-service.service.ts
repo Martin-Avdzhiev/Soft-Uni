@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { Profile } from '../types/user';
 const registerUrl = 'http://localhost:3000/api/register'; //POST
 const loginUrl = 'http://localhost:3000/api/login'; //POST
-const profileUrl = 'http://localhost:3000/api/users/profile'; //GET
+const profileUrl = 'http://localhost:3000/api/users/profile/'; //GET need to add /:username
 const updateProfileUrl = 'http://localhost:3000/api/users/profile'; //PUT
 @Injectable({
   providedIn: 'root'
@@ -41,16 +41,17 @@ export class AuthServiceService {
     });
   }
 
-  getProfileInfo(): string[] {
+  getProfileInfo(): Profile | void{
     const email = this.cookieService.get('email');
     const username = this.cookieService.get('username');
-    this.http.get(profileUrl).subscribe({
-      next: (res) => {
-        console.log(res)
+    this.http.get(profileUrl + username).subscribe({
+      next: (res: any) => {
+        const imageUrl = res.imageUrl;
+        this.cookieService.set('imageUrl', imageUrl);
       }, error: (error) => console.log(error)
     })
-    return [email, username]
   }
+
   updateProfileInfo(imageUrl: string) {
     const email = this.cookieService.get('email');
     const username = this.cookieService.get('username');
@@ -59,6 +60,7 @@ export class AuthServiceService {
       email,
       imageUrl
     }
+
     this.http.put(updateProfileUrl, data).subscribe({
       next: (res) => {
       },
