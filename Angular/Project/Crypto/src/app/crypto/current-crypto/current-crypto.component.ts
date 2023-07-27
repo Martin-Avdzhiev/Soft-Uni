@@ -38,7 +38,11 @@ export class CurrentCryptoComponent implements OnInit, AfterViewInit, DoCheck {
   currentAmount: number = 0;
   payAmount: number = 0;
   error: string | undefined;
+  buyingError: string | undefined;
   username: string | undefined;
+  success: string | undefined;
+  symbol: string | undefined;
+  walletBalance: number | undefined;
   showBuyCrypto(){
     if(!this.showBuyCryptoDiv){this.currentAmount = 0;}
     this.showBuyCryptoDiv = !this.showBuyCryptoDiv;
@@ -48,10 +52,24 @@ export class CurrentCryptoComponent implements OnInit, AfterViewInit, DoCheck {
    this.currentAmount = event.target.value;
   }
   buyCrypto(amount: any){
+    if(!amount.value){
+      this.buyingError = 'You must enter the amount!';
+      return
+    }
     this.payAmount = Number(amount.value) * Number(this.price);
+    if(this.payAmount < 10){
+      this.buyingError = 'You can\'t buy less than $10 worth of crypto!';
+      return
+    }
+    this.buyingError = undefined;
     this.authService.buyCrypto(this.payAmount, this.name, Number(amount.value));
+    this.walletBalance = Number(this.cookieService.get('walletBalance'));
+    if(this.walletBalance < this.payAmount) return;
+    this.success = `You successfully bought ${amount.value} ${this.symbol} for $${this.payAmount.toFixed(2)}`;
+    setTimeout(() => {
+      this.success = undefined;
+    }, 5000);
   }
-
   ngDoCheck(): void {
     this.error = this.cookieService.get('error');
     if(this.error == 'undefined') this.error = undefined;
@@ -76,6 +94,7 @@ export class CurrentCryptoComponent implements OnInit, AfterViewInit, DoCheck {
             this.localData.symbol = value?.symbol;
             this.localData.name = value?.name;
             this.name = value?.name;
+            this.symbol = value?.symbol;
             this.localData.supply = value?.supply;
             this.localData.maxSupply = value?.maxSupply;
             this.localData.explorer = value?.explorer;

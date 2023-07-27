@@ -12,8 +12,13 @@
     <div>
       <input type="number" placeholder="Amount {{localData.symbol}}"  (keyup)="onKey($event)" ngModel #amount>
       <button (click)="buyCrypto(amount)">Buy for ${{ currentAmount | multiplyPipe: price }}</button>
-      <p class="error" *ngIf="error">{{error}}</p>
     </div>
+    <div *ngIf="error" class="not-enough-money">
+      <p class="error">{{error}}</p>
+      <a routerLink="/wallet/{{username}}">You can deposit from here.</a>
+    </div>
+      <p class="error" *ngIf="buyingError">{{buyingError}}</p>
+      <p class="success" *ngIf="success">{{success}}</p>
 
   </div>
 </div>

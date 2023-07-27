@@ -43,7 +43,7 @@ export class AuthServiceService {
         this.cookieService.delete('error');
         this.cookieService.delete('walletBalance');
         this.cookieService.set('walletBalance', res.walletBalance);
-        this.router.navigate([`/wallet/${username}`])
+       // this.router.navigate([`/wallet/${username}`])
       },error: (err) => {
         this.cookieService.set('error', err.error.message);
       }
