@@ -18,6 +18,7 @@
   h2 {
     font-size: 24px;
     margin-bottom: 5px;
+    margin-top: 10px;
   }
   
   .balance span {
@@ -66,10 +67,15 @@
   .fiat{
     font-size: 23px;
   }
-  /* li:nth-child(odd) {
-    color: #3498db;  
-  } 
-  
-   li:nth-child(even) {
-    color: #e74c3c; 
-  }  */
+.deposit{
+  margin-top: 13px;
+  width: 140px;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.deposit:hover{
+  background-color: rgb(185, 182, 182);
+}
