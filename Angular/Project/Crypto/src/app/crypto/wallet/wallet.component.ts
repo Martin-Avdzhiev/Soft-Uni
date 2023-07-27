@@ -31,6 +31,7 @@ export class WalletComponent implements OnInit, AfterViewInit,DoCheck {
   ownCryptosArray: any;
   isShowedDeposit: boolean = false;
   error: string | undefined;
+  success: string | undefined;
   constructor(private authService: AuthServiceService, private cookieService: CookieService){}
 
   showDeposit(){
@@ -42,10 +43,17 @@ export class WalletComponent implements OnInit, AfterViewInit,DoCheck {
       this.error = 'Enter a deposit sum!';
       return
     }
+    if(amount.value < 10){
+      this.error = 'Minimum deposit is $10';
+      return
+    }
     this.error = undefined;
     this.authService.deposit(Number(amount.value));
+    this.success = `Deposited amount of $${amount.value} is successfully!`;
     amount.value = '';
-    
+    setTimeout(() => {
+      this.success = undefined;
+    }, 5000);
   }
   ngOnInit(): void {
     this.walletBalance = Number(this.cookieService.get('walletBalance')).toFixed(2);
