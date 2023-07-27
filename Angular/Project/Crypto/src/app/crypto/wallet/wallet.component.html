@@ -3,7 +3,6 @@
     <div class="balance">
         <span class="fiat">Fiat Balance: </span><span class="balance-in-wallet">${{walletBalance}}</span>
     </div>
-    <button class="deposit">Deposit Dollars</button>
     <h2>My Cryptocurrencies</h2>
     <div class="crypto-amount">
         <p>Crypto</p>
@@ -17,4 +16,10 @@
             <p>{{crypto.amount}}</p>
         </div>
     </div>
+    <button *ngIf="!isShowedDeposit" class="deposit" (click)="showDeposit()">Deposit</button>
+    <div *ngIf="isShowedDeposit" @fadeIn @fadeOut class="depositDiv">
+        <input placeholder="Amount" ngModel #amount>
+        <button (click)="depositDollars(amount)">Deposit Dollars</button>
+    </div>
+    <p class="error" *ngIf="error">{{error}}</p>
 </div>
