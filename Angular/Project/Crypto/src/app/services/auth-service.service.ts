@@ -41,13 +41,14 @@ export class AuthServiceService {
     });
   }
 
-  getProfileInfo(): Profile | void{
-    const email = this.cookieService.get('email');
+  getProfileInfo(): Profile | void {
     const username = this.cookieService.get('username');
     this.http.get(profileUrl + username).subscribe({
       next: (res: any) => {
         const imageUrl = res.imageUrl;
+        const walletBalance = res.walletBalance
         this.cookieService.set('imageUrl', imageUrl);
+        this.cookieService.set('walletBalance', walletBalance)
       }, error: (error) => console.log(error)
     })
   }

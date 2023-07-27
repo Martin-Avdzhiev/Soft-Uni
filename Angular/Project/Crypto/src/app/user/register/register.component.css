@@ -67,3 +67,9 @@
     color: red;
     padding-top: 0;
   }
+
+  #walletBalance{
+    width: 410px;
+    margin-bottom: 10px;
+    height: 20px;
+  }

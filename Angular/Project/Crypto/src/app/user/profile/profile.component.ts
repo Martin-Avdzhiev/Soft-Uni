@@ -38,7 +38,7 @@ export class ProfileComponent implements OnInit {
     this.imageUrl = this.cookieService.get('imageUrl');
     this.email = this.cookieService.get('email');
     this.username = this.cookieService.get('username');
-    if (!this.imageUrl) this.imageUrl = this.defaultImage;
+      if (this.imageUrl == 'undefined' || !this.imageUrl) this.imageUrl = this.defaultImage;
   }
 
   showDiv(): void {

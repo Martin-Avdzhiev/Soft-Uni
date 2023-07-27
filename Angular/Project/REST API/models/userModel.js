@@ -35,7 +35,19 @@ const userSchema = new mongoose.Schema({
     },
     imageUrl: {
         type: String,
-    }
+    },
+    walletBalance: {
+        type: Number,
+        required: true
+    },
+    ownCryptos: [{
+        name: {
+            type: String
+        },
+        amount: {
+            type: Number
+        }
+    }]
 }, { timestamps: { createdAt: 'created_at' } });
 
 userSchema.methods = {

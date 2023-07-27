@@ -13,12 +13,14 @@ const removePassword = (data) => {
 }
 
 function register(req, res, next) {
-    const {email, username, password, repeatPassword } = req.body;
-    if(password != repeatPassword){
+    const { email, username, password, repeatPassword, walletBalance } = req.body;
+    if (password != repeatPassword) {
         return res.status(401).send({ message: 'Passwords must be the same!' });
     }
-
-    return userModel.create({ email, username, password })
+    if (!walletBalance) {
+        return res.status(401).send({ message: 'Deposit is required!' });
+    }
+    return userModel.create({ email, username, password, walletBalance })
         .then((createdUser) => {
             createdUser = bsonToJson(createdUser);
             createdUser = removePassword(createdUser);
@@ -94,7 +96,7 @@ function getProfileInfo(req, res, next) {
 }
 
 function editProfileInfo(req, res, next) {
-  //  const { _id: userId } = req.user;
+    //  const { _id: userId } = req.user;
     const { username, email, imageUrl } = req.body;
 
     userModel.findOneAndUpdate({ username: username }, { username, email, imageUrl }, { runValidators: true, new: true })

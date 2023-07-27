@@ -1,0 +1,70 @@
+.wallet {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .balance p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #27ae60; /* Green color for positive balance */
+  }
+  
+  .crypto-list {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .crypto-amount{
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .crypto-amount>p{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .cryptos>p{
+    font-size: 18px;
+    width: 166px;
+    padding-left: 20px;
+  }
+  .prices>p{
+    font-size: 18px;
+    width: 210px;
+    padding-left: 20px;
+  }
+  /* li:nth-child(odd) {
+    color: #3498db;  
+  } 
+  
+   li:nth-child(even) {
+    color: #e74c3c; 
+  }  */

@@ -6,6 +6,7 @@ import { CryptoRoutingModule } from './crypto-routing.module';
 import { CurrentCryptoComponent } from './current-crypto/current-crypto.component'
 import { CryptoNewsComponent } from './crypto-news/crypto-news.component';
 import { CurrentCryptoNewComponent } from './current-crypto-new/current-crypto-new.component';
+import { WalletComponent } from './wallet/wallet.component';
 
 
 
@@ -14,7 +15,8 @@ import { CurrentCryptoNewComponent } from './current-crypto-new/current-crypto-n
     CryptoDirectiveDirective,
     CurrentCryptoComponent,
     CryptoNewsComponent,
-    CurrentCryptoNewComponent
+    CurrentCryptoNewComponent,
+    WalletComponent
   ],
   imports: [
     CommonModule,

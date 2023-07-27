@@ -16,4 +16,5 @@ export interface Profile {
     username: string;
     _id: string;
     imageUrl: string | undefined;
+    walletBallance: number;
 }

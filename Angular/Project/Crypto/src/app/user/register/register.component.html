@@ -2,6 +2,12 @@
   <h2>Registration Form</h2>
 
   <form #form="ngForm" (ngSubmit)="register(form)">
+
+    <!-- Deposit -->
+    <label for="wallet-balance">Deposit amount($):</label>
+    <input type="number" id="walletBalance" name="walletBalance" placeholder="Deposit amount" ngModel #walletBalance="ngModel">
+
+
     <!-- Username  -->
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" placeholder="Enter your username" ngModel required
@@ -37,6 +43,7 @@
     <ng-container *ngIf="repeatPassword.touched">
       <p class="error" *ngIf="repeatPassword.errors?.['required']">Repeat password is required</p>
     </ng-container>
+
 
     <input type="submit" value="Register" *ngIf="!form.invalid">
     <input type="submit" value="Register" *ngIf="form.invalid" disabled style="background-color: grey;">
