@@ -39,6 +39,7 @@ img{
 
 .description{
   width: 70%;
+  font-size: 18px;
 }
 
 button{
@@ -77,4 +78,6 @@ p.error {
   border-radius: 0.3em;
   color: red;
   padding-top: 0;
+  margin-left: 10px;
+  font-size: 25px;
 }

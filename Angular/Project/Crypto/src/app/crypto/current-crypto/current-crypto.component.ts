@@ -40,7 +40,9 @@ export class CurrentCryptoComponent implements OnInit, AfterViewInit, DoCheck {
   error: string | undefined;
   username: string | undefined;
   showBuyCrypto(){
+    if(!this.showBuyCryptoDiv){this.currentAmount = 0;}
     this.showBuyCryptoDiv = !this.showBuyCryptoDiv;
+    this.cookieService.delete('error')
   }
   onKey(event:any){
    this.currentAmount = event.target.value;
