@@ -7,7 +7,8 @@ import { CurrentCryptoComponent } from './current-crypto/current-crypto.componen
 import { CryptoNewsComponent } from './crypto-news/crypto-news.component';
 import { CurrentCryptoNewComponent } from './current-crypto-new/current-crypto-new.component';
 import { WalletComponent } from './wallet/wallet.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MultiplyPipePipe } from './multiply-pipe.pipe';
 
 
 @NgModule({
@@ -16,11 +17,13 @@ import { WalletComponent } from './wallet/wallet.component';
     CurrentCryptoComponent,
     CryptoNewsComponent,
     CurrentCryptoNewComponent,
-    WalletComponent
+    WalletComponent,
+    MultiplyPipePipe
   ],
   imports: [
     CommonModule,
-    CryptoRoutingModule
+    CryptoRoutingModule,
+    BrowserAnimationsModule
   ],
   exports: [
     CryptoListComponent

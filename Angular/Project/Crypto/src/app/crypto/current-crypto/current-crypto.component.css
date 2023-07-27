@@ -52,3 +52,22 @@ button{
 button:hover{
   background-color: rgb(157, 155, 155);
 }
+
+.buy-div{
+  margin-top: 10px;
+}
+.buy-div>div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buy-div>div>input{
+  width: 200px;
+  height: 40px;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+.buy-div>div>button{
+  width: 250px;
+  height: 60px;
+}

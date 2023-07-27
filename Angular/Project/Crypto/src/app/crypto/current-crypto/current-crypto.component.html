@@ -7,5 +7,12 @@
   <div class="description">
     <p>{{localData.description}}</p>
   </div>
-  <button>Buy {{localData.name}}</button>
+  <button (click)="showBuyCrypto()">Buy {{localData.name}}</button>
+  <div *ngIf="showBuyCryptoDiv" @fadeIn @fadeOut class="buy-div">
+    <div>
+      <input type="number" placeholder="Amount {{localData.symbol}}"  (keyup)="onKey($event)">
+      <button>Buy for ${{ currentAmount | multiplyPipe: price }}</button>
+    </div>
+
+  </div>
 </div>
