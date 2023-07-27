@@ -20,12 +20,13 @@
     margin-bottom: 5px;
   }
   
-  .balance p {
-    font-size: 20px;
+  .balance span {
+    font-size: 23px;
     font-weight: bold;
-    color: #27ae60; /* Green color for positive balance */
   }
-  
+  .balance-in-wallet{
+    color: #27ae60;
+  }
   .crypto-list {
     display: flex;
     justify-content: space-around;
@@ -60,6 +61,10 @@
     font-size: 18px;
     width: 210px;
     padding-left: 20px;
+  }
+
+  .fiat{
+    font-size: 23px;
   }
   /* li:nth-child(odd) {
     color: #3498db;  

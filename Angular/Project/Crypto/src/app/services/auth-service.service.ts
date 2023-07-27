@@ -28,6 +28,7 @@ export class AuthServiceService {
         this.cookieService.delete('error');
         this.cookieService.delete('walletBalance');
         this.cookieService.set('walletBalance', res.walletBalance);
+        this.router.navigate([`/wallet/${username}`])
       },error: (err) => {
         this.cookieService.set('error', err.error.message);
       }
@@ -58,16 +59,19 @@ export class AuthServiceService {
     });
   }
 
-  getProfileInfo(): Profile | void {
+  getProfileInfo(): any {
     const username = this.cookieService.get('username');
+    let response:any = {};
     this.http.get(profileUrl + username).subscribe({
       next: (res: any) => {
         const imageUrl = res.imageUrl;
         const walletBalance = res.walletBalance
         this.cookieService.set('imageUrl', imageUrl);
-        this.cookieService.set('walletBalance', walletBalance)
+        this.cookieService.set('walletBalance', walletBalance);
+        response.ownCryptos = res.ownCryptos;
       }, error: (error) => console.log(error)
     })
+      return response
   }
 
   updateProfileInfo(imageUrl: string) {
