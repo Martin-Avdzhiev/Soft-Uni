@@ -8,6 +8,7 @@ const registerUrl = 'http://localhost:3000/api/register'; //POST
 const loginUrl = 'http://localhost:3000/api/login'; //POST
 const profileUrl = 'http://localhost:3000/api/users/profile/'; //GET need to add /:username
 const updateProfileUrl = 'http://localhost:3000/api/users/profile'; //PUT
+const buyCryptoUrl = 'http://localhost:3000/api/cryptos/' //POST, add type of crypto at the end of link
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +16,23 @@ export class AuthServiceService {
 
   constructor(private http: HttpClient, private cookieService: CookieService, private router: Router) { }
 
-
+  buyCrypto(payingDollars: number, typeOfCypto: string, amount: number) {
+    const username = this.cookieService.get('username');
+    const data = {
+      payingDollars,
+      username,
+      amount
+    }
+    this.http.post(buyCryptoUrl + typeOfCypto, data).subscribe({
+      next: (res:any) => {
+        this.cookieService.delete('error');
+        this.cookieService.delete('walletBalance');
+        this.cookieService.set('walletBalance', res.walletBalance);
+      },error: (err) => {
+        this.cookieService.set('error', err.error.message);
+      }
+    })
+  }
 
   postRegister(data: Register) {
     this.http.post(registerUrl, data).subscribe({

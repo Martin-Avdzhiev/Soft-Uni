@@ -1,8 +1,10 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, DoCheck } from '@angular/core';
 import { CryptoService } from 'src/app/services/crypto-service.service';
 import { ActivatedRoute } from '@angular/router';
 import { LocalCryptoData } from 'src/app/types/crypto';
 import { animate, state, style, transition, trigger, } from '@angular/animations';
+import { CookieService } from 'ngx-cookie-service';
+import { AuthServiceService } from 'src/app/services/auth-service.service'; 
 
 const enterTransition = transition(':enter', [
   style({
@@ -25,22 +27,37 @@ const fadeOut = trigger('fadeOut', [exitTransition]);
   styleUrls: ['./current-crypto.component.css'],
   animations: [fadeIn, fadeOut]
 })
-export class CurrentCryptoComponent implements OnInit, AfterViewInit {
-  constructor(private cryptoService: CryptoService, private route: ActivatedRoute) { }
+export class CurrentCryptoComponent implements OnInit, AfterViewInit, DoCheck {
+  constructor(private authService: AuthServiceService,private cryptoService: CryptoService, private route: ActivatedRoute, private cookieService: CookieService) { }
   id: string | undefined;
   price: string | undefined;
+  name: string  = '';
   localData = new LocalCryptoData();
   alt: string | undefined;
   showBuyCryptoDiv: boolean = false;
   currentAmount: number = 0;
+  payAmount: number = 0;
+  error: string | undefined;
+  username: string | undefined;
   showBuyCrypto(){
     this.showBuyCryptoDiv = !this.showBuyCryptoDiv;
   }
   onKey(event:any){
    this.currentAmount = event.target.value;
   }
+  buyCrypto(amount: any){
+    this.payAmount = Number(amount.value) * Number(this.price);
+    this.authService.buyCrypto(this.payAmount, this.name, Number(amount.value));
+  }
+
+  ngDoCheck(): void {
+    this.error = this.cookieService.get('error');
+    if(this.error == 'undefined') this.error = undefined;
+  }
   ngOnInit(): void {
     this.id = this.route.snapshot.params['cryptoId'];
+    this.username = this.cookieService.get('username');
+    if(this.username == 'undefined') this.username = undefined;
     if (this.id) {
       this.cryptoService.getCryptoData(this.id).subscribe({
         next: (value) => {
@@ -56,6 +73,7 @@ export class CurrentCryptoComponent implements OnInit, AfterViewInit {
             this.localData.rank = value?.rank;
             this.localData.symbol = value?.symbol;
             this.localData.name = value?.name;
+            this.name = value?.name;
             this.localData.supply = value?.supply;
             this.localData.maxSupply = value?.maxSupply;
             this.localData.explorer = value?.explorer;

@@ -7,11 +7,12 @@
   <div class="description">
     <p>{{localData.description}}</p>
   </div>
-  <button (click)="showBuyCrypto()">Buy {{localData.name}}</button>
+  <button *ngIf="username" (click)="showBuyCrypto()">Buy {{localData.name}}</button>
   <div *ngIf="showBuyCryptoDiv" @fadeIn @fadeOut class="buy-div">
     <div>
-      <input type="number" placeholder="Amount {{localData.symbol}}"  (keyup)="onKey($event)">
-      <button>Buy for ${{ currentAmount | multiplyPipe: price }}</button>
+      <input type="number" placeholder="Amount {{localData.symbol}}"  (keyup)="onKey($event)" ngModel #amount>
+      <button (click)="buyCrypto(amount)">Buy for ${{ currentAmount | multiplyPipe: price }}</button>
+      <p class="error" *ngIf="error">{{error}}</p>
     </div>
 
   </div>
