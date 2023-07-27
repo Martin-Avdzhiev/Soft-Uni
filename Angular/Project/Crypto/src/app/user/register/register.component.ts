@@ -12,7 +12,14 @@ export class RegisterComponent {
   error:string | undefined;
 register(form: NgForm):void{
   if(form.invalid) return;
-  this.authService.postRegister(form.value);
+  const email = form.value.email;
+  const pattern = /[\w+]+@{1}[\w+]+\.{1}[\w+]+/;
+  const match = email.match(pattern)
+  if(!match){
+    this.cookieService.set('error','Invalid email!');
+  }else{
+    this.authService.postRegister(form.value);
+  }
   setTimeout(()=>{
     const isError = this.cookieService.get('error');
     this.error = isError;
