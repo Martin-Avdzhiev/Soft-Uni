@@ -106,3 +106,20 @@ p.error {
   font-size: 25px;
   color: black;
 }
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
+    width: 1000px;
+}
+
+.showDivs{
+  display: flex;
+  justify-content: space-around;
+  width: 1000px;
+}
+
+.errors{
+  display: flex;
+  justify-content: space-around;
+  width: 1000px;
+}

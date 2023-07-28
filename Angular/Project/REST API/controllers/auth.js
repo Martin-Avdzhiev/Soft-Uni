@@ -13,12 +13,10 @@ const removePassword = (data) => {
 }
 
 function register(req, res, next) {
-    const { email, username, password, repeatPassword, walletBalance } = req.body;
+    const { email, username, password, repeatPassword } = req.body;
+    const walletBalance = 0;
     if (password != repeatPassword) {
         return res.status(401).send({ message: 'Passwords must be the same!' });
-    }
-    if (!walletBalance) {
-        return res.status(401).send({ message: 'Deposit is required!' });
     }
     return userModel.create({ email, username, password, walletBalance })
         .then((createdUser) => {

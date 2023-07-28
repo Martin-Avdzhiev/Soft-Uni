@@ -16,10 +16,12 @@ router.post('/deposit', async (req,res)=> {
 })
 
 
-router.post('/:crypto', async (req,res)=> {
+router.post('/buy/:crypto', async (req,res)=> {
     const typeOfCrypto = req.params.crypto;
     const payingDollars = req.body.payingDollars;
     const amount = req.body.amount;
+    if(amount == 0) {return res.status(401).send({message: 'You must enter the amount!'})}
+    if(payingDollars < 10){return res.status(401).send({message: 'You can\'t buy less than $10 worth of crypto!'})}
     const username = req.body.username;
     let alreadyHave = false;
     const user = await userModel.findOne({username: username});
@@ -42,6 +44,33 @@ router.post('/:crypto', async (req,res)=> {
     await userModel.findOneAndUpdate({username: username}, user);
     res.status(200).send(user);
 })
+
+
+router.post('/sell/:crypto', async (req,res)=> {
+    const typeOfCrypto = req.params.crypto;
+    const receivingDollars = req.body.receivingDollars;
+    const amount = req.body.amount;
+    if(amount == 0) {return res.status(401).send({message: 'You must enter the amount!'})}
+    if(receivingDollars < 10){return res.status(401).send({message: 'You can\'t sell less than $10 worth of crypto!'})}
+    const username = req.body.username;
+    let alreadyHave = false;
+    const user = await userModel.findOne({username: username});
+
+    for(const crypto of user.ownCryptos){
+        if(crypto.name == typeOfCrypto){
+            if(crypto.amount < amount){return res.status(401).send({message: 'You can\'t sell more than what you have!'})}
+            alreadyHave = true;
+            user.walletBalance += receivingDollars;
+            crypto.amount -= amount;
+        }
+    }
+    if(!alreadyHave){return res.status(401).send({message: 'You can\'t sell more than what you have!'});}
+    await userModel.findOneAndUpdate({username: username}, user);
+    res.status(200).send(user);
+})
+
+
+
  router.get('/all', async (req ,res)=> {
 
 

@@ -23,6 +23,6 @@ register(form: NgForm):void{
   setTimeout(()=>{
     const isError = this.cookieService.get('error');
     this.error = isError;
-  },400);
+  },100);
 }
 }

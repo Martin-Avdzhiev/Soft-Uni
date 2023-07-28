@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { LocalCryptoData } from 'src/app/types/crypto';
 import { animate, state, style, transition, trigger, } from '@angular/animations';
 import { CookieService } from 'ngx-cookie-service';
-import { AuthServiceService } from 'src/app/services/auth-service.service'; 
+import { AuthServiceService } from 'src/app/services/auth-service.service';
 
 const enterTransition = transition(':enter', [
   style({
@@ -28,56 +28,71 @@ const fadeOut = trigger('fadeOut', [exitTransition]);
   animations: [fadeIn, fadeOut]
 })
 export class CurrentCryptoComponent implements OnInit, AfterViewInit, DoCheck {
-  constructor(private authService: AuthServiceService,private cryptoService: CryptoService, private route: ActivatedRoute, private cookieService: CookieService) { }
+  constructor(private authService: AuthServiceService, private cryptoService: CryptoService, private route: ActivatedRoute, private cookieService: CookieService) { }
   id: string | undefined;
   price: string | undefined;
-  name: string  = '';
+  name: string = '';
   localData = new LocalCryptoData();
   alt: string | undefined;
-  showBuyCryptoDiv: boolean = false;
-  currentAmount: number = 0;
+  showButtons: boolean = false;
+  currentBuyAmount: number = 0;
+  currentSellAmount: number = 0;
   payAmount: number = 0;
   error: string | undefined;
-  buyingError: string | undefined;
   username: string | undefined;
   success: string | undefined;
   symbol: string | undefined;
-  walletBalance: number | undefined;
-  showBuyCrypto(){
-    if(!this.showBuyCryptoDiv){this.currentAmount = 0;}
-    this.showBuyCryptoDiv = !this.showBuyCryptoDiv;
-    this.cookieService.delete('error')
-  }
-  onKey(event:any){
-   this.currentAmount = event.target.value;
-  }
-  buyCrypto(amount: any){
-    if(!amount.value){
-      this.buyingError = 'You must enter the amount!';
-      return
+  walletBalance: number = 0;
+
+  showCrypto() {
+    if (!this.showButtons) { this.currentBuyAmount = 0; }
+    if (this.showButtons) {
+      this.error = undefined;
+      this.success = undefined;
+      this.cookieService.delete('error');
     }
+
+    this.showButtons = !this.showButtons;
+    this.cookieService.delete('error');
+  }
+  onKeyBuy(event: any) {
+    this.currentBuyAmount = event.target.value;
+  }
+  onKeySell(event: any) {
+    this.currentSellAmount = event.target.value;
+  }
+  buyCrypto(amount: any) {
     this.payAmount = Number(amount.value) * Number(this.price);
-    if(this.payAmount < 10){
-      this.buyingError = 'You can\'t buy less than $10 worth of crypto!';
-      return
-    }
-    this.buyingError = undefined;
     this.authService.buyCrypto(this.payAmount, this.name, Number(amount.value));
     this.walletBalance = Number(this.cookieService.get('walletBalance'));
-    if(this.walletBalance < this.payAmount) return;
-    this.success = `You successfully bought ${amount.value} ${this.symbol} for $${this.payAmount.toFixed(2)}`;
     setTimeout(() => {
-      this.success = undefined;
-    }, 5000);
+      if (this.payAmount > this.walletBalance) { return };
+      if(!this.cookieService.check('error')){
+        this.success = `You successfully bought ${amount.value} ${this.symbol} for $${this.payAmount.toFixed(2)}`;
+      }
+    }, 500);
+  }
+  sellCrypto(amount: any) {
+ 
+    this.payAmount = Number(amount.value) * Number(this.price);
+    this.authService.sellCrypto(this.payAmount, this.name, Number(amount.value));
+    this.walletBalance = Number(this.cookieService.get('walletBalance'));
+    setTimeout(() => {
+      if (!this.cookieService.check('error')) {
+        this.success = `You successfully sold ${amount.value} ${this.symbol} for $${this.payAmount.toFixed(2)}`;
+      }
+    }, 500);
+  
   }
   ngDoCheck(): void {
     this.error = this.cookieService.get('error');
-    if(this.error == 'undefined') this.error = undefined;
+    if (this.error == 'undefined') this.error = undefined;
   }
   ngOnInit(): void {
+    this.error = undefined;
     this.id = this.route.snapshot.params['cryptoId'];
     this.username = this.cookieService.get('username');
-    if(this.username == 'undefined') this.username = undefined;
+    if (this.username == 'undefined') this.username = undefined;
     if (this.id) {
       this.cryptoService.getCryptoData(this.id).subscribe({
         next: (value) => {

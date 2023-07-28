@@ -3,11 +3,6 @@
 
   <form #form="ngForm" (ngSubmit)="register(form)">
 
-    <!-- Deposit -->
-    <label for="wallet-balance">Deposit amount($):</label>
-    <input type="number" id="walletBalance" name="walletBalance" placeholder="Deposit amount" ngModel #walletBalance="ngModel">
-
-
     <!-- Username  -->
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" placeholder="Enter your username" ngModel required

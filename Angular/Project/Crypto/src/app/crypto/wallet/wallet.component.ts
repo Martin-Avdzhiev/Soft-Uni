@@ -1,4 +1,4 @@
-import { Component,OnInit, AfterViewInit, DoCheck } from '@angular/core';
+import { Component, OnInit, AfterViewInit, DoCheck } from '@angular/core';
 import { AuthServiceService } from 'src/app/services/auth-service.service';
 import { CookieService } from 'ngx-cookie-service';
 import { animate, state, style, transition, trigger, } from '@angular/animations';
@@ -23,7 +23,7 @@ const fadeOut = trigger('fadeOut', [exitTransition]);
   styleUrls: ['./wallet.component.css'],
   animations: [fadeIn, fadeOut]
 })
-export class WalletComponent implements OnInit, AfterViewInit,DoCheck {
+export class WalletComponent implements OnInit, DoCheck {
   email: string | undefined;
   username: string | undefined;
   walletBalance: string | undefined;
@@ -32,18 +32,19 @@ export class WalletComponent implements OnInit, AfterViewInit,DoCheck {
   isShowedDeposit: boolean = false;
   error: string | undefined;
   success: string | undefined;
-  constructor(private authService: AuthServiceService, private cookieService: CookieService){}
+  isBoughtCrypto: boolean = false;
+  constructor(private authService: AuthServiceService, private cookieService: CookieService) { }
 
-  showDeposit(){
+  showDeposit() {
     this.isShowedDeposit = !this.isShowedDeposit;
   }
 
-  depositDollars(amount:any){
-    if(!amount.value){
+  depositDollars(amount: any) {
+    if (!amount.value) {
       this.error = 'Enter a deposit sum!';
       return
     }
-    if(amount.value < 10){
+    if (amount.value < 10) {
       this.error = 'Minimum deposit is $10';
       return
     }
@@ -60,16 +61,18 @@ export class WalletComponent implements OnInit, AfterViewInit,DoCheck {
 
     this.email = this.cookieService.get('email');
     this.username = this.cookieService.get('username');
-    this.ownCryptosObject = this.authService.getProfileInfo()
+   this.authService.getProfileInfo().subscribe({
+      next: (value) => {
+        this.ownCryptosArray = value.ownCryptos;
+        if(this.ownCryptosArray.length == 0){this.isBoughtCrypto = true;}
+        for (const crypto of this.ownCryptosArray) {
+          crypto.amount = crypto.amount.toFixed(4);
+        }
+      },
+      error: (error) => { console.log(error) }
+    });
   }
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.ownCryptosArray = this.ownCryptosObject.ownCryptos
-      for(const crypto of this.ownCryptosArray){
-          crypto.amount = crypto.amount.toFixed(4); 
-      }
-    }, 100);
-  }
+
   ngDoCheck(): void {
     this.walletBalance = Number(this.cookieService.get('walletBalance')).toFixed(2);
   }

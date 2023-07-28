@@ -1,5 +1,5 @@
-<div class="crypto-page" *ngIf="localData" >
-  <img [src]="localData.image" [alt]="alt"/> 
+<div class="crypto-page" *ngIf="localData">
+  <img [src]="localData.image" [alt]="alt" />
   <h2>{{ localData.name}}</h2>
   <div class="price">
     <h3>Price: {{ price }} USD</h3>
@@ -7,18 +7,28 @@
   <div class="description">
     <p>{{localData.description}}</p>
   </div>
-  <button *ngIf="username" (click)="showBuyCrypto()">Buy {{localData.name}}</button>
-  <div *ngIf="showBuyCryptoDiv" @fadeIn @fadeOut class="buy-div">
-    <div>
-      <input type="number" placeholder="Amount {{localData.symbol}}"  (keyup)="onKey($event)" ngModel #amount>
-      <button (click)="buyCrypto(amount)">Buy for ${{ currentAmount | multiplyPipe: price }}</button>
-    </div>
-    <div *ngIf="error" class="not-enough-money">
-      <p class="error">{{error}}</p>
-      <a routerLink="/wallet/{{username}}">You can deposit from here.</a>
-    </div>
-      <p class="error" *ngIf="buyingError">{{buyingError}}</p>
-      <p class="success" *ngIf="success">{{success}}</p>
-
+  <div class="buttons">
+    <button *ngIf="username" (click)="showCrypto()">Buy {{localData.name}}</button>
+    <button *ngIf="username" (click)="showCrypto()">Sell {{localData.name}}</button>
   </div>
+
+  <div class="showDivs" *ngIf="showButtons" @fadeIn @fadeOut>
+    <div class="buy-div">
+      <div>
+        <input type="number" placeholder="Amount {{localData.symbol}}" (keyup)="onKeyBuy($event)" ngModel #buyAmount>
+        <button (click)="buyCrypto(buyAmount)">Buy for ${{ currentBuyAmount | multiplyPipe: price }}</button>
+      </div>
+    </div>
+
+    <div  class="buy-div">
+      <div>
+        <input type="number" placeholder="Amount {{localData.symbol}}" (keyup)="onKeySell($event)" ngModel #sellAmount>
+        <button (click)="sellCrypto(sellAmount)">Sell for ${{ currentSellAmount | multiplyPipe: price }}</button>
+      </div>
+    </div>
+  </div>
+  <div class="errors" *ngIf="error">
+    <p class="error">{{error}}</p>
+  </div>
+  <p class="success" *ngIf="success">{{success}}</p>
 </div>
