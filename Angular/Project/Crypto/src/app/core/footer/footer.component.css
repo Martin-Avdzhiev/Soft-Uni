@@ -8,7 +8,6 @@ footer {
   position: fixed;
   bottom: 0; */
   background-color: rgba(0, 0, 0, 0.2);
-  font-size: 18px;
   text-align: center;
   position: absolute;
   right: 0;
@@ -18,8 +17,6 @@ footer {
 }
 
 footer>p {
-  height: 50px;
-  margin-bottom: 0;
-  margin-top: 25px;
+  height: 30px;
   font-size: 20px;
 }
