@@ -44,7 +44,7 @@ export class WalletComponent implements OnInit, DoCheck {
     if (amount.value < 10) {this.error = 'Minimum deposit is $10!';return};
 
     this.error = undefined;
-    this.authService.deposit(Number(amount.value));
+    this.authService.changeBalance(Number(amount.value), 'deposit');
     this.success = `Deposited amount of $${amount.value} is successfully!`;
     amount.value = '';
     setTimeout(() => {
@@ -56,7 +56,7 @@ export class WalletComponent implements OnInit, DoCheck {
     if (!amount.value) {this.error = 'Enter a deposit sum!';return;};
     if (amount.value < 10) {this.error = 'Minimum withdraw is $10!';return};
     this.error = undefined;
-    this.authService.withdraw(Number(amount.value));
+    this.authService.changeBalance(Number(amount.value), 'withdraw');
     this.success = `Withdraw  amount of $${amount.value} is successfully!`;
     amount.value = '';
     setTimeout(() => {

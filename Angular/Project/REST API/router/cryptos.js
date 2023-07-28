@@ -6,22 +6,18 @@ const {
     tokenBlacklistModel
 } = require('../models');
 
-router.post('/deposit', async (req,res)=> {
+router.post('/changeBalance', async (req,res)=> {
     const username = req.body.username;
     const amount = req.body.amount;
+    const typeOfOperation = req.body.typeOfOperation;
     const user = await userModel.findOne({username: username});
-    user.walletBalance += amount;
+    if(typeOfOperation == 'deposit'){  user.walletBalance += amount;}
+    else if(typeOfOperation == 'withdraw'){  user.walletBalance -= amount;}
+    else {res.status(401).send({message: 'Invalid operation!'})}
     await userModel.findOneAndUpdate({username: username}, user);
     res.status(200).send(user);
 })
-router.post('/withdraw', async (req,res)=> {
-    const username = req.body.username;
-    const amount = req.body.amount;
-    const user = await userModel.findOne({username: username});
-    user.walletBalance -= amount;
-    await userModel.findOneAndUpdate({username: username}, user);
-    res.status(200).send(user);
-})
+
 
 
 router.post('/buy/:crypto', async (req,res)=> {

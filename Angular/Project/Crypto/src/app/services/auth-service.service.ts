@@ -10,8 +10,7 @@ const profileUrl = 'http://localhost:3000/api/users/profile/'; //GET need to add
 const updateProfileUrl = 'http://localhost:3000/api/users/profile'; //PUT
 const buyCryptoUrl = 'http://localhost:3000/api/cryptos/buy/' //POST, add type of crypto at the end of link
 const sellCryptoUrl = 'http://localhost:3000/api/cryptos/sell/' //POST, add type of crypto at the end of link
-const depositUrl = 'http://localhost:3000/api/cryptos/deposit' //POST
-const withdrawUrl = 'http://localhost:3000/api/cryptos/withdraw' //POST
+const changeBalanceUrl = 'http://localhost:3000/api/cryptos/changeBalance' //POST
 @Injectable({
   providedIn: 'root'
 })
@@ -19,10 +18,10 @@ export class AuthServiceService {
 
   constructor(private http: HttpClient, private cookieService: CookieService, private router: Router) { }
 
-  deposit(amount: number){
+  changeBalance(amount: number, typeOfOperation:string){
     const username = this.cookieService.get('username');
-    const data = {amount, username}
-    this.http.post(depositUrl,data).subscribe({
+    const data = {amount, username, typeOfOperation}
+    this.http.post(changeBalanceUrl,data).subscribe({
       next: (res:any)=>{
         this.cookieService.delete('walletBalance');
         this.cookieService.set('walletBalance', res.walletBalance);
@@ -31,18 +30,7 @@ export class AuthServiceService {
       }
     })
   }
-  withdraw(amount:number){
-    const username = this.cookieService.get('username');
-    const data = {amount, username}
-    this.http.post(withdrawUrl,data).subscribe({
-      next: (res:any)=>{
-        this.cookieService.delete('walletBalance');
-        this.cookieService.set('walletBalance', res.walletBalance);
-      }, error: (error) =>{
-        console.log(error)
-      }
-    })
-  }
+
   buyCrypto(payingDollars: number, typeOfCypto: string, amount: number) {
     const username = this.cookieService.get('username');
     const data = {
