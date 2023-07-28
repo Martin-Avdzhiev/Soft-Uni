@@ -14,6 +14,14 @@ router.post('/deposit', async (req,res)=> {
     await userModel.findOneAndUpdate({username: username}, user);
     res.status(200).send(user);
 })
+router.post('/withdraw', async (req,res)=> {
+    const username = req.body.username;
+    const amount = req.body.amount;
+    const user = await userModel.findOne({username: username});
+    user.walletBalance -= amount;
+    await userModel.findOneAndUpdate({username: username}, user);
+    res.status(200).send(user);
+})
 
 
 router.post('/buy/:crypto', async (req,res)=> {

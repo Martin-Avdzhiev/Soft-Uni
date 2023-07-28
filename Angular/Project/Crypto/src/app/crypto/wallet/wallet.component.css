@@ -80,28 +80,28 @@
 .deposit:hover{
   background-color: rgb(185, 182, 182);
 }
-.depositDiv{
+.depositDiv>div{
   margin-top: 15px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.depositDiv>input,.depositDiv>button{
+.depositDiv>div>input,.depositDiv>div>button{
   border-radius: 15px;
   font-size: 18px;
 }
 
-.depositDiv>input{
+.depositDiv>div>input{
   width: 165px;
   height: 30px;
 }
-.depositDiv>button{
+.depositDiv>div>button{
   width: 165px;
   height: 40px;
   cursor: pointer;
 }
 
-.depositDiv>button:hover{
+.depositDiv>div>button:hover{
   background-color: rgb(185, 182, 182);
 }
 
