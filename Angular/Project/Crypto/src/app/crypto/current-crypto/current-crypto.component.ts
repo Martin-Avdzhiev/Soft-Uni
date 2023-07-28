@@ -87,6 +87,9 @@ export class CurrentCryptoComponent implements OnInit, AfterViewInit, DoCheck {
   ngDoCheck(): void {
     this.error = this.cookieService.get('error');
     if (this.error == 'undefined') this.error = undefined;
+    setTimeout(() => {
+      if(this.error){ this.success = undefined;};
+    }, 100);
   }
   ngOnInit(): void {
     this.error = undefined;
