@@ -1,7 +1,7 @@
 <div class="container">
     <div class="fancy-div">
         <h2>Welcome to Crypto Site</h2>
-        <p>
+        <p class="message">
             Crypto Market Info is a website that displays the most important information
             about the most famous cryptocurrencies. On it, you can learn how cryptocurrencies
             like Bitcoin, Ethereum, and many others work. The site is suitable for people
@@ -9,9 +9,14 @@
             is at a very basic level.
         </p>
         <div *ngIf="!isLogged" class="buttons">
-          <p>Already have acount? Login here &#8674; <button><a routerLink="/login" class="login">Login</a></button></p> 
-          <p>Don't have account? Register here &#8674; <button> <a routerLink="/register" class="register">Register</a></button></p> 
-
+            <p>Already have acount? Login here &#8674; <button><a routerLink="/login" class="login">Login</a></button>
+            </p>
+            <p>Don't have account? Register here &#8674; <button> <a routerLink="/register"
+                        class="register">Register</a></button></p>
+        </div>
+        <div *ngIf="isLogged">
+            <p class="qr-code">Do you want to understand Bitcoin more deeply?</p>
+            <img src="../../assets//qr-code.png">
         </div>
     </div>
 </div>
