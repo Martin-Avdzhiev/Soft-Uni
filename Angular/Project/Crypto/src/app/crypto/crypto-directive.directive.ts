@@ -1,5 +1,4 @@
 import { Directive, ElementRef, Renderer2, OnChanges, SimpleChanges, Input } from '@angular/core';
-import { CryptoService } from '../services/crypto-service.service';
 @Directive({
   selector: '[appCryptoDirective]'
 })
@@ -7,7 +6,7 @@ export class CryptoDirectiveDirective implements OnChanges {
   @Input() currentPrice: string = '';
   previousValue: string | undefined;
 
-  constructor(private elementRef: ElementRef, private renderer: Renderer2, private cryptoService: CryptoService,) { }
+  constructor(private elementRef: ElementRef, private renderer: Renderer2,) { }
 
   ngOnChanges(SimpleChanges: SimpleChanges): void {
     this.previousValue = SimpleChanges['currentPrice']?.previousValue;
