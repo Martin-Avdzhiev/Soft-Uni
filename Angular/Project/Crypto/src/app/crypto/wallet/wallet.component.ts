@@ -26,7 +26,7 @@ const fadeOut = trigger('fadeOut', [exitTransition]);
 export class WalletComponent implements OnInit, DoCheck {
   email: string | undefined;
   username: string | undefined;
-  walletBalance: string | undefined;
+  walletBalance: string  | undefined
   ownCryptosObject: any;
   ownCryptosArray: any;
   isShowedDeposit: boolean = false;
@@ -40,12 +40,14 @@ export class WalletComponent implements OnInit, DoCheck {
   }
 
   depositDollars(amount: any) {
-    if (!amount.value) {this.error = 'Enter a deposit sum!';return};
-    if (amount.value < 10) {this.error = 'Minimum deposit is $10!';return};
-
+    if (!amount.value) {this.error = 'Enter a deposit sum!'; amount.value = '';return};
+    if(amount.value.includes(',')){amount.value = amount.value.replace(',','.');}
+    amount.value = Number(amount.value)
+    if(isNaN(amount.value)){this.error = 'Invalid withdrawal sum!'; amount.value = '';return;}
+    if (amount.value < 10) {this.error = 'Minimum deposit is $10!'; amount.value = '';return};
     this.error = undefined;
     this.authService.changeBalance(Number(amount.value), 'deposit');
-    this.success = `Deposited amount of $${amount.value} is successfully!`;
+    this.success = `Deposited amount of $${Number(amount.value).toFixed(2)} is successfully!`;
     amount.value = '';
     setTimeout(() => {
       this.success = undefined;
@@ -53,11 +55,15 @@ export class WalletComponent implements OnInit, DoCheck {
   }
 
   withdrawDollars(amount: any){
-    if (!amount.value) {this.error = 'Enter a deposit sum!';return;};
-    if (amount.value < 10) {this.error = 'Minimum withdraw is $10!';return};
+    if (!amount.value) {this.error = 'Enter a deposit sum!'; amount.value = '';return;};
+    if(amount.value.includes(',')){amount.value = amount.value.replace(',','.');}
+    amount.value = Number(amount.value)
+    if(isNaN(amount.value)){this.error = 'Invalid withdrawal sum!'; amount.value = '';return;}
+    if (amount.value < 10) {this.error = 'Minimum withdraw is $10!'; amount.value = '';return};
+    if (amount.value > Number(this.walletBalance)) {this.error = 'You don\'t have enough money!'; amount.value = '';return};
     this.error = undefined;
     this.authService.changeBalance(Number(amount.value), 'withdraw');
-    this.success = `Withdraw  amount of $${amount.value} is successfully!`;
+    this.success = `Withdraw  amount of $${Number(amount.value).toFixed(2)} is successfully!`;
     amount.value = '';
     setTimeout(() => {
       this.success = undefined;
