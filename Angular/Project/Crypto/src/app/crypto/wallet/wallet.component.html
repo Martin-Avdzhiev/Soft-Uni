@@ -20,11 +20,11 @@
     <button *ngIf="!isShowedDeposit" class="deposit" (click)="showDeposit()">Deposit/Withdraw</button>
     <div *ngIf="isShowedDeposit" @fadeIn @fadeOut class="depositDiv">
         <div>
-            <input placeholder="Amount" ngModel #depositAmount>
+            <input placeholder="Amount" ngModel #depositAmount type="number">
             <button (click)="depositDollars(depositAmount)">Deposit Dollars</button>
         </div>
         <div>
-            <input placeholder="Amount" ngModel #withdrawAmount>
+            <input placeholder="Amount" ngModel #withdrawAmount type="number">
             <button (click)="withdrawDollars(withdrawAmount)">Withdraw Dollars</button>
         </div>
     </div>
