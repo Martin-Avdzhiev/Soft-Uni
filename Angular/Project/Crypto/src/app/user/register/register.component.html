@@ -6,12 +6,14 @@
     <!-- Username  -->
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" placeholder="Enter your username" ngModel required
-      #username="ngModel" minlength="6">
+      #username="ngModel" minlength="6" maxlength="15">
 
     <ng-container *ngIf="username.touched">
       <p class="error" *ngIf="username.errors?.['required']">Username is required</p>
       <p class="error" *ngIf="username.errors?.['minlength']">Username must be at least
         {{username.errors?.['minlength']['requiredLength']}} characters!</p>
+        <p class="error" *ngIf="username.errors?.['maxlength']">Username must be less than
+          {{username.errors?.['minlength']['requiredLength']}} characters!</p>
     </ng-container>
 
     <!-- Email  -->
