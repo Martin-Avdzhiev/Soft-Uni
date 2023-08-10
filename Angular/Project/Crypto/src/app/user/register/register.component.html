@@ -25,9 +25,11 @@
     <!-- Password  -->
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" placeholder="Enter your password" ngModel required
-      #password="ngModel">
+      #password="ngModel" minlength="6">
     <ng-container *ngIf="password.touched">
       <p class="error" *ngIf="password.errors?.['required']">Password is required</p>
+      <p class="error" *ngIf="password.errors?.['minlength']">Password must be at least
+        {{password.errors?.['minlength']['requiredLength']}} characters!</p>
     </ng-container>
 
     <!-- Repeat password  -->
