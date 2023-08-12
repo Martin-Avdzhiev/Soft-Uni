@@ -10,7 +10,6 @@ export class AntiAuthActivate implements CanActivate{
     constructor (private cookieService: CookieService, private router: Router){}
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
        this.isLogged = this.cookieService.check('username');
-       console.log(this.isLogged)
        if(this.isLogged){
         this.router.navigate(['/']);
        } 

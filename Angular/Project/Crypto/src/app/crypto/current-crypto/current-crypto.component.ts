@@ -49,9 +49,7 @@ export class CurrentCryptoComponent implements OnInit, AfterViewInit, DoCheck {
     if (this.showButtons) {
       this.error = undefined;
       this.success = undefined;
-      this.cookieService.delete('error');
     }
-
     this.showButtons = !this.showButtons;
     this.cookieService.delete('error');
   }
@@ -64,9 +62,8 @@ export class CurrentCryptoComponent implements OnInit, AfterViewInit, DoCheck {
   buyCrypto(amount: any) {
     this.payAmount = Number(amount.value) * Number(this.price);
     this.authService.buyCrypto(this.payAmount, this.name, Number(amount.value));
-    this.walletBalance = Number(this.cookieService.get('walletBalance'));
+    this.walletBalance = Number(this.cookieService.get('walletBalance')); //name = crypto name
     setTimeout(() => {
-      if (this.payAmount > this.walletBalance) { return };
       if(!this.cookieService.check('error')){
         this.success = `You successfully bought ${amount.value} ${this.symbol} for $${this.payAmount.toFixed(2)}`;
       }
@@ -75,7 +72,7 @@ export class CurrentCryptoComponent implements OnInit, AfterViewInit, DoCheck {
   sellCrypto(amount: any) {
  
     this.payAmount = Number(amount.value) * Number(this.price);
-    this.authService.sellCrypto(this.payAmount, this.name, Number(amount.value));
+    this.authService.sellCrypto(this.payAmount, this.name, Number(amount.value)); //name = crypto name
     this.walletBalance = Number(this.cookieService.get('walletBalance'));
     setTimeout(() => {
       if (!this.cookieService.check('error')) {
@@ -87,9 +84,7 @@ export class CurrentCryptoComponent implements OnInit, AfterViewInit, DoCheck {
   ngDoCheck(): void {
     this.error = this.cookieService.get('error');
     if (this.error == 'undefined') this.error = undefined;
-   // setTimeout(() => {
       if(this.error){ this.success = undefined;};
-    //}, 100);
   }
   ngOnInit(): void {
     this.cookieService.delete('error');
@@ -126,13 +121,12 @@ export class CurrentCryptoComponent implements OnInit, AfterViewInit, DoCheck {
   }
 
   ngAfterViewInit(): void {
-    //  setInterval(()=> {
     if (this.id) {
       this.cryptoService.getCryptoData(this.id).subscribe({
         next: (value) => this.price = this.cryptoService.transformPrice(value?.data[0].priceUsd),
         error: (error) => console.log(error)
       });
     }
-    //    },30000)
+
   }
 }

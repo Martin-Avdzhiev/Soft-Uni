@@ -32,7 +32,7 @@ export class WalletComponent implements OnInit, DoCheck {
   isShowedDeposit: boolean = false;
   error: string | undefined;
   success: string | undefined;
-  isBoughtCrypto: boolean = false;
+  isBoughtCrypto: boolean = true;
   constructor(private authService: AuthServiceService, private cookieService: CookieService) { }
 
   showDeposit() {
@@ -55,7 +55,7 @@ export class WalletComponent implements OnInit, DoCheck {
   }
 
   withdrawDollars(amount: any){
-    if (!amount.value) {this.error = 'Enter a deposit sum!'; amount.value = '';return;};
+    if (!amount.value) {this.error = 'Enter a withdraw sum!'; amount.value = '';return;};
     if(amount.value.includes(',')){amount.value = amount.value.replace(',','.');}
     amount.value = Number(amount.value)
     if(isNaN(amount.value)){this.error = 'Invalid withdrawal sum!'; amount.value = '';return;}
@@ -77,7 +77,7 @@ export class WalletComponent implements OnInit, DoCheck {
    this.authService.getProfileInfo().subscribe({
       next: (value) => {
         this.ownCryptosArray = value.ownCryptos;
-        if(this.ownCryptosArray.length == 0){this.isBoughtCrypto = true;}
+        if(this.ownCryptosArray.length == 0){this.isBoughtCrypto = false;}
         for (const crypto of this.ownCryptosArray) {
           crypto.amount = crypto.amount.toFixed(4);
         }

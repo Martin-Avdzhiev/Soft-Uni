@@ -26,7 +26,6 @@ export class CryptoService {
       description = removeLastWord.join(' ');
 
     }
-    console.log(fisrtPartCryptoNewApiUrl + description + secondPartCryptoNewApiUrl)
     return this.http.get<{ articles: CryptoNew[] }>(fisrtPartCryptoNewApiUrl + description + secondPartCryptoNewApiUrl);
   }
 
