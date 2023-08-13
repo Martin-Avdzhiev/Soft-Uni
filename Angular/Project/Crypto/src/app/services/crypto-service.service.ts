@@ -19,13 +19,13 @@ export class CryptoService {
 
   getSingleCryptoNewByDescription(description: string) {
 
-    if (description.includes('.com')) { }
-    else if (description) {
-      const removeLastWord = description.split(' ');
-      removeLastWord.pop();
-      description = removeLastWord.join(' ');
+    // if (description.includes('.com')) { }
+    // else if (description) {
+    //   const removeLastWord = description.split(' ');
+    //   removeLastWord.pop();
+    //   description = removeLastWord.join(' ');
 
-    }
+    // }
     return this.http.get<{ articles: CryptoNew[] }>(fisrtPartCryptoNewApiUrl + description + secondPartCryptoNewApiUrl);
   }
 
