@@ -1,0 +1,14 @@
+body{
+    background-color: #f9f7cf;
+    width: 480px;
+    padding: 15px 5px 15px;
+}
+header, footer{
+    background-color: #f2dcbb;
+    padding: 15px 5px 15px;
+
+}
+h1,h2,p{
+    padding-left: 10px;
+    margin: 10px;
+}
