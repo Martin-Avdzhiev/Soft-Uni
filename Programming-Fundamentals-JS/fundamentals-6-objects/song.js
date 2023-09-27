@@ -22,6 +22,7 @@ function createSong (array) {
     else {
         let filtered = songs.filter((i) => i.type === typeSong);
         filtered.forEach((i) => console.log(i.name));
+
     }
 }
 
