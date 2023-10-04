@@ -1,0 +1,21 @@
+.viewport{
+    position: relative;
+}
+.card{
+    display: block;
+    position: absolute;
+}
+img{
+    max-width: 300px;
+    height: auto;
+}
+.first{
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%);
+}
+.second{
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+}
