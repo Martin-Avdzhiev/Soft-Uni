@@ -1,0 +1,80 @@
+.first-section {
+    width: 55%;
+}
+
+img[alt="1"] {
+    float: right;
+    width: 150px;
+    height: auto;
+    border: 3px solid white;
+}
+
+aside {
+    position: absolute;
+    left: 60%;
+    top: 10%;
+    display: block;
+}
+
+.first-section>div {
+    float: right;
+    border: 3px solid black;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+}
+
+.first-section>p {
+    font-size: 20px;
+}
+#categories-ul>li>span {
+    color:rgb(0,102,0);
+    font-size: 18px;
+}
+#social-ul>li>a{
+    text-decoration: none;
+    font-size: 18px;
+}
+.default-paraghraphs{
+    max-width: 53%;
+}
+#blockquote-paragraph{
+    max-width: 50%;
+    display: inline-block;
+    border-right: 2px solid grey;
+    padding-right: 1em;
+}
+blockquote{
+    display: inline;
+    position: absolute;
+    max-width: 20%;
+    color: grey;
+    margin-left: 1em;
+    font-style: italic;
+
+}
+#blockquote-section{
+    max-width: 53%;
+}
+#blockquote-section>span{
+    color: grey;
+    position: absolute;
+    top: 82%;
+    right: 51%;
+    font-style: italic;
+}
+#final-section{
+    max-width: 53%;
+}
+img[alt="2"]{
+    float: left;
+    border: 3px solid white;
+}
+#final-section>p{
+    margin-top: 0;
+    font-size: 18px;
+}
+#final-section>div{
+    border: 3px solid black;
+    float: left;
+    margin-right: 1em;
+}

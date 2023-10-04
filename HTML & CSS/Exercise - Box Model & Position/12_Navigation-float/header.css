@@ -1,0 +1,29 @@
+.main-header{
+    border-bottom: 1px solid black;
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.5em 20em 0 0;
+}
+#ul-nav{
+    margin: 0;
+    padding: 0;
+}
+#ul-nav>li{
+    display: inline-block;
+    padding-inline: 1em;
+    margin-left: 2em;
+    color: rgb(94, 163, 94);
+}
+header>p{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+    display: inline-block;
+}
