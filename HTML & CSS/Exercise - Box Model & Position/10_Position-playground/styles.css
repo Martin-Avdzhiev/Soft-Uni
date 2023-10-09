@@ -1,21 +1,49 @@
-.viewport{
-    position: relative;
+body{
+    margin: 0;
 }
-.card{
+.card {
     display: block;
     position: absolute;
 }
+
 img{
-    max-width: 300px;
+    max-width: 260px;
     height: auto;
 }
-.first{
+
+.first {
     left: 50%;
-    top: 5%;
+    top: 15%;
     transform: translate(-50%);
 }
-.second{
-    top: 40%;
+
+.second {
+    top: 55%;
     left: 50%;
     transform: translate(-50%);
 }
+
+.fa-star {
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    color: white;
+}
+
+.fa-link {
+    position: absolute;
+    right: 2%;
+    bottom: 5%;
+    color: white;
+}
+.first-div{
+    background: linear-gradient(90deg, rgba(0,36,35,1) 0%, rgba(9,49,121,0.9922093837535014) 39%, rgba(0,255,196,1) 100%);
+    width: 100%;
+    height: 50vh;
+}
+
+.second-div{
+    background: linear-gradient(90deg, rgba(36,0,21,1) 0%, rgba(121,9,96,0.9922093837535014) 39%, rgba(255,123,0,1) 100%);
+    width: 100%;
+    height: 50vh;
+} 

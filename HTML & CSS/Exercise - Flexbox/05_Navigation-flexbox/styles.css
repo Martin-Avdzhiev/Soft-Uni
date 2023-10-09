@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 2em 3em 0 3em;
+}
+header{
+    border-bottom: 2px solid rgb(0, 0, 0);
+    display: flex;
+    gap: 70%;
+    
+}
+header>ul{
+    display: flex;
+    list-style-type: none;
+}
+a{
+    color: rgb(0, 153, 0);
+    margin-right: 1em;
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    padding-bottom: 1em;
+}
+li{
+    margin-top: 1em;
+}
+p{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.title{
+    font-weight: 700;
+    font-size: 40px;
+}
