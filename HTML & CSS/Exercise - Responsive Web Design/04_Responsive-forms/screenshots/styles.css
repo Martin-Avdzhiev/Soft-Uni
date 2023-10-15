@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: black;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+form {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    transform: translateY(-50%);
+    /* flex-basis: 15%; */
+    border: 1px solid rgb(113, 112, 112);
+    border-radius: 0.5em;
+    position: relative;
+    padding: 1.5em;
+    z-index: 1;
+    background-color: rgb(242, 242, 242);
+    min-height: 20vh;
+    min-width: 25vw;
+    box-shadow: 0 0 3px 3px rgb(242, 242, 242);
+}
+
+input {
+    flex: 1 1 70%;
+    font-family: 'FontAwesome';
+    border-radius: 0.3em;
+    height: 3.5vh;
+    padding: 0 0.5em;
+}
+
+label {
+    flex: 1 1 10%;
+    font-weight: 700;
+}
+
+input,
+label {
+    margin-top: 1.5em;
+}
+
+p {
+    border: 1px solid black;
+    width: 35%;
+    border-radius: 0.3em;
+    position: absolute;
+    top: -11.5%;
+    right: 65.3%;
+    z-index: 2;
+    background-color: white;
+    padding: 1em 0 1em 0.5em;
+    font-weight: 700;
+}
+
+button {
+    background-color: rgb(66, 66, 66);
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 0.3em;
+    padding: 0.3em 0.6em;
+    margin-top: 1em;
+}
+
+@media (max-width: 499px) {
+    form {
+        flex-basis: 65%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin-top: 15em;
+    }
+
+    input {
+        padding: 0.5em 0 0.5em 0.3em;
+    }
+
+    p {
+        top: -7%;
+        right: 40.5%;
+        width: 60%;
+    }
+
+    button {
+        text-align: center;
+        width: 50%;
+    }
+}
+
+@media (max-width: 699px) and (min-width: 500px) {
+    form {
+        flex-basis: 65%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin-top: 15em;
+    }
+
+    input {
+        padding: 0.5em 0 0.5em 0.3em;
+    }
+
+    p {
+        top: -7%;
+        right: 50.3%;
+        width: 50%
+    }
+
+    button {
+        text-align: center;
+        width: 40%;
+    }
+}
+
+@media(max-width: 999px) and (min-width: 700px) {
+
+    form {
+        flex-basis: 50%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin-top: 15em;
+    }
+
+    input {
+        padding: 0.5em 0 0.5em 0.3em;
+    }
+
+    p {
+        top: -7%;
+        right: 65.5%;
+    }
+    button{
+        text-align: center;
+        width: 40%;
+    }
+}
+
+@media(max-width: 1470px) and (min-width: 1000px) {
+    form {
+        flex-basis: 40%;
+    }
+}
+
+@media(min-width: 1471px) {
+    form {
+        flex-basis: 15%;
+    }
+}
+@media(min-height: 1000px)and (min-width: 1000px) {
+    body{
+        font-size: 26px;
+        align-items: center;
+    }
+    form{
+        margin-top: 15em;
+        gap: 0.2em;
+    }
+    input {
+        flex: 1 1 100%;
+        font-family: 'FontAwesome';
+        border-radius: 0.3em;
+        height: 3.5vh;
+        padding: 0 0.5em;
+    }
+    
+    label {
+        flex: 1 1 100%;
+        font-weight: 700;
+    }
+}
+@media(min-width: 750px) and (min-height: 1000px){
+    form {
+        flex-basis: 50%;
+        margin-bottom: 30em;
+    }
+}

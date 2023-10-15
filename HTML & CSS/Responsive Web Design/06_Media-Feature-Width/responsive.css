@@ -1,0 +1,32 @@
+body {
+  display: flex;
+}
+
+div {
+  background: lightblue;
+  width: 200px;
+  height: 200px;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (min-width:35rem) {
+  article {
+    background-color: yellow;
+  }
+}
+
+@media (max-width:50rem) {
+  article {
+    border: 2px solid blue;
+  }
+}
+
+@media (width:360px) {
+  article {
+    color: red;
+  }
+}

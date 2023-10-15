@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins';
+}
+section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+header{
+    text-align: center;
+}
+h1{
+    font-weight: 600;
+}
+header p{
+    margin-bottom: 1em;
+}
+span{
+    color: rgb(115, 194, 221);
+}
+main{
+    display: flex;
+    max-width: 60%;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+article{
+    flex: 1 1 calc(100% / 3.33);
+    background-color: rgb(72, 121, 144);
+    border-radius: 1em;
+}
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+}
+article p{
+    padding-left: 1em;
+}
+h2{
+    padding-left: 0.65em;
+}
+button{
+    margin: 1em 0 1em 1.5em;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    color: white;
+    background-color: rgb(87, 146, 198);
+    cursor: pointer;
+}
