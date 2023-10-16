@@ -1,0 +1,176 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Sans';
+}
+
+header {
+    display: flex;
+    background-color: rgb(209, 25, 25);
+    padding: 1em 3em;
+    justify-content: space-between;
+    color: white;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    padding: 0 0.3em;
+}
+
+main {
+    color: white;
+    width: 100%;
+    height: 37.5em;
+    overflow: hidden;
+}
+
+main>* {
+    position: relative;
+    z-index: 2;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5.5em;
+    padding-right: 5.5em;
+    padding-top: 1em;
+    margin-bottom: 8em;
+}
+
+h2,
+p,
+button {
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    letter-spacing: 0.25em;
+}
+
+p {
+    font-size: 20px;
+}
+
+button {
+    color: white;
+    background-color: rgb(209, 56, 56);
+    border-radius: 0.4em;
+    padding: 0.5em 0.5em;
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+    width: 33%;
+    margin-left: 33%;
+}
+
+.main-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: -133%;
+    z-index: 1;
+}
+
+.bigger-main-div {
+    display: flex;
+    justify-content: center;
+}
+
+.main-div {
+    display: flex;
+    margin-top: 4em;
+    flex-direction: column;
+    width: 27%;
+    gap: 3em;
+}
+
+.fa-dumbbell {
+    transform: rotate(135deg);
+}
+
+h3 {
+    width: 10%;
+    margin: 1em auto;
+    text-align: center;
+    font-size: 22px;
+}
+
+.red-line {
+    border-bottom: 2px solid red;
+    width: 1.5%;
+    margin: 0 auto;
+}
+
+.welcome {
+    display: flex;
+    justify-content: space-around;
+}
+
+.red {
+    color: red;
+}
+.grey{
+    color: grey;
+}
+.welcome > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 33.33%;
+    margin-top: 1em;
+}
+.welcome > article > p{
+    text-align: center;
+    padding: 0.5em 7em;
+}
+.welcome >article > .fa-solid{
+    font-size: 50px;
+    padding-bottom: 0.5em;
+}
+.coaches{
+    display: flex;
+    justify-content: space-around;
+}
+.coaches > article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5em;
+    margin-bottom: 5em;
+}
+.coaches> article > img{
+    max-width: 50%;
+}
+.coaches> article > p{
+    width: 50%;
+    font-size: 18px;
+}
+h5{
+    margin-top: 0.8em;
+    font-size: 16px;
+}
+.coaches> article > .red{
+    margin: 0.5em;
+}
+footer{
+    background-color: rgb(204, 75, 75);
+    text-align: center;
+    padding: 0.5em 0 0.5em 0;
+}
