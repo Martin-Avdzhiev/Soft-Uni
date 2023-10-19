@@ -1,10 +1,12 @@
-@media (max-width: 500px) {
-    body{
+@media (max-width: 600px) {
+    body {
         font-size: 18px
     }
-    footer{
+
+    footer {
         font-size: 16px;
     }
+
     .navbar-link,
     .home-textinput {
         display: none;
@@ -28,40 +30,57 @@
     .home-container04 {
         justify-content: center;
     }
-    .home-container03{
+
+    .home-container03 {
         margin-left: 100px;
     }
+
     .category-card-image {
         width: 200px;
         height: 200px;
     }
-    .home-full-width-banner{
+
+    .home-full-width-banner {
         flex-wrap: wrap;
     }
-    .home-image6{
+
+    .home-image6 {
         width: 100%;
     }
-    .home-left4{
+
+    .home-left4 {
         padding: 2em 0 2em 0;
     }
-    .home-text30{
+
+    .home-text30 {
         width: 100%;
     }
-    .home-btn{
+
+    .home-btn {
         margin-top: -1.3em;
     }
-    .home-container09{
+
+    .home-container09 {
         max-width: 70%;
         position: relative;
         top: 925px;
         left: 32px;
     }
-    .home-links-container{
+
+    .home-links-container {
         flex-wrap: wrap;
         position: relative;
         right: 150px;
     }
-    .section-container{
+
+    .section-container {
         padding-top: 25px;
     }
+
+    .home-container08 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
 }
