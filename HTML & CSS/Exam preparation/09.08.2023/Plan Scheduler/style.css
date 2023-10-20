@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+}
+
+nav,
+ul {
+    display: flex;
+    gap: 1em;
+}
+
+nav {
+    background-color: rgb(221, 221, 221);
+    padding: 1.75em 0 1em 3em;
+}
+
+nav ul {
+    list-style-type: none;
+    flex: 1 1 93%;
+}
+
+nav ul li {
+    padding-right: 1em;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.get-started {
+    height: 46.9em;
+    background-image: url('./images/background.jpg');
+    background-position: bottom;
+    padding-top: 12em;
+}
+
+nav>.buy-now {
+    flex: 1 1 7%;
+}
+
+.buy-now a {
+    background-color: white;
+    padding: 0.5em 1em;
+    border: 1px solid black;
+    border-radius: 0.3em;
+}
+
+.started-flexbox {
+    margin: 0 0 0 21em;
+}
+
+.started-flexbox>h2 {
+    font-size: 45px;
+    width: 17ch;
+    font-weight: 700;
+    margin-bottom: 2em;
+}
+
+.started-flexbox>p {
+    color: white;
+    font-size: 18px;
+    width: 50ch;
+    margin-bottom: 4em;
+    font-weight: 700;
+}
+
+.started-flexbox>a {
+    display: inline-block;
+    padding: 1em 2em;
+    background-color: black;
+    color: white;
+    border-radius: 0.2em;
+    transition: 0.3s ease-in-out;
+}
+.started-flexbox>.start:hover{
+   transform: scale(1.02);
+}
+.numbers ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1em 0 0.5em 0;
+    font-size: 50px;
+    font-weight: 700;
+    list-style-type: none;
+    color: rgb(255, 124, 76);
+}
+
+.paragraphs-container {
+    display: flex;
+    justify-content: center;
+}
+
+.paragraphs {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.paragraphs h5 {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.paragraphs p {
+    font-size: 14px;
+    color: rgb(89, 89, 89);
+    margin-bottom: 3em;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background-color: rgb(217, 217, 217);
+    padding: 2.5em 0 2.5em 3em;
+}
+
+section img {
+    width: 30%;
+    height: auto;
+}
+
+section article {
+    display: flex;
+    gap: 1.5em;
+}
+
+.article-without-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.article-without-img h6 {
+    color: rgb(89, 89, 89);
+    font-size: 18px;
+}
+
+.article-without-img h2 {
+    font-size: 30px;
+}
+
+.article-without-img p:nth-child(3) {
+    color: rgb(89, 89, 89);
+    width: 82ch;
+}
+
+.article-without-img p:nth-child(4) {
+    font-weight: 600;
+}
+
+.article-without-img p:nth-child(5) {
+    color: rgb(89, 89, 89);
+}
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+    padding: 0 3em;
+}
+
+.plans {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    padding: 4em 15em;
+    gap: 4em;
+    justify-content: space-around;
+}
+
+.plans div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    flex: 1 1 33%;
+}
+
+.plans div:nth-child(2) {
+    background-color: rgb(255, 124, 76);
+    flex: 1 1 33%;
+}
+
+.plans div:nth-child(3) {
+    background-color: black;
+    color: white;
+    flex: 1 1 33%;
+}
+
+
+.plans div:nth-child(1) h3 {
+    font-size: 35px;
+}
+
+.plans h3 {
+    margin-bottom: 1em;
+    font-size: 30px;
+}
+
+.plans h2 {
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 0.4em;
+}
+
+.plans span,
+.plans div p:nth-child(6) {
+    font-weight: 700;
+}
+
+.plan p,
+.plan span {
+    margin-bottom: 1em;
+    font-size: 18px;
+}
+
+.first a {
+    display: inline-block;
+    color: white;
+    background-color: black;
+    padding: 0.8em 1em;
+    border-radius: 0.3em;
+}
+
+.second a {
+    display: inline-block;
+    background-color: white;
+    padding: 0.8em 1em;
+    border-radius: 0.3em;
+}
+.first > p:nth-child(6),.second > p:nth-child(6){
+    margin-bottom: 4em;
+}
+.first,.second{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    padding: 2em 7.5em;
+}
+.first:hover,.second:hover{
+    transform: scale(1.02);
+}
+footer{
+    flex: 1 1 auto;
+}
+footer ul{
+    display: flex;
+    font-size: 24px;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 2em 8em;
+    background-color: rgb(217, 217, 217);
+}
