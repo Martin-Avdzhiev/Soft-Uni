@@ -1,0 +1,37 @@
+@media (max-width:600px){
+    .navigation-header, .home-text,.home-image{
+        display: none;
+    }
+    .home-text01{
+        width: 50%;
+    }
+    .home-portofolio{
+        padding-top: 0;
+    }
+    .home-text03{
+        margin-right: 36px;
+    }
+    .home-tab-selector-header{
+        margin-top: 1em;
+    }
+    .home-tab-selector-cards-container{
+        grid-template-columns: initial;
+    }
+    .section-container{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .home-top-part,.home-links-container{
+        flex-direction: column;
+    }
+    .home-contact-container, .home-product-container,.home-navigate-container{
+        margin-bottom: 2em;
+    }
+    .button-primary{
+        padding: 1.5em;
+        background-color: rgb(149,68,51);
+    }
+    .home-subscribe-container{
+        width: 100%;
+    }
+}

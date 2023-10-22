@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=PT%20Sans%3A400%2C700');
+@import url('https://fonts.googleapis.com/css?family=PT%20Serif');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'PT Sans';
+    width: 100%;
+}
+
+.backgound-container{
+    width: 66%;
+    background-image: url('/Solution/3/images/background.jpg');
+    background-position: left;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    font-family: 'PT Sans';
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+}
+nav ul li{
+    padding-right: 2em;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+.nav-image img{
+    width: 5em;
+    height: auto;
+}
+.header-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: white;
+    padding: 0.5em 0 9em 8em;
+}
+.header-text h2{
+    font-family: 'PT Serif';
+    font-weight: 400;
+    font-size: 40px;
+}
+.header-text p{
+    width: 58ch;
+    font-size: 14px;
+}
+main{
+    background-color: white;
+    width: 100%;
+}
+.objectives-container{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 5em 10em 7em 10em;
+    border-bottom: 3px solid rgb(217,217,217);
+}
+.objectives-container h3{
+    font-family: 'PT Serif';
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+}
+.objectives-container p{
+    font-size: 14px;
+    margin-bottom: 3em;
+    width: 64ch;
+}
+.objectives-container a{
+    text-decoration: none;
+    color: rgb(199,152,131);
+    border: 2px solid rgb(199,152,131);
+    font-weight: 700;
+    padding: 0.5em 1em;
+}
+.animals{
+    display: flex;
+    gap: 3em;
+}
+.animals div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 8em;
+    height: 8em;
+    background-color: rgb(228,228,228);
+    border-radius: 50%;
+}
+.animals img{
+    width: 6em;
+    height: 6em;
+}
+.sponsors-partners{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+.sponsors-partners h2:nth-child(1){
+    margin-top: 1.5em;
+}
+.sponsors-partners h2{
+    font-family: 'PT Serif';
+    color: rgb(184,142,103);
+    font-size: 36px;
+    font-weight: 500;
+}
+.sponsors-partners p{
+    text-align: center;
+    width: 130ch;
+    color: grey;
+}
+.sponsors-partners p:nth-child(5){
+    margin-bottom: 3em;
+}
+footer{
+    background-color: black;
+    width: 100%;
+}
+.info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    text-transform: uppercase;
+    border-bottom: 1px solid gray;
+}
+footer h5{
+    font-size: 26px;
+    font-weight: 400;
+    text-transform: initial;
+    font-family: 'PT Serif';
+    margin: 2em 0;
+    color: white;
+}
+footer ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    list-style-type: none;
+
+}
+footer ul li{
+    color: rgb(125,130,142);
+}
+footer > div > div:nth-child(1) > ul > li:nth-child(7){
+    margin-bottom: 5em;
+}
+.copyright{
+    color: rgb(125,130,142);
+    padding: 1em 0 1em 21.4em;
+}
