@@ -1,8 +1,9 @@
-import '../css/footer.css'
-export default function Footer() {
+const Footer = () => {
     return (
         <footer className="footer">
-            <p>Copyright © designed by Mihail Valkov</p>
+            <p>This site is designed to be used for training purposes at SoftUni.</p>
         </footer>
     )
 }
+
+export default Footer

@@ -1,8 +1,0 @@
-.site-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    gap: 2em;
-    margin-top: 2em;
-}

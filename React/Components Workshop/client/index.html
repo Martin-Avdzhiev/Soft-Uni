@@ -11,19 +11,8 @@
 </head>
 
 <body>
-  <!-- Header component -->
-  <header class="header">
-    <div class="logo">
-      <span class="course">React Course - June 2022</span>
-      <span class="description">User List Demo</span>
-    </div>
-  </header>
 
-  <!-- Main component  -->
-  <main class="main">
-    <!-- Section component  -->
-    <section class="card users-container">
-      <!-- Search bar component -->
+       <!-- Search bar component
       <form class="search-form">
         <h2>
           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user"
@@ -37,7 +26,7 @@
         </h2>
         <div class="search-input-container">
           <input type="text" placeholder="Please, select the search criteria" name="search" />
-          <!-- Show the clear button only if input field length !== 0 -->
+           Show the clear button only if input field length !== 0 -->
           <button class="btn close-btn">
             <i class="fa-solid fa-xmark"></i>
           </button>
@@ -49,7 +38,7 @@
 
         <div class="filter">
           <span>Search Criteria:</span>
-          <select name="criteria" class="criteria" value="">
+          <select name="criteria" class="criteria">
             <option value="">Not selected</option>
             <option value="">First Name</option>
             <option value="">Last Name</option>
@@ -57,7 +46,7 @@
             <option value="">Phone</option>
           </select>
         </div>
-      </form>
+      </form> 
 
       <!-- Table component -->
       <div class="table-wrapper">
@@ -66,8 +55,8 @@
         <!-- <div class="loading-shade"> -->
         <!-- Loading spinner  -->
         <!-- <div class="spinner"></div> -->
-
-        <!-- No users added yet  -->
+<!-- 
+        No users added yet  -->
 
         <!-- <div class="table-overlap">
               <svg
@@ -138,8 +127,8 @@
                 Image
               </th>
               <th>
-                First name<svg class="icon" aria-hidden="true" focusable="false" data-prefix="fas"
-                  data-icon="arrow-down" class="svg-inline--fa fa-arrow-down Table_icon__+HHgn" role="img"
+                First name<svg aria-hidden="true" focusable="false" data-prefix="fas"
+                  data-icon="arrow-down" class="icon svg-inline--fa fa-arrow-down Table_icon__+HHgn" role="img"
                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                   <path fill="currentColor"
                     d="M374.6 310.6l-160 160C208.4 476.9 200.2 480 192 480s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 370.8V64c0-17.69 14.33-31.1 31.1-31.1S224 46.31 224 64v306.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0S387.1 298.1 374.6 310.6z">
@@ -147,8 +136,8 @@
                 </svg>
               </th>
               <th>
-                Last name<svg class="icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-down"
-                  class="svg-inline--fa fa-arrow-down Table_icon__+HHgn" role="img" xmlns="http://www.w3.org/2000/svg"
+                Last name<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-down"
+                  class="icon svg-inline--fa fa-arrow-down Table_icon__+HHgn" role="img" xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 384 512">
                   <path fill="currentColor"
                     d="M374.6 310.6l-160 160C208.4 476.9 200.2 480 192 480s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 370.8V64c0-17.69 14.33-31.1 31.1-31.1S224 46.31 224 64v306.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0S387.1 298.1 374.6 310.6z">
@@ -165,8 +154,8 @@
                 </svg>
               </th>
               <th>
-                Phone<svg class="icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-down"
-                  class="svg-inline--fa fa-arrow-down Table_icon__+HHgn" role="img" xmlns="http://www.w3.org/2000/svg"
+                Phone<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-down"
+                  class="icon svg-inline--fa fa-arrow-down Table_icon__+HHgn" role="img" xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 384 512">
                   <path fill="currentColor"
                     d="M374.6 310.6l-160 160C208.4 476.9 200.2 480 192 480s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 370.8V64c0-17.69 14.33-31.1 31.1-31.1S224 46.31 224 64v306.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0S387.1 298.1 374.6 310.6z">
@@ -175,8 +164,8 @@
               </th>
               <th>
                 Created
-                <svg class="icon active-icon" aria-hidden="true" focusable="false" data-prefix="fas"
-                  data-icon="arrow-down" class="svg-inline--fa fa-arrow-down Table_icon__+HHgn" role="img"
+                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                  data-icon="arrow-down" class="icon active-icon svg-inline--fa fa-arrow-down Table_icon__+HHgn" role="img"
                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                   <path fill="currentColor"
                     d="M374.6 310.6l-160 160C208.4 476.9 200.2 480 192 480s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 370.8V64c0-17.69 14.33-31.1 31.1-31.1S224 46.31 224 64v306.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0S387.1 298.1 374.6 310.6z">
@@ -354,9 +343,6 @@
                   <span><i class="fa-solid fa-user"></i></span>
                   <input id="firstName" name="firstName" type="text" />
                 </div>
-                <p class="form-error">
-                  First name should be at least 3 characters long!
-                </p>
               </div>
               <div class="form-group">
                 <label for="lastName">Last name</label>
@@ -364,9 +350,6 @@
                   <span><i class="fa-solid fa-user"></i></span>
                   <input id="lastName" name="lastName" type="text" />
                 </div>
-                <p class="form-error">
-                  Last name should be at least 3 characters long!
-                </p>
               </div>
             </div>
 
@@ -377,7 +360,6 @@
                   <span><i class="fa-solid fa-envelope"></i></span>
                   <input id="email" name="email" type="text" />
                 </div>
-                <p class="form-error">Email is not valid!</p>
               </div>
               <div class="form-group">
                 <label for="phoneNumber">Phone number</label>
@@ -385,7 +367,6 @@
                   <span><i class="fa-solid fa-phone"></i></span>
                   <input id="phoneNumber" name="phoneNumber" type="text" />
                 </div>
-                <p class="form-error">Phone number is not valid!</p>
               </div>
             </div>
 
@@ -395,7 +376,6 @@
                 <span><i class="fa-solid fa-image"></i></span>
                 <input id="imageUrl" name="imageUrl" type="text" />
               </div>
-              <p class="form-error">ImageUrl is not valid!</p>
             </div>
 
             <div class="form-row">
@@ -405,9 +385,6 @@
                   <span><i class="fa-solid fa-map"></i></span>
                   <input id="country" name="country" type="text" />
                 </div>
-                <p class="form-error">
-                  Country should be at least 2 characters long!
-                </p>
               </div>
               <div class="form-group">
                 <label for="city">City</label>
@@ -415,9 +392,6 @@
                   <span><i class="fa-solid fa-city"></i></span>
                   <input id="city" name="city" type="text" />
                 </div>
-                <p class="form-error">
-                  City should be at least 3 characters long!
-                </p>
               </div>
             </div>
 
@@ -428,9 +402,6 @@
                   <span><i class="fa-solid fa-map"></i></span>
                   <input id="street" name="street" type="text" />
                 </div>
-                <p class="form-error">
-                  Street should be at least 3 characters long!
-                </p>
               </div>
               <div class="form-group">
                 <label for="streetNumber">Street number</label>
@@ -438,9 +409,6 @@
                   <span><i class="fa-solid fa-house-chimney"></i></span>
                   <input id="streetNumber" name="streetNumber" type="text" />
                 </div>
-                <p class="form-error">
-                  Street number should be a positive number!
-                </p>
               </div>
             </div>
             <div id="form-actions">
@@ -483,11 +451,8 @@
       </div>
     </div> -->
 
-  </main>
-  <!-- Footer component  -->
-  <footer class="footer">
-    <p>Copyright © designed by Mihail Valkov</p>
-  </footer>
+  
+
 </body>
 
 </html>
