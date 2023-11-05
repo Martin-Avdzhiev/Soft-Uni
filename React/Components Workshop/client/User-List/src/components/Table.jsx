@@ -1,5 +1,5 @@
 import TableRow from "./TableRow";
-
+import { useEffect, useState } from "react";
 const Table = () => {
     return (
         <div className="table-wrapper">
