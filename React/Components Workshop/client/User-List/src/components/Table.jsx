@@ -1,6 +1,17 @@
+import CreateUserModal from "./CreateUserModal";
 import TableRow from "./TableRow";
 import { useEffect, useState } from "react";
 const Table = () => {
+    const [users, setUsers] = useState([]);
+    const [showCreate, setShowCreate] = useState(false);
+    useEffect(() => {
+        fetch('http://localhost:3030/jsonstore/users')
+            .then(response => response.json())
+            .then(data => setUsers(Object.values(data)))
+    }, []);
+    const createUserClickHandler = () => {
+        setShowCreate(!showCreate)
+    }
     return (
         <div className="table-wrapper">
             {/* <!-- Overlap components  --> */}
@@ -129,9 +140,24 @@ const Table = () => {
                 </thead>
                 <tbody>
                     {/* <!-- Table row component --> */}
-                    <TableRow></TableRow>
+                    {users.map(user => (
+                        <TableRow
+                            key={user._id}
+                            firstName={user.firstName}
+                            lastName={user.lastName}
+                            email={user.email}
+                            phoneNumber={user.phoneNumber}
+                            createdAt={user.createdAt}
+                            updatedAt={user.updatedAt}
+                            imageUrl={user.imageUrl}
+                            address={user.address}
+                        />
+                    ))}
+
                 </tbody>
             </table>
+            <button className="btn-add btn" onClick={createUserClickHandler}>Add new user</button>
+            {showCreate && <CreateUserModal createUserClickHandler={createUserClickHandler}/>}
         </div>
     )
 }

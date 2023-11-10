@@ -9,7 +9,7 @@ const UserList = () => {
                 <Table></Table>
 
             {/* <!-- New user button  --> */}
-            <button className="btn-add btn">Add new user</button>
+            
 
             {/* <!-- Pagination component  --> */}
             {/* <div className="pagination position">
