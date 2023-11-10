@@ -1,0 +1,12 @@
+ * {
+     box-sizing: border-box;
+ }
+html{
+    display: flex;
+    justify-content: center;
+}
+ body {
+     margin: 0;
+     font-family: Arial, sans-serif;
+     width: 70%;
+ }
