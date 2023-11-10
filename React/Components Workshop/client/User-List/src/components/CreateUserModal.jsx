@@ -1,4 +1,7 @@
-const CreateUserModal = ({createUserClickHandler}) => {
+const CreateUserModal = ({
+    createUserClickHandler,
+    onUserCreate
+}) => {
     return (
         <div className="overlay">
             <div className="backdrop" onClick={createUserClickHandler}></div>
@@ -15,7 +18,7 @@ const CreateUserModal = ({createUserClickHandler}) => {
                             </svg>
                         </button>
                     </header>
-                    <form>
+                    <form onSubmit={onUserCreate}>
                         <div className="form-row">
                             <div className="form-group">
                                 <label htmlFor="firstName">First name</label>

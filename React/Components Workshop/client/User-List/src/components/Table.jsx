@@ -1,25 +1,37 @@
 import CreateUserModal from "./CreateUserModal";
 import TableRow from "./TableRow";
+import { UserInfoModal } from "./UserInfoModal";
 import { useEffect, useState } from "react";
+import { getAll, create, getOne, deleteUser } from "../services/userService";
 const Table = () => {
     const [users, setUsers] = useState([]);
     const [showCreate, setShowCreate] = useState(false);
+    const [showInfo, setShowInfo] = useState(false);
+    const [userInfo, setUserInfo] = useState({});
     useEffect(() => {
-        fetch('http://localhost:3030/jsonstore/users')
-            .then(response => response.json())
-            .then(data => setUsers(Object.values(data)))
+        const data = getAll().then(result => setUsers(Object.values(result)));
     }, []);
     const createUserClickHandler = () => {
-        setShowCreate(!showCreate)
+        setShowCreate(!showCreate);
+    }
+    const onUserCreate = async (e) => {
+        e.preventDefault();
+        const formData = Object.fromEntries(new FormData(e.currentTarget));
+        const result = await create(formData);
+        setShowCreate(false);
+        setUsers(state => [...state, result]);
+    };
+    const userInfoClickHandler = async (userId) => {
+        const user = await getOne(userId);
+        setUserInfo(user);
+        setShowInfo(true);
+    }
+    const onClickDeleteUser = async (id) => {
+        const deletedUser = await deleteUser(id);
+        setUsers(state => state.filter(x => x._id !== id));
     }
     return (
         <div className="table-wrapper">
-            {/* <!-- Overlap components  --> */}
-
-            {/* <!-- <div className="loading-shade"> --> */}
-            {/* <!-- Loading spinner  --> */}
-            {/* <!-- <div className="spinner"></div> -->  */}
-            {/* <!-- No users added yet  -->  */}
 
             {/* <!-- <div className="table-overlap">
                <svg
@@ -82,7 +94,12 @@ const Table = () => {
                <h2>Failed to fetch</h2>
            </div> -->
             <!-- </div> --> */}
+            {showCreate && <CreateUserModal
+                createUserClickHandler={createUserClickHandler}
+                onUserCreate={onUserCreate}
+            />}
 
+            {showInfo && <UserInfoModal userInfo={userInfo} onClose={() => setShowInfo(false)} />}
             <table className="table">
                 <thead>
                     <tr>
@@ -143,6 +160,7 @@ const Table = () => {
                     {users.map(user => (
                         <TableRow
                             key={user._id}
+                            _id={user._id}
                             firstName={user.firstName}
                             lastName={user.lastName}
                             email={user.email}
@@ -151,13 +169,14 @@ const Table = () => {
                             updatedAt={user.updatedAt}
                             imageUrl={user.imageUrl}
                             address={user.address}
+                            onUserInfoClick={userInfoClickHandler}
+                            onClickDeleteUser={onClickDeleteUser}
                         />
                     ))}
 
                 </tbody>
             </table>
             <button className="btn-add btn" onClick={createUserClickHandler}>Add new user</button>
-            {showCreate && <CreateUserModal createUserClickHandler={createUserClickHandler}/>}
         </div>
     )
 }
