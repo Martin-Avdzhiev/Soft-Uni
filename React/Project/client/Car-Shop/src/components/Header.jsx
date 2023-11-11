@@ -1,14 +1,14 @@
 import './styles/Header.css';
-import carImage from'../assets/header-background-car.jpg'
+import { Link } from 'react-router-dom'
 export default function Header() {
     return (
         <header>
             <div class="navbar">
-                <a href="#cars">Cars</a>
-                <a href="#motorbikes">Motorbikes</a>
-                <a href="#atv">ATVs</a>
-                <a href="#signup" class="right">Sign Up</a>
-                <a href="#login" class="right">Login</a>
+                <Link to="/cars">Cars</Link>
+                <Link to="/motorbikes">Motorbikes</Link>
+                <Link to="/atv">ATVs</Link>
+                <Link to="/signup" class="right">Sign Up</Link>
+                <Link to="/login" class="right">Login</Link>
             </div>
         </header>
 
