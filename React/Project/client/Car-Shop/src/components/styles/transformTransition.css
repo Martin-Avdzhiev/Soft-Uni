@@ -1,21 +1,21 @@
-.car-transition-enter{
+.transition-enter{
     transform: scale(1);
 }
-.car-transition-enter-active{
+.transition-enter-active{
     transform: scale(1.2);
     transition: transform 0.3s ease-in;
 }
-.car-transition-enter-done{
+.transition-enter-done{
     transform: scale(1.2);
 }
-.car-transition-exit{
+.transition-exit{
     transform: scale(1.2);
 }
-.car-transition-exit-active{
+.transition-exit-active{
     transform: scale(1);
     transition: transform 0.3s ease-out;
 }
-.car-transition-exit-done{
+.transition-exit-done{
     transform: scale(1);
 }
 

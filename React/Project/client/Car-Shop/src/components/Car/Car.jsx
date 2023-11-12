@@ -18,7 +18,7 @@ export default function Car({
                 <CSSTransition
                     in={isEnter}
                     timeout={300}
-                    classNames="car-transition"
+                    classNames="transition"
                 >
                     <img src={imageUrl} alt={name} />
                 </CSSTransition>
