@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { useState } from 'react';
-import '../styles/Car/Car.css';
+import '../styles/transformTransition.css';
 export default function Car({
     _id,
     name,
