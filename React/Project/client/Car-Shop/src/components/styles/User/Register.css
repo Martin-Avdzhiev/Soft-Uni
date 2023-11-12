@@ -1,0 +1,41 @@
+.signup-form {
+    max-width: 300px;
+    margin: 5em auto 0 auto;
+    border: 1px solid black;
+    padding: 1.5em;
+}
+
+.signup-form h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.signup-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.signup-form button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: #555;
+}
+.signup-form button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+  }
