@@ -1,14 +1,14 @@
 import '../styles/Motorbike/MotorbikeCatalog.css';
 import { useEffect, useState } from 'react';
 import Motorbike from './Motorbike.jsx';
-import { numberFormat } from '../../utils/format.js'
+import { numberFormat } from '../../utils/format.js';
+import { getAllMotorbikes } from '../../services/motorbikeService.js';
 export default function CarCatalog() {
     const [motorbikes, setMotorbike] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:3000/api/motorbikes')
-            .then(response => response.json())
-            .then(data => setMotorbike(data))
-            .catch(err => console.log(err))
+        getAllMotorbikes()
+        .then(result => setMotorbike(result))
+        .catch(error => console.log(error));
     }, [])
     return (
         <div className="motorbikes-container">

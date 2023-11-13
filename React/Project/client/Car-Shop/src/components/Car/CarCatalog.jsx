@@ -2,13 +2,12 @@ import '../styles/Car/CarCatalog.css';
 import { useEffect, useState } from 'react';
 import Car from './Car';
 import { numberFormat } from '../../utils/format.js';
+import { getAllCars } from '../../services/carService.js';
 export default function CarCatalog() {
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:3000/api/cars')
-            .then(response => response.json())
-            .then(data => setCars(data))
-            .catch(err => console.log(err))
+        getAllCars().then(result => setCars(result))
+        .catch(error => console.log(error));
     }, [])
     return (
         <div className="cars-container">
