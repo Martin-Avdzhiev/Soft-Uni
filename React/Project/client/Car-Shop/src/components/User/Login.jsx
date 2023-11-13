@@ -19,7 +19,9 @@ export default function Login(){
         e.preventDefault();
         // Add your login logic here
       };
-    
+     const onSubmitHandler = (e) => {
+        e.preventDefault();
+      }
       return (
         <form className="login-form" onSubmit={handleSubmit}>
           <h2>Login</h2>
@@ -44,7 +46,7 @@ export default function Login(){
             required
           />
     
-          <button type="submit" disabled={!isFormValid()}>
+          <button type="submit" disabled={!isFormValid()} onSubmit={onSubmitHandler}>
             Login
           </button>
         </form>
