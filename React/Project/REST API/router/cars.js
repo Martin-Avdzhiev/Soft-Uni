@@ -9,8 +9,8 @@ const {
 
 
 router.get('/:id', async (req, res) => {
-    const currentCar = await CarModel.findOne({ id: req.params.id })
-    res.json(currentCar)
+    const currentCar = await CarModel.findById(req.params.id);
+    res.json(currentCar);
 })
 
 

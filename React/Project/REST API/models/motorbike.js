@@ -14,8 +14,8 @@ const motorbikeSchema = new mongoose.Schema({
         type:Number,
         required: true
     },
-    cubicCentimeter:{
-        type: Number,
+    engine:{
+        type: String,
         required: true
     },
     mileage:{

@@ -27,11 +27,11 @@ const CarSchema = new mongoose.Schema({
         required: true
     },
     type: {
-        type:Number,
+        type:String,
         required: true
     },
-    cubicCentimeter:{
-        type: Number,
+    engine:{
+        type: String,
         required: true
     }
 });

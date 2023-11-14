@@ -48,10 +48,6 @@
     background-color: #747474;
     color: white;
 }
-/* .cars-container .car div:hover img {
-    transform: scale(1.2);
-    transition: ease-in-out 0.2s; 
-} */
 
 .car-transition {
     transition: all .2s ease-in-out;

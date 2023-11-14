@@ -1,0 +1,38 @@
+.one-car-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+.one-car {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ddd;
+    width: 34em;
+    border-radius: 1em;
+    padding: 1em 2em;
+}
+
+.one-car>div:nth-child(1) {
+    margin-top: 1.5em;
+    margin-bottom: 1.2em;
+}
+
+.one-car img {
+    max-width: 20em;
+    height: auto;
+    border-radius: 1em;
+}
+
+.one-car .information {
+    max-width: 25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+.one-car .information li {
+    font-size: 26px;
+}
