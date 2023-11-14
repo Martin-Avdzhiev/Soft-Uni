@@ -2,8 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 1em;
-    margin-bottom: 3em;
+    padding: 1.25em;
 }
 
 .cars-container .car {
@@ -23,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 15em;
     height: 10em;
     overflow: hidden;
     margin: 0.5em auto 1em auto;
@@ -32,8 +31,8 @@
 .cars-container img {
     display: block;
     margin: 0 auto;
-    width: auto;
-    height: 10em;
+    width: 15em;
+    height: auto;
     border-radius: 1em;
 }
 
@@ -48,24 +47,4 @@
 .cars-container .car a:hover {
     background-color: #747474;
     color: white;
-}
-
-.car-transition {
-    transition: all .2s ease-in-out;
-}
-
-.car-transition.enter {
-    opacity: 0;
-}
-
-.car-transition.enter-active {
-    opacity: 1;
-}
-
-.car-transition.exit {
-    opacity: 1;
-}
-
-.car-transition.exit-active {
-    opacity: 0;
 }

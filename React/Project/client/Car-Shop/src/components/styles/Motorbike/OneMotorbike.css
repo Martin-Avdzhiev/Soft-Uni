@@ -1,11 +1,11 @@
-.one-car-container{
+.one-motorbike-container{
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
     align-items: center;
     margin-top: 3.5em;
 }
-.one-car {
+.one-motorbike {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,18 +15,18 @@
     padding: 1em 2em;
 }
 
-.one-car>div:nth-child(1) {
+.one-motorbike>div:nth-child(1) {
     margin-top: 1.5em;
     margin-bottom: 1.2em;
 }
 
-.one-car img {
+.one-motorbike img {
     max-width: 20em;
     height: auto;
     border-radius: 1em;
 }
 
-.one-car .information {
+.one-motorbike .information {
     max-width: 25em;
     display: flex;
     flex-direction: column;
@@ -34,6 +34,6 @@
     gap: 1em;
 }
 
-.one-car .information li {
+.one-motorbike .information li {
     font-size: 26px;
 }
