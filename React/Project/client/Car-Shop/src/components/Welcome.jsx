@@ -6,8 +6,10 @@ export default function Welcome() {
     return (
         <>
         <div className='welcome'>
+            <div className='welcome-message'>
             <h1>Welcome to our Car Shop</h1>
             <h3>psss, we offer motorbikes too...</h3>
+            </div>
             <p>Explore our wide range of cars, motorbikes.</p>
             <p>Don't have account?</p>
             <Link to="/signup">SIGN UP</Link>

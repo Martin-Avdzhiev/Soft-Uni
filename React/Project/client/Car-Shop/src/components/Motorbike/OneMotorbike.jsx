@@ -35,7 +35,6 @@ export default function OneMotorbike() {
                     <li>Mileage: {numbers[1]} miles</li>
                     <li>City: {motorbike.city}</li>
                     <li>Engine: {motorbike.engine}</li>
-                    <li>Type: {motorbike.type}</li>
                 </ul>
             </div>
         </div>

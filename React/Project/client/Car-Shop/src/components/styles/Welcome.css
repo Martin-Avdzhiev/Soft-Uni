@@ -1,17 +1,18 @@
+.welcome-message{
+  display: flex;
+  justify-content: center;
+  gap: 0.3em;
+}
 .welcome h1 {
-  position: relative;
   margin: 0;
   font-size: 2em;
 }
 
 .welcome h3 {
-  position: absolute;
   color: rgb(198, 197, 197);
   font-style: italic;
-  right: 25%;
-  top: 19%;
+  margin: 1em 0 0 0;
 }
-
 .welcome p {
   font-size: 1.2em;
   margin-top: 10px;
