@@ -10,5 +10,15 @@ const getOneData = async (type, id) => {
     return data;
 }
 
-
-export { getAllData, getOneData }
+const postOneVehicle = async (type, data) => {
+    const response = await fetch(`http://localhost:3000/api/${type}/create`, {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    const result = await response.json();
+    return response;
+}
+export { getAllData, getOneData, postOneVehicle }
