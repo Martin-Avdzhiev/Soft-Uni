@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "6550b0716bdbfb2e3414c361"
+  },
+  "name": "Honda CBR500R",
+  "price": 60000,
+  "mileage": 25000,
+  "city": "Tokyo",
+  "imageUrl": "https://www.bultraco-sofia.bg/sites/default/files/styles/full/public/343020_22ym_honda_cbr500r.jpg?itok=kgJUdVMg",
+  "engine": "471cc, liquid-cooled, parallel-twin engine\""
+},
+{
+  "_id": {
+    "$oid": "6550b0816bdbfb2e3414c363"
+  },
+  "name": "Yamaha MT-07",
+  "price": 66000,
+  "mileage": 30000,
+  "city": "New York",
+  "imageUrl": "https://www.cyclenews.com/wp-content/uploads/2021/09/Cycle-News-2021-Yamaha-MT-07-Review.jpg",
+  "engine": "689cc, liquid-cooled, parallel-twin engine"
+},
+{
+  "_id": {
+    "$oid": "6550b08f6bdbfb2e3414c365"
+  },
+  "name": "Kawasaki Ninja 300",
+  "price": 45000,
+  "mileage": 55000,
+  "city": "London",
+  "imageUrl": "https://www.drivencarguide.co.nz/media/132410/200517spl30006.jpg?width=1028&quality=85&rnd=131396732780000000",
+  "engine": "296cc, liquid-cooled, parallel-twin engine"
+},
+{
+  "_id": {
+    "$oid": "6550b0a06bdbfb2e3414c368"
+  },
+  "name": "BMW G310R",
+  "price": 25000,
+  "mileage": 28000,
+  "city": "Berlin",
+  "imageUrl": "https://bd.gaadicdn.com/processedimages/bmw/bmw-g-310-r/494X300/bmw-g-310-r607d241426cbc.jpg?impolicy=resize&imwidth=360",
+  "engine": "313cc, liquid-cooled, single-cylinder engine"
+},
+{
+  "_id": {
+    "$oid": "6550b0a86bdbfb2e3414c36a"
+  },
+  "name": "Suzuki Burgman 200",
+  "price": 15000,
+  "mileage": 40000,
+  "city": "Paris",
+  "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Burgman_200.jpg",
+  "engine": "200cc, single-cylinder, four-stroke engine"
+},
+{
+  "_id": {
+    "$oid": "6550b0ac6bdbfb2e3414c36c"
+  },
+  "name": "Harley-Davidson Street 750",
+  "price": 8000,
+  "mileage": 20000,
+  "city": "Los Angeles",
+  "imageUrl": "https://www.team-bhp.com/carpics/HarleyDavidsonStreet750/m/harleydavidson-street750-67.jpg",
+  "engine": "749cc, liquid-cooled, Revolution X V-twin engine"
+}]
