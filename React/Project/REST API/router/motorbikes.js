@@ -8,6 +8,16 @@ router.get('/:id', async (req, res) => {
     res.json(currentMotorbikes)
 })
 
+router.post('/create', async (req, res) => {
+    try {
+        const newMotorbike = req.body;
+        await MotorbikeModel.create(newMotorbike);
+        res.status(200).send(newMotorbike);
+    } catch (error) {
+        console.error(error);
+        res.status(401).send('Something happen :(');
+    }
+});
 
 router.get('/', async (req, res) => {
     const allMotorbikes = await MotorbikeModel.find();
