@@ -6,7 +6,16 @@ const {
     tokenBlacklistModel
 } = require('../models');
 
-
+router.post('/create', async (req, res) => {
+    try {
+        const newCar = req.body;
+        await CarModel.create(newCar);
+        res.status(200).send(newCar);
+    } catch (error) {
+        console.error(error);
+        res.status(401).send('Something happen :(');
+    }
+});
 
 router.get('/:id', async (req, res) => {
     const currentCar = await CarModel.findById(req.params.id);

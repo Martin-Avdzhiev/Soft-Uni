@@ -7,29 +7,35 @@ const motorbikeSchema = new mongoose.Schema({
         required: true
     },
     name: {
-        type:String,
-        required: true
-    },
-    price: {
-        type:Number,
-        required: true
-    },
-    engine:{
         type: String,
         required: true
     },
-    mileage:{
+    price: {
+        type: Number,
+        required: true
+    },
+    engine: {
+        type: String,
+        required: true
+    },
+    mileage: {
         type: Number,
         required: true
     },
     city: {
-        type:String,
+        type: String,
         required: true
     },
     imageUrl: {
-        type:String,
+        type: String,
+        required: true
+    },
+    owner: {
+        type: ObjectId,
+        ref: 'User',
         required: true
     }
+
 }, { timestamps: { createdAt: 'created_at' } });
 
 module.exports = mongoose.model('Motorbike', motorbikeSchema);

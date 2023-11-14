@@ -33,7 +33,12 @@ const CarSchema = new mongoose.Schema({
     engine:{
         type: String,
         required: true
-    }
+    },
+    owner: {
+        type: ObjectId,
+        ref: 'User',
+        required: true
+      }
 });
 
 const CarModel = mongoose.model('Car', CarSchema);

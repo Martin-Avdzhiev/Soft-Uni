@@ -33,19 +33,14 @@ const userSchema = new mongoose.Schema({
         //     message: props => `${props.value} must contains only latin letters and digits!`
         // },
     },
-    imageUrl: {
-        type: String,
-    },
-    walletBalance: {
-        type: Number,
-        required: true
-    },
-    ownCryptos: [{
+    ownCars: [{
         name: {
             type: String
-        },
-        amount: {
-            type: Number
+        }
+    }],
+    ownMotorbikes: [{
+        name: {
+            type: String
         }
     }]
 }, { timestamps: { createdAt: 'created_at' } });
