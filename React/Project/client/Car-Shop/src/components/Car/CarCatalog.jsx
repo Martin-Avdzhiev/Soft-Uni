@@ -2,11 +2,11 @@ import '../styles/Car/CarCatalog.css';
 import { useEffect, useState } from 'react';
 import Car from './Car';
 import { numberFormat } from '../../utils/format.js';
-import { getAllCars } from '../../services/carService.js';
+import { getAllData } from '../../services/fetchServices.js';
 export default function CarCatalog() {
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        getAllCars().then(result => setCars(result))
+        getAllData('cars').then(result => setCars(result))
         .catch(error => console.log(error));
     }, [])
     return (

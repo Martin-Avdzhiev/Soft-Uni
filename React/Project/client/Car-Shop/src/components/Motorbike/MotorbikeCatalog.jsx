@@ -2,11 +2,11 @@ import '../styles/Motorbike/MotorbikeCatalog.css';
 import { useEffect, useState } from 'react';
 import Motorbike from './Motorbike.jsx';
 import { numberFormat } from '../../utils/format.js';
-import { getAllMotorbikes } from '../../services/motorbikeService.js';
+import { getAllData } from '../../services/fetchServices.js';
 export default function CarCatalog() {
     const [motorbikes, setMotorbike] = useState([]);
     useEffect(() => {
-        getAllMotorbikes()
+        getAllData('motorbikes')
         .then(result => setMotorbike(result))
         .catch(error => console.log(error));
     }, [])
