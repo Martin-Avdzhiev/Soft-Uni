@@ -19,6 +19,6 @@ const postOneVehicle = async (type, data) => {
         body: JSON.stringify(data)
     })
     const result = await response.json();
-    return response;
+    return result;
 }
 export { getAllData, getOneData, postOneVehicle }
