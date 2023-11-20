@@ -28,7 +28,7 @@ export default function Motorbike({
             <p>Price: ${price}</p>
             <p>Mileage: {mileage} miles</p>
             <p>City: {city}</p>
-            <Link to={`/motorbikes/${_id}`}>Details</Link>
+            <Link to={`/motorbikes/${_id}`} className='details'>Details</Link>
         </div>
     )
 }

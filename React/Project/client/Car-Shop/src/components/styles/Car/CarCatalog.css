@@ -36,7 +36,7 @@
     border-radius: 1em;
 }
 
-.cars-container .car a {
+.cars-container .car .details {
     text-decoration: none;
     color: black;
     border: 1px solid black;

@@ -29,7 +29,7 @@ export default function Car({
             <p>Price: ${price}</p>
             <p>Mileage: {mileage} miles</p>
             <p>City: {city}</p>
-            <Link to={`/cars/${_id}`}>Details</Link>
+            <Link to={`/cars/${_id}`} className='details'>Details</Link>
         </div>
     )
 }
