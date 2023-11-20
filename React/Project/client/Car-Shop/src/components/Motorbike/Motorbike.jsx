@@ -14,7 +14,7 @@ export default function Motorbike({
     return (
         <div className="motorbike">
             <div onMouseEnter={() => setIsEnter((v) => true)} onMouseLeave={() => setIsEnter((v) => false)}>
-                <Link to={`/motorbikes/${_id}`}>
+                <Link to={`/motorbikes/${_id}`} className='link-single-image'>
                     <CSSTransition
                         in={isEnter}
                         timeout={300}

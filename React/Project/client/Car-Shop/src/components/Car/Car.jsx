@@ -15,7 +15,7 @@ export default function Car({
 
         <div className="car">
             <div onMouseEnter={() => setIsEnter((v) => true)} onMouseLeave={() => setIsEnter((v) => false)}>
-                <Link to={`/cars/${_id}`}>
+                <Link to={`/cars/${_id}`} className='link-single-image'>
                     <CSSTransition
                         in={isEnter}
                         timeout={300}

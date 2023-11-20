@@ -18,16 +18,18 @@
 .motorbikes-container h2 {
     margin-top: 0;
 }
-.motorbikes-container .motorbike div{
+
+/* .motorbikes-container .motorbike div {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 15em;
-    height: 10em;
+    height: 8em;
     overflow: hidden;
     margin: 0.5em auto 1em auto;
     border-radius: 1em;
-}
+} */
+
 .motorbikes-container img {
     display: block;
     margin: 0 auto;
@@ -36,10 +38,22 @@
     border-radius: 1em;
 }
 
+.link-single-image {
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15em;
+    height: 8em;
+    overflow: hidden;
+    margin: 0.5em auto 1em auto;
+    border-radius: 1em;
+}
+
 .motorbikes-container .motorbike .details {
+    border: 1px solid black;
     text-decoration: none;
     color: black;
-    border: 1px solid black;
     padding: 0.5em 1em;
     border-radius: 1em;
 }

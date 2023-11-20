@@ -18,16 +18,18 @@
 .cars-container h2 {
     margin-top: 0;
 }
-.cars-container .car div{
+
+/* .cars-container .car div {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 15em;
-    height: 10em;
+    height: 8em;
     overflow: hidden;
     margin: 0.5em auto 1em auto;
     border-radius: 1em;
-}
+} */
+
 .cars-container img {
     display: block;
     margin: 0 auto;
@@ -35,16 +37,27 @@
     height: auto;
     border-radius: 1em;
 }
+.link-single-image{
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15em;
+    height: 8em;
+    overflow: hidden;
+    margin: 0.5em auto 1em auto;
+    border-radius: 1em;
+}
 
 .cars-container .car .details {
-    text-decoration: none;
-    color: black;
     border: 1px solid black;
+    color: black;
+    text-decoration: none;
     padding: 0.5em 1em;
     border-radius: 1em;
 }
 
-.cars-container .car a:hover {
+.cars-container .car .details:hover {
     background-color: #747474;
     color: white;
 }
