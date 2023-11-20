@@ -18,8 +18,12 @@ router.post('/create', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-    const currentCar = await CarModel.findById(req.params.id);
-    res.json(currentCar);
+    try {
+        const currentCar = await CarModel.findById(req.params.id);
+        res.json(currentCar);
+    } catch (error) {
+        return res.status(404).send({message: 'There is no car with this id!'});
+    }
 })
 
 

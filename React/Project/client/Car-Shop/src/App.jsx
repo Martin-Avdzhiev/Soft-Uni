@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx'
 import Welcome from './components/Welcome';
+import PageNotFound from './components/PageNotFound.jsx';
 import Register from './components/User/Register.jsx';
 import Login from './components/User/Login.jsx';
 import CarCatalog from './components/Car/CarCatalog.jsx';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/motorbikes" element={<MotorbikeCatalog />} />
         <Route path="/signup" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       </div>
       <Footer />

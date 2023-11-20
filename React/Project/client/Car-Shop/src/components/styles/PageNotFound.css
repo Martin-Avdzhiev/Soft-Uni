@@ -1,0 +1,31 @@
+.error-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 30em;
+}
+
+.error-container .error-code {
+    font-size: 6em;
+    color: #333;
+    margin: 0;
+}
+
+.error-container .error-message {
+    font-size: 1.5em;
+    color: #555;
+}
+
+.error-container .go-home-link {
+    display: block;
+    margin-top: 20px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.error-container .go-home-link:hover {
+    text-decoration: underline;
+}

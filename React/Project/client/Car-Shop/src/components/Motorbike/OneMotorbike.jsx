@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getOneData } from '../../services/fetchServices';
 import { numberFormat } from '../../utils/format';
+import { useNavigate } from "react-router-dom";
 import '../styles/transformTransition.css';
 import '../styles/motorbike/OneMotorbike.css'
 export default function OneMotorbike() {
@@ -10,11 +11,15 @@ export default function OneMotorbike() {
     const [motorbike, setMotorbike] = useState({});
     const [numbers, setNumbers] = useState([]);
     const { id } = useParams();
+    const navigate = useNavigate();
     useEffect(() => {
         getOneData('motorbikes', id).then(data => {
             setMotorbike(data);
             setNumbers([numberFormat(data.price), numberFormat(data.mileage)]);
         })
+        .catch(error => {
+            navigate("/404");
+        });
 
     }, [])
     return (
