@@ -15,13 +15,15 @@ export default function Car({
 
         <div className="car">
             <div onMouseEnter={() => setIsEnter((v) => true)} onMouseLeave={() => setIsEnter((v) => false)}>
-                <CSSTransition
-                    in={isEnter}
-                    timeout={300}
-                    classNames="transition"
-                >
-                    <img src={imageUrl} alt={name} />
-                </CSSTransition>
+                <Link to={`/cars/${_id}`}>
+                    <CSSTransition
+                        in={isEnter}
+                        timeout={300}
+                        classNames="transition"
+                    >
+                        <img src={imageUrl} alt={name} />
+                    </CSSTransition>
+                </Link>
             </div>
             <h2>{name}</h2>
             <p>Price: ${price}</p>
