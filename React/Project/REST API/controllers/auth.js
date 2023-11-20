@@ -14,13 +14,12 @@ const removePassword = (data) => {
 
 function register(req, res, next) {
     const { email, username, password, repeatPassword } = req.body;
-    const walletBalance = 0;
     if(!password){return res.status(401).send({ message: 'Password is required!' });}
     if(!repeatPassword){return res.status(401).send({ message: 'Repeat password is required!' });}
     if (password != repeatPassword) {
         return res.status(401).send({ message: 'Passwords must be the same!' });
     }
-    return userModel.create({ email, username, password, walletBalance })
+    return userModel.create({ email, username, password })
         .then((createdUser) => {
             createdUser = bsonToJson(createdUser);
             createdUser = removePassword(createdUser);

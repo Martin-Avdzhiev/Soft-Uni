@@ -47,6 +47,14 @@ export default function Register() {
                 onChange={handleInputChange}
                 required />
 
+            <label htmlFor="signup-repeat-password">Repeat Password</label>
+            <input type="password"
+                id="signup-repeat-password"
+                name="repeatPassword"
+                value={formData.repeatPassword}
+                onChange={handleInputChange}
+                required />
+
             <button type="submit" disabled={!isFormValid()}>Sign Up</button>
         </form>
     )
