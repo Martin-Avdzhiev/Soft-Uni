@@ -14,13 +14,15 @@ export default function Motorbike({
     return (
         <div className="motorbike">
             <div onMouseEnter={() => setIsEnter((v) => true)} onMouseLeave={() => setIsEnter((v) => false)}>
-                <CSSTransition
-                    in={isEnter}
-                    timeout={300}
-                    classNames="transition"
-                >
-                    <img src={imageUrl} alt={name} />
-                </CSSTransition>
+                <Link to={`/motorbikes/${_id}`}>
+                    <CSSTransition
+                        in={isEnter}
+                        timeout={300}
+                        classNames="transition"
+                    >
+                        <img src={imageUrl} alt={name} />
+                    </CSSTransition>
+                </Link>
             </div>
             <h2>{name}</h2>
             <p>Price: ${price}</p>
