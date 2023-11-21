@@ -1,7 +1,7 @@
 import { CSSTransition } from 'react-transition-group';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getOneData } from '../../services/fetchServices';
+import { getOneData } from '../../services/dataServices';
 import { numberFormat } from '../../utils/format';
 import { useNavigate } from "react-router-dom";
 import '../styles/transformTransition.css';

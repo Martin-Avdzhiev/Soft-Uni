@@ -2,7 +2,7 @@ import '../styles/Motorbike/MotorbikeCatalog.css';
 import { useEffect, useState } from 'react';
 import Motorbike from './Motorbike.jsx';
 import { numberFormat } from '../../utils/format.js';
-import { getAllData } from '../../services/fetchServices.js';
+import { getAllData } from '../../services/dataServices.js';
 export default function CarCatalog() {
     const [motorbikes, setMotorbike] = useState([]);
     useEffect(() => {

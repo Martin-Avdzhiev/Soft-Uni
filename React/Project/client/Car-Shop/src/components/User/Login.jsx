@@ -1,52 +1,43 @@
 import '../styles/User/Login.css';
-import React, { useState } from 'react';
-export default function Login(){
-    const [formData, setFormData] = useState({
-        username: '',
-        password: '',
-      });
-    
-      const isFormValid = () => {
-        return formData.username.trim() !== '' && formData.password.trim() !== '';
-      };
-    
-      const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-      };
-    
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        // Add your login logic here
-      };
+import useForm from '../../hooks/useForm';
+import { useContext } from 'react';
+import AuthContext from '../../contexts/authContext';
+export default function Login() {
 
-      return (
-        <form className="login-form" onSubmit={handleSubmit}>
-          <h2>Login</h2>
-    
-          <label htmlFor="login-username">Username</label>
-          <input
-            type="text"
-            id="login-username"
-            name="username"
-            value={formData.username}
-            onChange={handleInputChange}
-            required
-          />
-    
-          <label htmlFor="login-password">Password</label>
-          <input
-            type="password"
-            id="login-password"
-            name="password"
-            value={formData.password}
-            onChange={handleInputChange}
-            required
-          />
-    
-          <button type="submit" disabled={!isFormValid()}>
-            Login
-          </button>
+    const isFormValid = () => {
+      return values.username.trim() !== '' && values.password.trim() !== '';
+    };
+    const { loginSumbitHandler } = useContext(AuthContext)
+    const { values, onChange, onSubmit } = useForm(loginSumbitHandler, { username: '', password: '' });
+
+    return (
+        <form className="login-form" onSubmit={onSubmit}>
+            <h2>Login</h2>
+
+            <label htmlFor="login-username">Username</label>
+            <input
+                type="text"
+                id="login-username"
+                name="username"
+                value={values.username}
+                onChange={onChange}
+                required
+            />
+
+            <label htmlFor="login-password">Password</label>
+            <input
+                type="password"
+                id="login-password"
+                name="password"
+                value={values.password}
+                onChange={onChange}
+                required
+            />
+
+            <button type="submit" disabled={!isFormValid()}>
+                Login
+            </button>
         </form>
-      );
+    );
 }
+
