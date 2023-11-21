@@ -10,6 +10,7 @@ import Footer from './components/Footer.jsx';
 import Welcome from './components/Welcome';
 import Login from './components/User/Login.jsx';
 import Register from './components/User/Register.jsx';
+import Logout from './components/User/Logout.jsx';
 import CarCatalog from './components/Car/CarCatalog.jsx';
 import MotorbikeCatalog from './components/Motorbike/MotorbikeCatalog.jsx';
 import OneCar from './components/Car/OneCar.jsx';
@@ -23,7 +24,7 @@ function App() {
 
   const clearError = () => {
     setLoginError(''),
-    setRegisterError('')
+      setRegisterError('')
   }
 
   const loginSumbitHandler = async (values) => {
@@ -41,7 +42,6 @@ function App() {
 
   const registerSubmitHandler = async (values) => {
     const result = await register(values);
-    console.log(result)
     if (result.message) {
       setAuth({});
       setRegisterError(result.message);
@@ -51,6 +51,9 @@ function App() {
       setRegisterError('');
       navigate('/')
     }
+  }
+  const logoutSubmitHandler = () => {
+    setAuth({})
   }
 
   const values = {
@@ -62,10 +65,11 @@ function App() {
     isAuthenticated: !!auth.username,
     loginError,
     registerError,
+    logoutSubmitHandler,
     clearError
   }
   return (
-    <AuthContext.Provider value={ values }>
+    <AuthContext.Provider value={values}>
       <div className='main-container'>
         <Header />
         <Routes>
@@ -76,6 +80,7 @@ function App() {
           <Route path="/motorbikes" element={<MotorbikeCatalog />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
