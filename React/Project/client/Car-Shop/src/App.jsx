@@ -28,7 +28,7 @@ function App() {
     else {
       setAuth(result);
       setError('');
-     // navigate('/')
+      navigate('/')
     }
   };
 
@@ -37,7 +37,8 @@ function App() {
     username: auth.username,
     email: auth.email,
     _id: auth._id,
-    isAuthenticated: !!auth.username
+    isAuthenticated: !!auth.username,
+    error
   }
   return (
     <AuthContext.Provider value={ values }>

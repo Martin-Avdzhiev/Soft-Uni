@@ -5,9 +5,12 @@ import AuthContext from '../../contexts/authContext';
 export default function Login() {
 
     const isFormValid = () => {
-      return values.username.trim() !== '' && values.password.trim() !== '';
+        return values.username.trim() !== '' && values.password.trim() !== '';
     };
-    const { loginSumbitHandler } = useContext(AuthContext)
+    const {
+        loginSumbitHandler,
+        error
+    } = useContext(AuthContext)
     const { values, onChange, onSubmit } = useForm(loginSumbitHandler, { username: '', password: '' });
 
     return (
@@ -37,6 +40,11 @@ export default function Login() {
             <button type="submit" disabled={!isFormValid()}>
                 Login
             </button>
+            {error && (
+                <div className='login-error-container'>
+                    <p className='error'>{error}</p>
+                </div>
+            )}
         </form>
     );
 }
