@@ -1,61 +1,73 @@
+import AuthContext from '../../contexts/authContext';
+import useForm from '../../hooks/useForm';
 import '../styles/User/Register.css';
-import React, { useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 export default function Register() {
-    const [formData, setFormData] = useState({
-        username: '',
-        password: '',
-        email: '',
-    });
 
     const isFormValid = () => {
-        return formData.username.trim() !== '' && formData.password.trim() !== '' && formData.email.trim() !== '';
+        return values.username.trim() !== ''
+            && values.password.trim() !== ''
+            && values.email.trim() !== ''
+            && values.repeatPassword.trim() !== '';
     };
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    };
+    const {
+        registerSubmitHandler,
+        registerError,
+        clearError
+    } = useContext(AuthContext);
+    const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
+        username: '',
+        email: '',
+        password: '',
+        repeatPassword: ''
+    })
+    useEffect(() => {
+        return () => { clearError() }
+    }, [])
     return (
-        <form className="signup-form">
+        <form className="signup-form" onSubmit={onSubmit}>
             <h2>Sign Up</h2>
             <label htmlFor="signup-username">Username</label>
             <input
                 type="text"
                 id="signup-username"
                 name="username"
-                value={formData.username}
-                onChange={handleInputChange}
+                value={values.username}
+                onChange={onChange}
                 required />
 
             <label htmlFor="signup-email">Email</label>
             <input type="email"
                 id="signup-email"
                 name="email"
-                value={formData.email}
-                onChange={handleInputChange}
+                value={values.email}
+                onChange={onChange}
                 required />
 
             <label htmlFor="signup-password">Password</label>
             <input type="password"
                 id="signup-password"
                 name="password"
-                value={formData.password}
-                onChange={handleInputChange}
+                value={values.password}
+                onChange={onChange}
                 required />
 
             <label htmlFor="signup-repeat-password">Repeat Password</label>
             <input type="password"
                 id="signup-repeat-password"
                 name="repeatPassword"
-                value={formData.repeatPassword}
-                onChange={handleInputChange}
+                value={values.repeatPassword}
+                onChange={onChange}
                 required />
 
             <button type="submit" disabled={!isFormValid()}>Sign Up</button>
+            {registerError && (
+                <div className='register-error-container'>
+                    <p className='error'>{registerError}</p>
+                </div>
+            )}
         </form>
     )
 }
+
+// disabled={!isFormValid()}

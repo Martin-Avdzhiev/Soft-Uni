@@ -1,6 +1,6 @@
 import '../styles/User/Login.css';
 import useForm from '../../hooks/useForm';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import AuthContext from '../../contexts/authContext';
 export default function Login() {
 
@@ -9,9 +9,14 @@ export default function Login() {
     };
     const {
         loginSumbitHandler,
-        error
+        loginError,
+        clearError
     } = useContext(AuthContext)
     const { values, onChange, onSubmit } = useForm(loginSumbitHandler, { username: '', password: '' });
+
+    useEffect(() => {
+        return () => {clearError()}
+    },[])
 
     return (
         <form className="login-form" onSubmit={onSubmit}>
@@ -40,9 +45,9 @@ export default function Login() {
             <button type="submit" disabled={!isFormValid()}>
                 Login
             </button>
-            {error && (
+            {loginError && (
                 <div className='login-error-container'>
-                    <p className='error'>{error}</p>
+                    <p className='error'>{loginError}</p>
                 </div>
             )}
         </form>

@@ -13,7 +13,6 @@ const userSchema = new mongoose.Schema({
     username: {
         type: String,
         required: true,
-        minlength: [6, 'Username should be at least 6 characters'],
         unique: true
         // validate: {
         //     validator: function (v) {

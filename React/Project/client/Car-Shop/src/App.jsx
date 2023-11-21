@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './App.css';
 
 import AuthContext from './contexts/authContext.js';
-import { login } from './services/authServices.js';
+import { login, register } from './services/authServices.js';
 
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
@@ -18,27 +18,51 @@ import PageNotFound from './components/PageNotFound.jsx';
 function App() {
   const navigate = useNavigate();
   const [auth, setAuth] = useState({});
-  const [error, setError] = useState('');
+  const [loginError, setLoginError] = useState('');
+  const [registerError, setRegisterError] = useState('');
+
+  const clearError = () => {
+    setLoginError(''),
+    setRegisterError('')
+  }
+
   const loginSumbitHandler = async (values) => {
     const result = await login(values);
     if (result.message) {
       setAuth({});
-      setError(result.message);
+      setLoginError(result.message);
     }
     else {
       setAuth(result);
-      setError('');
+      setLoginError('');
       navigate('/')
     }
   };
 
+  const registerSubmitHandler = async (values) => {
+    const result = await register(values);
+    console.log(result)
+    if (result.message) {
+      setAuth({});
+      setRegisterError(result.message);
+    }
+    else {
+      setAuth(result);
+      setRegisterError('');
+      navigate('/')
+    }
+  }
+
   const values = {
     loginSumbitHandler,
+    registerSubmitHandler,
     username: auth.username,
     email: auth.email,
     _id: auth._id,
     isAuthenticated: !!auth.username,
-    error
+    loginError,
+    registerError,
+    clearError
   }
   return (
     <AuthContext.Provider value={ values }>

@@ -35,7 +35,19 @@
 .signup-form button:hover {
     background-color: #555;
 }
+
 .signup-form button:disabled {
     background-color: #888;
     cursor: not-allowed;
-  }
+}
+
+.signup-form .register-error-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.signup-form .register-error-container .error {
+    color: red;
+    margin: 1em 0 0 0;
+}

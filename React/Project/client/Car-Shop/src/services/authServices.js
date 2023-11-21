@@ -12,4 +12,17 @@ const login = async (values) => {
     return result;
 }
 
-export { login };
+const register = async (values) => {
+    const response = await fetch(`${baseUrl}/register`, {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(values)
+    });
+    const result = await response.json();
+    return result;
+}
+
+
+export { login, register };
