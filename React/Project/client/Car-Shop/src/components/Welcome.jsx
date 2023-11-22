@@ -1,13 +1,16 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import './styles/Welcome.css';
 import './styles/transformTransition.css';
 import welcomeCar from '../assets/welcome-car.jpg';
 import welcomeMotorbike from '../assets/welcome-motorbike.jpg';
+import AuthContext from '../contexts/authContext';
 export default function Welcome() {
     const [isEnterCar, setIsEnterCar] = useState(false);
     const [isEnterMotorbike, setIsEnterMotorbike] = useState(false);
+    const { username } = useContext(AuthContext);
+
     return (
         <>
             <div className='welcome'>
@@ -16,8 +19,12 @@ export default function Welcome() {
                     <h3>psss, we offer motorbikes too...</h3>
                 </div>
                 <p>Explore our wide range of cars, motorbikes.</p>
-                <p>Don't have account?</p>
-                <Link to="/signup">SIGN UP</Link>
+                {!username && (
+                    <>
+                        <p>Don't have account?</p>
+                        <Link to="/signup">SIGN UP</Link>
+                    </>
+                )}
             </div>
             <div className='welcome-images'>
                 <div className='welcome-car'>

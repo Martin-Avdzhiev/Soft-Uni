@@ -33,14 +33,12 @@ const userSchema = new mongoose.Schema({
         // },
     },
     ownCars: [{
-        name: {
-            type: String
-        }
+        type: ObjectId,
+        ref: 'Car'
     }],
     ownMotorbikes: [{
-        name: {
-            type: String
-        }
+        type: ObjectId,
+        ref: 'Motorbike'
     }]
 }, { timestamps: { createdAt: 'created_at' } });
 
