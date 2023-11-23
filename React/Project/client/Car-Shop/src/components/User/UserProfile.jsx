@@ -53,21 +53,24 @@ export default function UserProfile() {
                 </div>
                 <div className="vehicle-section">
                     <p className='offers'>Your motorbike offers:</p>
-                    <div className="vehicle">
-                        <div className="vehicle-image">
-                            <img
-                                src="https://example.com/motorbike-image.jpg"
-                                alt="Motorbike Image"
-                            />
+                    {userInfo.ownMotorbikes?.map(motorbike => (
+                        <div className="vehicle">
+                            <div className="vehicle-image">
+                                <img
+                                    src={motorbike.imageUrl}
+                                    alt={motorbike.name}
+                                />
+                            </div>
+                            <div className="vehicle-info">
+                                <p>{motorbike.name}</p>
+                            </div>
+                            <div className="vehicle-buttons">
+                                <button className="edit-button">Edit</button>
+                                <button className="delete-button">Delete</button>
+                            </div>
                         </div>
-                        <div className="vehicle-info">
-                            <p>Name: Yamaha YZF-R1</p>
-                        </div>
-                        <div className="vehicle-buttons">
-                            <button className="edit-button">Edit</button>
-                            <button className="delete-button">Delete</button>
-                        </div>
-                    </div>
+                    ))}
+
                 </div>
             </div>
         </div>
