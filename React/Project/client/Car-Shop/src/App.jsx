@@ -8,6 +8,7 @@ import { login, register } from './services/authServices.js';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Welcome from './components/Welcome';
+import UserProfile from './components/User/UserProfile.jsx';
 import Login from './components/User/Login.jsx';
 import Register from './components/User/Register.jsx';
 import Logout from './components/User/Logout.jsx';
@@ -85,6 +86,7 @@ function App() {
           <Route path="/logout" element={<Logout />} />
           <Route path="/create/car" element={<CreateCarOffer />} />
           <Route path="/create/motorbike" element={<CreateMotorbikeOffer />} />
+          <Route path="/user/:id" element={<UserProfile />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
