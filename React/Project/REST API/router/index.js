@@ -8,7 +8,7 @@ router.post('/register', authController.register);
 router.post('/login', authController.login);
 router.post('/logout', authController.logout);
 
-router.use('/users', users);
+router.use('/user', users);
 router.use('/motorbikes', motorbikes);
 router.use('/cars', cars)
 

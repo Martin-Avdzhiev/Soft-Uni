@@ -1,8 +1,9 @@
 const {
     userModel,
-    tokenBlacklistModel
+    tokenBlacklistModel,
 } = require('../models');
-
+const CarModel = require('../models/car');
+const MotorbikeModel= require('../models/motorbike');
 const utils = require('../utils');
 const { authCookieName } = require('../app-config');
 
@@ -14,9 +15,9 @@ const removePassword = (data) => {
 
 function register(req, res, next) {
     const { email, username, password, repeatPassword } = req.body;
-    if(username.length < 6){return res.status(401).send({message: 'Username must be at least 6 characters!'})}
-    if(!password){return res.status(401).send({ message: 'Password is required!' });}
-    if(!repeatPassword){return res.status(401).send({ message: 'Repeat password is required!' });}
+    if (username.length < 6) { return res.status(401).send({ message: 'Username must be at least 6 characters!' }) }
+    if (!password) { return res.status(401).send({ message: 'Password is required!' }); }
+    if (!repeatPassword) { return res.status(401).send({ message: 'Repeat password is required!' }); }
     if (password != repeatPassword) {
         return res.status(401).send({ message: 'Passwords must be the same!' });
     }
@@ -88,12 +89,33 @@ function logout(req, res) {
         .catch(err => res.send(err));
 }
 
-function getProfileInfo(req, res, next) {
-    const username = req.params.username
-    userModel.findOne({ username: username }, { password: 0, __v: 0 }) //finding by Id and returning without password and __v
-        .then(user => { res.status(200).json(user) })
-        .catch(next);
-}
+async function getProfileInfo(req, res, next) {
+    try {
+
+        const id = req.params.id;
+        const user = await userModel.findById(id);
+        const cars = [];
+        const motorbikes = [];
+        for (const carId of user.ownCars) {
+            const car = await CarModel.findById(carId);
+            cars.push(car);
+        }
+        for (const motorbikeId of user.ownMotorbikes) {
+            const motorbike = await MotorbikeModel.findById(motorbikeId);
+            motorbikes.push(motorbike);
+        }
+        user.ownCars = cars;
+        user.ownMotorbikes = motorbikes
+        res.status(200).send(user);
+    }
+    catch (error) {
+        res.status(404).send(error)
+    }
+};
+// userModel.findOne({ username: username }, { password: 0, __v: 0 }) //finding by Id and returning without password and __v
+//     .then(user => { res.status(200).json(user) })
+//     .catch(next);
+
 
 function editProfileInfo(req, res, next) {
     //  const { _id: userId } = req.user;
@@ -103,6 +125,8 @@ function editProfileInfo(req, res, next) {
         .then(x => { res.status(200).json(x) })
         .catch(next);
 }
+
+
 
 module.exports = {
     login,

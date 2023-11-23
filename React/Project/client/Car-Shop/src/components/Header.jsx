@@ -22,8 +22,6 @@ export default function Header() {
                     <>
                         <Link to="/logout" className="right">Logout</Link>
                         <Link to={`/user/${_id}`} className="right">{username}</Link>
-                        <Link to="/create/car">Create Car offer</Link>
-                        <Link to="/create/motorbike">Create Motorbike offer</Link>
                     </>
                 )}
                 {!isAuthenticated && (

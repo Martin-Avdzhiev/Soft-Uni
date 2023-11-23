@@ -38,4 +38,6 @@ const motorbikeSchema = new mongoose.Schema({
 
 }, { timestamps: { createdAt: 'created_at' } });
 
-module.exports = mongoose.model('Motorbike', motorbikeSchema);
+const MotorbikeModel = mongoose.model('Motorbike', motorbikeSchema);
+
+module.exports = MotorbikeModel;

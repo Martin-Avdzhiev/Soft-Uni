@@ -24,5 +24,9 @@ const register = async (values) => {
     return result;
 }
 
-
-export { login, register };
+const getProfileInfo = async (id) => {
+    const response = await fetch(`${baseUrl}/user/${id}`);
+    const result = await response.json();
+    return result
+}
+export { login, register, getProfileInfo };
