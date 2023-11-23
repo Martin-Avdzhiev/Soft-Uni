@@ -2,7 +2,10 @@ const express = require('express');
 const router = express.Router();
 const { auth } = require('../utils');
 const MotorbikeModel = require('../models/motorbike')
-
+const {
+    userModel,
+    tokenBlacklistModel
+} = require('../models');
 router.get('/:id', async (req, res) => {
     try {
         const currentMotorbikes = await MotorbikeModel.findById(req.params.id);
@@ -15,7 +18,10 @@ router.get('/:id', async (req, res) => {
 router.post('/create', async (req, res) => {
     try {
         const newMotorbike = req.body;
-        await MotorbikeModel.create(newMotorbike);
+        const owner = await userModel.findById(newMotorbike.owner);
+        const newMotorbikeModel = await MotorbikeModel.create(newMotorbike);
+        owner.ownMotorbikes.push(newMotorbikeModel._id);
+        await userModel.findByIdAndUpdate(newMotorbike.owner, owner);
         res.status(200).send(newMotorbike);
     } catch (error) {
         console.error(error);

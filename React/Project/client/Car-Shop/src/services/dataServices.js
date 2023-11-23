@@ -14,6 +14,7 @@ const getOneData = async (type, id) => {
 }
 
 const postOneVehicle = async (type, data) => {
+    console.log(data)
     const response = await fetch(`${baseUrl}/${type}/create`, {
         method: 'POST',
         headers: {
