@@ -2,24 +2,36 @@ import { useContext, useEffect, useState } from 'react';
 import '../styles/User/UserProfile.css';
 import AuthContext from '../../contexts/authContext';
 import { getProfileInfo } from '../../services/authServices';
+import { deleteVehicle } from '../../services/dataServices';
 import { Link } from 'react-router-dom';
 export default function UserProfile() {
     const [userInfo, setUserInfo] = useState({});
+    const [cars, setCars] = useState([]);
     const [isModalOpen, setModalOpen] = useState(false);
+    const [vehicleIdToDelete, setVehicleIdToDelete] = useState([]);
     const {
         _id
     } = useContext(AuthContext);
 
-    const openModal = () => {setModalOpen(true);}
+    const openModal = (type, id) => {
+        setModalOpen(true);
+        setVehicleIdToDelete([type, id]);
+    }
 
-    const closeModal = () => {setModalOpen(false);}
+    const closeModal = () => { setModalOpen(false); }
 
-    const deleteVehicle = async () => {
-        console.log('delete')
+    const deleteOneVehicle = async () => {
+         const result = await deleteVehicle(vehicleIdToDelete[0], vehicleIdToDelete[1]);
+        const filteredCars = cars.filter(x => x._id !== vehicleIdToDelete[1]);
+        setCars(filteredCars);
+        setModalOpen(false);
     }
 
     useEffect(() => {
-        getProfileInfo(_id).then(result => setUserInfo(result));
+        getProfileInfo(_id).then(result => {
+             setUserInfo(result);
+             setCars(result.ownCars);
+        });
     }, [])
     return (
         <>
@@ -46,7 +58,7 @@ export default function UserProfile() {
                 <div className="vehicles-wrapper">
                     <div className="vehicle-section">
                         <p className='offers'>Your car offers:</p>
-                        {userInfo.ownCars?.map(car => (
+                        {cars?.map(car => (
                             <div className="vehicle" key={car._id}>
                                 <div className="vehicle-image">
                                     <img src={car.imageUrl} alt={car.name} />
@@ -56,7 +68,7 @@ export default function UserProfile() {
                                 </div>
                                 <div className="vehicle-buttons">
                                     <button className="edit-button">Edit</button>
-                                    <button className="delete-button" onClick={openModal}>Delete</button>
+                                    <button className="delete-button" onClick={() => openModal('cars', car._id)}>Delete</button>
                                 </div>
                             </div>
                         ))}
@@ -76,7 +88,7 @@ export default function UserProfile() {
                                 </div>
                                 <div className="vehicle-buttons">
                                     <button className="edit-button">Edit</button>
-                                    <button className="delete-button" onClick={openModal}>Delete</button>
+                                    <button className="delete-button" onClick={() => openModal('motorbikes', motorbike._id)}>Delete</button>
                                 </div>
                             </div>
                         ))}
@@ -87,7 +99,7 @@ export default function UserProfile() {
             <div className={`modal ${isModalOpen ? ' open' : ''}`}>
                 <div className="modal-content">
                     <p>Are you sure you want to delete it?</p>
-                    <button onClick={deleteVehicle}>Yes</button>
+                    <button onClick={deleteOneVehicle}>Yes</button>
                     <button onClick={closeModal}>No</button>
                 </div>
             </div>

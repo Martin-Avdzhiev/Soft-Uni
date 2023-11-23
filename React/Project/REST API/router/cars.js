@@ -7,6 +7,7 @@ const {
 } = require('../models');
 
 router.post('/create', async (req, res) => {
+
     try {
         const newCar = req.body;
         const owner = await userModel.findById(newCar.owner);
@@ -22,6 +23,7 @@ router.post('/create', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
+
     try {
         const currentCar = await CarModel.findById(req.params.id);
         res.json(currentCar);
@@ -30,11 +32,29 @@ router.get('/:id', async (req, res) => {
     }
 })
 
+router.delete('/:id', async (req, res) => {
+    try {
+
+        const car = await CarModel.findByIdAndDelete(req.params.id);
+        const owner = await userModel.findById(car.owner);
+        for (let index = 0; index < owner.ownCars.length; index++) {
+            if(owner.ownCars[index] == req.params.id){
+                owner.ownCars.splice(index, 1);
+                break;
+            }
+        }
+        await userModel.findByIdAndUpdate(owner._id, owner);
+        res.status(200).send({ message: 'Successfull deleted' })
+    } catch (error) {
+        return res.status(404).send({ message: 'There is no car with this id!' });
+    }
+})
 
 router.get('/', async (req, res) => {
     const allCars = await CarModel.find();
     res.status(200).send(allCars);
 
 })
+
 
 module.exports = router;

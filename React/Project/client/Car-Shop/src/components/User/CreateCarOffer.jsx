@@ -1,16 +1,18 @@
 import { useEffect, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 import AuthContext from '../../contexts/authContext';
 import '../styles/User/CreateOffer.css';
 import { postOneVehicle } from '../../services/dataServices';
 export default function CreateCarOffer() {
+    const navigate = useNavigate();
     const isFormValid = () => {
         return values.username.trim() !== '' && values.password.trim() !== '';
     };
 
     const onCreateCarSubmit = async (values) => {
         const result = await postOneVehicle('cars', {...values, owner:_id});
-        console.log(result)
+        navigate(`/user/${_id}`);
     }
 
     const {

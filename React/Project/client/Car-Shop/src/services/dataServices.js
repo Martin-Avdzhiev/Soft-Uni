@@ -14,7 +14,6 @@ const getOneData = async (type, id) => {
 }
 
 const postOneVehicle = async (type, data) => {
-    console.log(data)
     const response = await fetch(`${baseUrl}/${type}/create`, {
         method: 'POST',
         headers: {
@@ -25,4 +24,16 @@ const postOneVehicle = async (type, data) => {
     const result = await response.json();
     return result;
 }
-export { getAllData, getOneData, postOneVehicle }
+
+const deleteVehicle = async (type, vehicleId) => {
+    const response = await fetch(`${baseUrl}/${type}/${vehicleId}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const result = await response.json();
+    return result
+}
+
+export { getAllData, getOneData, postOneVehicle, deleteVehicle }
