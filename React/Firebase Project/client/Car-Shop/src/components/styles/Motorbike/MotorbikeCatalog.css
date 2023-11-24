@@ -1,0 +1,64 @@
+.motorbikes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1.25em;
+}
+
+.motorbikes-container .motorbike {
+    flex: 0 0 30%;
+    border: 2px solid #ddd;
+    padding: 0.6em;
+    margin: 0.6em;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #ddd;
+}
+
+.motorbikes-container h2 {
+    margin-top: 0;
+}
+
+/* .motorbikes-container .motorbike div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15em;
+    height: 8em;
+    overflow: hidden;
+    margin: 0.5em auto 1em auto;
+    border-radius: 1em;
+} */
+
+.motorbikes-container img {
+    display: block;
+    margin: 0 auto;
+    width: 15em;
+    height: auto;
+    border-radius: 1em;
+}
+
+.link-single-image {
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15em;
+    height: 8em;
+    overflow: hidden;
+    margin: 0.5em auto 1em auto;
+    border-radius: 1em;
+}
+
+.motorbikes-container .motorbike .details {
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+}
+
+.motorbikes-container .motorbike a:hover {
+    background-color: #747474;
+    color: white;
+}

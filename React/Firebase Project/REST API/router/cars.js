@@ -46,7 +46,7 @@ router.delete('/:id', async (req, res) => {
         const car = await CarModel.findByIdAndDelete(req.params.id);
         const owner = await userModel.findById(car.owner);
         for (let index = 0; index < owner.ownCars.length; index++) {
-            if(owner.ownCars[index] == req.params.id){
+            if (owner.ownCars[index] == req.params.id) {
                 owner.ownCars.splice(index, 1);
                 break;
             }
@@ -59,8 +59,12 @@ router.delete('/:id', async (req, res) => {
 })
 
 router.get('/', async (req, res) => {
-    const allCars = await CarModel.find();
-    res.status(200).send(allCars);
+    try {
+        const allCars = await CarModel.find();
+        return res.status(200).send(allCars);
+    } catch (error) {
+        return res.status(404).send({ message: 'Couldn\'t find cars.' })
+    }
 
 })
 

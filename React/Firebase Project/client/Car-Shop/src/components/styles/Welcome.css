@@ -1,0 +1,64 @@
+.welcome-message{
+  display: flex;
+  justify-content: center;
+  gap: 0.3em;
+}
+.welcome h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.welcome h3 {
+  color: rgb(198, 197, 197);
+  font-style: italic;
+  margin: 1em 0 0 0;
+}
+.welcome p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.welcome a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.05em;
+}
+
+.welcome {
+  color: black;
+  text-align: center;
+  padding: 3em;
+  border: 3px dashed black;
+  margin-top: 2em
+}
+
+.welcome-images {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  align-items: start;
+  margin: 2em 0 5em 0;
+}
+
+.welcome-car,
+.welcome-motorbike {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30em;
+  height: auto;
+  overflow: hidden;
+  border-radius: 7em;
+}
+
+.welcome-car img {
+  width: 30em;
+  height: 20em;
+}
+
+.welcome-motorbike img {
+  width: 30em;
+  height: 20em;
+}

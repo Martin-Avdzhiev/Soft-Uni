@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "654fabcdcce6f1fbcf55857b"
+  },
+  "name": "VW Golf 4",
+  "price": 3000,
+  "mileage": 250000,
+  "city": "Pernik",
+  "imageUrl": "https://s1.cdn.autoevolution.com/images/gallery/VOLKSWAGENR32-1425_5.jpg",
+  "type": "diesel",
+  "engine": "1.9 TDI"
+},
+{
+  "_id": {
+    "$oid": "654fac19cce6f1fbcf55857d"
+  },
+  "name": "BMW e60",
+  "price": 20000,
+  "mileage": 66000,
+  "city": "Haskovo",
+  "imageUrl": "https://avtonovini.bg/wp-content/uploads/2023/03/BMW-E60-5-%D1%81%D0%B5%D1%80%D0%B8%D1%8F-2003-%E2%80%93-2010-.png",
+  "type": "diesel",
+  "engine": "520i: 2.2L inline-6"
+},
+{
+  "_id": {
+    "$oid": "654fac5bcce6f1fbcf55857f"
+  },
+  "name": "Kia Sportage",
+  "price": 25000,
+  "mileage": 33000,
+  "city": "Sofia",
+  "imageUrl": "https://editorial.pxcrush.net/carsales/general/editorial/kia-sportage-s-01-gsty.jpg?width=1024&height=683",
+  "type": "petrol",
+  "engine": "2.0L Theta II inline-4"
+},
+{
+  "_id": {
+    "$oid": "654fac8acce6f1fbcf558581"
+  },
+  "name": "Lada Niva 4x4",
+  "price": 2000,
+  "mileage": 1000000,
+  "city": "Kaspichan",
+  "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/1987_Lada_Niva_1600.jpg",
+  "type": "petrol",
+  "engine": "1.7L SOHC Inline-4"
+},
+{
+  "_id": {
+    "$oid": "654facb7cce6f1fbcf558583"
+  },
+  "name": "Ferrari 488 GTB",
+  "price": 560000,
+  "mileage": 87000,
+  "city": "Rome",
+  "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/2017_Ferrari_488_GTB_Automatic_3.9.jpg",
+  "type": "petrol",
+  "engine": " 1.5L K15B inline-4"
+},
+{
+  "_id": {
+    "$oid": "654face1cce6f1fbcf558585"
+  },
+  "name": "Bugatti Veyron",
+  "price": 999999,
+  "mileage": 78000,
+  "city": "London",
+  "imageUrl": "https://cdn.actualno.eu/actualno_2013/upload/news/2014/08/06/0791152001407316532_458686_920x517.webp",
+  "type": "diesel",
+  "engine": "2.2L MultiJet II turbocharged inline-4"
+}]

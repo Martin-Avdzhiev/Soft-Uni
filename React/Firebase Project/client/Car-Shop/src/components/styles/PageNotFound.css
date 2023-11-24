@@ -1,0 +1,31 @@
+.page-not-found-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 30em;
+}
+
+.page-not-found-container .error-code {
+    font-size: 6em;
+    color: #333;
+    margin: 0;
+}
+
+.page-not-found-container .error-message {
+    font-size: 1.5em;
+    color: #555;
+}
+
+.page-not-found-container .go-home-link {
+    display: block;
+    margin-top: 20px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.page-not-found-container .go-home-link:hover {
+    text-decoration: underline;
+}

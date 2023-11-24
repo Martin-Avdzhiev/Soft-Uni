@@ -1,0 +1,28 @@
+ * {
+     box-sizing: border-box;
+ }
+
+ html {
+     display: flex;
+     justify-content: center;
+ }
+
+ body {
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+     margin: 0;
+     font-family: Arial, sans-serif;
+     width: 70%;
+     padding-top: 1.5em;
+ }
+ .main-container{
+    flex: 1 0 auto;
+    box-sizing: border-box;
+ }
+
+ #root{
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 1.5em);
+ }

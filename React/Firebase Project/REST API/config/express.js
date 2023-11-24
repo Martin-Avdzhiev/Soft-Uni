@@ -11,5 +11,6 @@ module.exports = (app) => {
 
     app.use(express.static(path.resolve(__basedir, 'static')));
 
+    
     // app.use(errorHandler(err, req, res, next));
 };

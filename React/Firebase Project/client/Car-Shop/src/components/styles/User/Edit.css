@@ -1,0 +1,35 @@
+.edit-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-container .edit-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-container label {
+    margin-bottom: 8px;
+}
+
+.edit-container input {
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+.edit-container button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-container button:hover {
+    background-color: #2980b9;
+}

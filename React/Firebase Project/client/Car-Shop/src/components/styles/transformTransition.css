@@ -1,0 +1,21 @@
+.transition-enter{
+    transform: scale(1);
+}
+.transition-enter-active{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in;
+}
+.transition-enter-done{
+    transform: scale(1.2);
+}
+.transition-exit{
+    transform: scale(1.2);
+}
+.transition-exit-active{
+    transform: scale(1);
+    transition: transform 0.3s ease-out;
+}
+.transition-exit-done{
+    transform: scale(1);
+}
+

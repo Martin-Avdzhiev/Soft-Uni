@@ -1,0 +1,25 @@
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    padding: 0.75em 1.5em;
+  }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.75em 1em;
+    margin: 0 1em;
+    text-decoration: none;
+  }
+
+  .navbar a.right {
+    float: right;
+  }
+
+  .navbar a:hover {
+    background-color: #ddd;
+    border-radius: 1.5em;
+    color: black;
+  }
