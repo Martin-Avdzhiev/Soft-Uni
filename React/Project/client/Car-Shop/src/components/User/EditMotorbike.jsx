@@ -6,31 +6,32 @@ import AuthContext from '../../contexts/authContext';
 
 import { updateVehicle } from '../../services/dataServices';
 import '../styles/User/Edit.css';
-export default function EditCar() {
+
+export default function EditMotorbike(){
     const navigate = useNavigate();
-    const { carId } = useParams();
+    const { motorbikeId } = useParams();
     const isFormValid = () => {
         return values.username.trim() !== '' && values.password.trim() !== '';
     };
 
-    const onEditCarSubmit = async (values) => {
-        const result = await updateVehicle('cars', carId, { ...values, owner: _id });
-        navigate(`/user/${_id}`);
+    const onEditMotorbikeSubmit = async (values) => {
+        const result = await updateVehicle('motorbikes', motorbikeId, { ...values, owner: _id });
+         navigate(`/user/${_id}`);
     }
 
     const {
         usename,
         _id,
         clearError
-    } = useContext(AuthContext)
-    const { values, onChange, onSubmit } = useForm(onEditCarSubmit,
+    } = useContext(AuthContext);
+
+    const { values, onChange, onSubmit } = useForm(onEditMotorbikeSubmit,
         {
             name: '',
             price: '',
             mileage: '',
             city: '',
             imageUrl: '',
-            type: '',
             engine: ''
         }
     );
@@ -44,10 +45,10 @@ export default function EditCar() {
 
     return (
         <div className="edit-container">
-            <h2>Edit Car</h2>
+            <h2>Edit Motorbike</h2>
             <form className="edit-form" onSubmit={onSubmit}>
 
-                <label htmlFor="car-name">Car Name:</label>
+                <label htmlFor="motorbike-name">Motorbike Name:</label>
                 <input
                     type="text"
                     id="name"
@@ -57,7 +58,7 @@ export default function EditCar() {
                     required
                 />
 
-                <label htmlFor="car-price">Car Price:</label>
+                <label htmlFor="motorbike-price">Motorbike Price:</label>
                 <input
                     type="number"
                     id="price"
@@ -67,7 +68,7 @@ export default function EditCar() {
                     required
                 />
 
-                <label htmlFor="car-mileage">Car Mileage:</label>
+                <label htmlFor="motorbike-mileage">Motorbike Mileage:</label>
                 <input
                     type="number"
                     id="mileage"
@@ -77,7 +78,7 @@ export default function EditCar() {
                     required
                 />
 
-                <label htmlFor="car-city">Car City:</label>
+                <label htmlFor="motorbike-city">Motorbike City:</label>
                 <input
                     type="text"
                     id="city"
@@ -87,7 +88,7 @@ export default function EditCar() {
                     required
                 />
 
-                <label htmlFor="carImage">Image:</label>
+                <label htmlFor="motorbikeImage">Image:</label>
                 <input
                     type="text"
                     id="imageUrl"
@@ -96,16 +97,7 @@ export default function EditCar() {
                     value={values.imageUrl}
                     required />
 
-                <label htmlFor="carType">Type of fuel:</label>
-                <input
-                    type="text"
-                    id="type"
-                    name="type"
-                    onChange={onChange}
-                    value={values.type}
-                    required />
-
-                <label htmlFor="carEngine">Engine:</label>
+                <label htmlFor="motorbikeEngine">Engine:</label>
                 <input
                     type="text"
                     id="type"

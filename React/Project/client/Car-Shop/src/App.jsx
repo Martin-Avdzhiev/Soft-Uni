@@ -19,6 +19,7 @@ import OneMotorbike from './components/Motorbike/OneMotorbike.jsx';
 import CreateCarOffer from './components/User/CreateCarOffer.jsx';
 import CreateMotorbikeOffer from './components/User/CreateMotorbikeOffer.jsx';
 import EditCar from './components/User/EditCar.jsx';
+import EditMotorbike from './components/User/EditMotorbike.jsx';
 import PageNotFound from './components/PageNotFound.jsx';
 function App() {
   const navigate = useNavigate();
@@ -88,6 +89,7 @@ function App() {
           <Route path="/create/car" element={<CreateCarOffer />} />
           <Route path="/create/motorbike" element={<CreateMotorbikeOffer />} />
           <Route path="/edit/cars/:carId" element={<EditCar />} />
+          <Route path="/edit/motorbikes/:motorbikeId" element={<EditMotorbike />} />
           <Route path="/user/:id" element={<UserProfile />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

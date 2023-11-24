@@ -15,6 +15,16 @@ router.get('/:id', async (req, res) => {
     }
 })
 
+router.put('/:id', async (req, res) => {
+    try {
+        const updatedMotorbike = req.body;
+        const result = await MotorbikeModel.findByIdAndUpdate(req.params.id, updatedMotorbike);
+        return res.status(200).send(result);
+    } catch (error) {
+        return res.status(404).send({ message: 'There is no motorbike with this id!' });
+    }
+})
+
 router.delete('/:id', async (req, res) => {
     try {
         const motorbike = await MotorbikeModel.findByIdAndDelete(req.params.id);

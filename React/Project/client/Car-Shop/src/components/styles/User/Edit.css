@@ -1,4 +1,4 @@
-.edit-car-container {
+.edit-container {
     max-width: 600px;
     margin: 50px auto;
     background-color: #fff;
@@ -7,21 +7,21 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.edit-car-container .edit-car-form {
+.edit-container .edit-form {
     display: flex;
     flex-direction: column;
 }
 
-.edit-car-container label {
+.edit-container label {
     margin-bottom: 8px;
 }
 
-.edit-car-container input {
+.edit-container input {
     padding: 8px;
     margin-bottom: 16px;
 }
 
-.edit-car-container button {
+.edit-container button {
     background-color: #3498db;
     color: #fff;
     border: none;
@@ -30,6 +30,6 @@
     cursor: pointer;
 }
 
-.edit-car-container button:hover {
+.edit-container button:hover {
     background-color: #2980b9;
 }

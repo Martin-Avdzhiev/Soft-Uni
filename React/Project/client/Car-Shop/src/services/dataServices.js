@@ -33,6 +33,8 @@ const updateVehicle = async (type, vehicleId, data) => {
         },
         body: JSON.stringify(data)
     })
+    const result = await response.json();
+    return result
 }
 
 const deleteVehicle = async (type, vehicleId) => {
