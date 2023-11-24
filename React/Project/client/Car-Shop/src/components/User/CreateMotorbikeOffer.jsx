@@ -35,7 +35,7 @@ export default function CreateMotorbikeOffer() {
 
     useEffect(() => {
         if(!_id){
-            navigate('/');
+            navigate('/login');
         }
         return () => { clearError() }
     }, [])
