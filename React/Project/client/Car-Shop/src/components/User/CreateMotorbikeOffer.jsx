@@ -34,6 +34,9 @@ export default function CreateMotorbikeOffer() {
     );
 
     useEffect(() => {
+        if(!_id){
+            navigate('/');
+        }
         return () => { clearError() }
     }, [])
     return (
