@@ -31,7 +31,15 @@ router.get('/:id', async (req, res) => {
         return res.status(404).send({ message: 'There is no car with this id!' });
     }
 })
-
+router.put('/:id', async (req, res) => {
+    try {
+        const updatedCar = req.body;
+        const result = await CarModel.findByIdAndUpdate(req.params.id, updatedCar);
+        return res.status(200).send(result);
+    } catch (error) {
+        return res.status(404).send({ message: 'There is no car with this id!' });
+    }
+})
 router.delete('/:id', async (req, res) => {
     try {
 

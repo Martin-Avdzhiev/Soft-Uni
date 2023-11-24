@@ -28,7 +28,7 @@ router.delete('/:id', async (req, res) => {
         await userModel.findByIdAndUpdate(owner._id, owner);
         res.status(200).send({ message: 'Successfull deleted' })
     } catch (error) {
-        return res.status(404).send({ message: 'There is no car with this id!' });
+        return res.status(404).send({ message: 'There is no motorbike with this id!' });
     }
 })
 

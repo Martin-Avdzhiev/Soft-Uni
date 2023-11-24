@@ -22,6 +22,10 @@ export default function UserProfile() {
 
     const closeModal = () => { setModalOpen(false); }
 
+    const navigateToeditPage = (type, id) => {
+        navigate(`/edit/${type}/${id}`);
+    }
+
     const deleteOneVehicle = async () => {
         
          const result = await deleteVehicle(vehicleIdToDelete[0], vehicleIdToDelete[1]);
@@ -80,7 +84,7 @@ export default function UserProfile() {
                                     <p>{car.name}</p>
                                 </div>
                                 <div className="vehicle-buttons">
-                                    <button className="edit-button">Edit</button>
+                                    <button className="edit-button" onClick={() => navigateToeditPage('cars', car._id)}>Edit</button>
                                     <button className="delete-button" onClick={() => openModal('cars', car._id)}>Delete</button>
                                 </div>
                             </div>
@@ -100,7 +104,7 @@ export default function UserProfile() {
                                     <p>{motorbike.name}</p>
                                 </div>
                                 <div className="vehicle-buttons">
-                                    <button className="edit-button">Edit</button>
+                                    <button className="edit-button" onClick={() => navigateToeditPage('motorbikes', motorbike._id)}>Edit</button>
                                     <button className="delete-button" onClick={() => openModal('motorbikes', motorbike._id)}>Delete</button>
                                 </div>
                             </div>

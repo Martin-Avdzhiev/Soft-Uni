@@ -17,8 +17,9 @@ import MotorbikeCatalog from './components/Motorbike/MotorbikeCatalog.jsx';
 import OneCar from './components/Car/OneCar.jsx';
 import OneMotorbike from './components/Motorbike/OneMotorbike.jsx';
 import CreateCarOffer from './components/User/CreateCarOffer.jsx';
-import PageNotFound from './components/PageNotFound.jsx';
 import CreateMotorbikeOffer from './components/User/CreateMotorbikeOffer.jsx';
+import EditCar from './components/User/EditCar.jsx';
+import PageNotFound from './components/PageNotFound.jsx';
 function App() {
   const navigate = useNavigate();
   const [auth, setAuth] = useState({});
@@ -86,6 +87,7 @@ function App() {
           <Route path="/logout" element={<Logout />} />
           <Route path="/create/car" element={<CreateCarOffer />} />
           <Route path="/create/motorbike" element={<CreateMotorbikeOffer />} />
+          <Route path="/edit/cars/:carId" element={<EditCar />} />
           <Route path="/user/:id" element={<UserProfile />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
