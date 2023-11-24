@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/User/UserProfile.css';
 import AuthContext from '../../contexts/authContext';
 import { getProfileInfo } from '../../services/authServices';
 import { deleteVehicle } from '../../services/dataServices';
-import { Link } from 'react-router-dom';
 export default function UserProfile() {
+    const navigate = useNavigate();
     const [userInfo, setUserInfo] = useState({});
     const [cars, setCars] = useState([]);
     const [isModalOpen, setModalOpen] = useState(false);
@@ -28,6 +29,9 @@ export default function UserProfile() {
     }
 
     useEffect(() => {
+        if(!_id){
+            navigate('/login')
+        }
         getProfileInfo(_id).then(result => {
              setUserInfo(result);
              setCars(result.ownCars);

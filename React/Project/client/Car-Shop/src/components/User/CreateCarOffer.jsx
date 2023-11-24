@@ -33,6 +33,9 @@ export default function CreateCarOffer() {
     );
 
     useEffect(() => {
+        if(!_id){
+            navigate('/login');
+        }
         return () => { clearError() }
     }, [])
     return (
