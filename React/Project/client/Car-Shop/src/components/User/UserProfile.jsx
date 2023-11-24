@@ -8,6 +8,7 @@ export default function UserProfile() {
     const navigate = useNavigate();
     const [userInfo, setUserInfo] = useState({});
     const [cars, setCars] = useState([]);
+    const [motorbikes, setMotorbikes] = useState([]);
     const [isModalOpen, setModalOpen] = useState(false);
     const [vehicleIdToDelete, setVehicleIdToDelete] = useState([]);
     const {
@@ -22,9 +23,16 @@ export default function UserProfile() {
     const closeModal = () => { setModalOpen(false); }
 
     const deleteOneVehicle = async () => {
+        
          const result = await deleteVehicle(vehicleIdToDelete[0], vehicleIdToDelete[1]);
-        const filteredCars = cars.filter(x => x._id !== vehicleIdToDelete[1]);
-        setCars(filteredCars);
+         if(vehicleIdToDelete[0] == 'cars'){
+             const filteredCars = cars.filter(x => x._id !== vehicleIdToDelete[1]);
+             setCars(filteredCars);
+         }
+         else if(vehicleIdToDelete[0] == 'motorbikes') {
+            const filteredMotorbikes = motorbikes.filter(x => x._id !== vehicleIdToDelete[1]);
+            setMotorbikes(filteredMotorbikes);
+         }
         setModalOpen(false);
     }
 
@@ -35,6 +43,7 @@ export default function UserProfile() {
         getProfileInfo(_id).then(result => {
              setUserInfo(result);
              setCars(result.ownCars);
+             setMotorbikes(result.ownMotorbikes)
         });
     }, [])
     return (
@@ -79,7 +88,7 @@ export default function UserProfile() {
                     </div>
                     <div className="vehicle-section">
                         <p className='offers'>Your motorbike offers:</p>
-                        {userInfo.ownMotorbikes?.map(motorbike => (
+                        {motorbikes?.map(motorbike => (
                             <div className="vehicle" key={motorbike._id}>
                                 <div className="vehicle-image">
                                     <img
