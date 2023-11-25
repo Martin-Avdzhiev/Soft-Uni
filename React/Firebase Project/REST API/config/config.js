@@ -14,7 +14,7 @@ const config = {
     production: {
         port: process.env.PORT || 4000,
         dbURL: process.env.CONNECTION,
-        origin: ['http://localhost:5555', 'http://localhost:5173', 'https://car-shop-6b1fb.firebaseapp.com']
+        origin: ['http://localhost:5555', 'http://localhost:5173', 'https://car-shop-6b1fb.firebaseapp.com', 'https://car-shop-6b1fb.web.app']
     }
 };
 

@@ -1,23 +1,22 @@
 
 
-const baseUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'http://localhost:3001'
-const url = `${baseUrl}/api`;
+const baseUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://us-central1-car-shop-6b1fb.cloudfunctions.net/api';
 
 
 const getAllData = async (type) => {
-    const response = await fetch(`${url}/${type}`);
+    const response = await fetch(`${baseUrl}/${type}`);
     const data = await response.json();
     return data;
 }
 
 const getOneData = async (type, id) => {
-    const response = await fetch(`${url}/${type}/${id}`);
+    const response = await fetch(`${baseUrl}/${type}/${id}`);
     const data = await response.json();
     return data;
 }
 
 const postOneVehicle = async (type, data) => {
-    const response = await fetch(`${url}/${type}/create`, {
+    const response = await fetch(`${baseUrl}/${type}/create`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
@@ -29,7 +28,7 @@ const postOneVehicle = async (type, data) => {
 }
 
 const updateVehicle = async (type, vehicleId, data) => {
-    const response = await fetch(`${url}/${type}/${vehicleId}`, {
+    const response = await fetch(`${baseUrl}/${type}/${vehicleId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -41,7 +40,7 @@ const updateVehicle = async (type, vehicleId, data) => {
 }
 
 const deleteVehicle = async (type, vehicleId) => {
-    const response = await fetch(`${url}/${type}/${vehicleId}`, {
+    const response = await fetch(`${baseUrl}/${type}/${vehicleId}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'

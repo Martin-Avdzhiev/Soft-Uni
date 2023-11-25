@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000/api';
+const baseUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://us-central1-car-shop-6b1fb.cloudfunctions.net/api';
 
 const login = async (values) => {
     const response = await fetch(`${baseUrl}/login`, {
