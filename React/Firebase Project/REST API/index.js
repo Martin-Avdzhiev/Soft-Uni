@@ -7,6 +7,7 @@ admin.initializeApp();
 const dbConnector = require('./config/db');
 
 const app = require('express')();
+require('./config/express')(app);
 const cors = require('cors');
 const apiRouter = require('./router');
 const config = require('./config/config');
@@ -15,17 +16,20 @@ app.use(cors({
   origin: config.origin,
   credentials: true
 }));
-app.use('/api', apiRouter);
-app.use(errorHandler);
-require('./config/express')(app);
 
-
-dbConnector()
-  .then(() => {
-    if (process.env.NODE_ENV !== 'production') {
-      app.listen(config.port, console.log(`Listening on port ${config.port}!`));
-    }
-
-  })
-  .catch(console.error);
+if (process.env.NODE_ENV === 'development') {
+  app.use('/api', apiRouter);
+  app.use(errorHandler);
+  app.listen(config.port, console.log(`Listening on port ${config.port}!`));
+} else {
+  app.use('/', apiRouter);
+  app.use(errorHandler);
+}
+// dbConnector()
+//   .then(() => {
+//     if (process.env.NODE_ENV !== 'production') {
+//       app.listen(config.port, console.log(`Listening on port ${config.port}!`));
+//     }
+//   })
+//  .catch(console.error);
 exports.api = functions.https.onRequest(app);

@@ -30,6 +30,7 @@
     "firebase-admin": "^11.11.1",
     "firebase-functions": "^4.5.0",
     "jsonwebtoken": "^8.5.1",
+    "mongodb": "^6.3.0",
     "mongoose": "^5.9.19"
   },
   "devDependencies": {

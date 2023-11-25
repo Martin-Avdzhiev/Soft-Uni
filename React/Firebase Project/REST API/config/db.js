@@ -4,13 +4,14 @@ mongoose.set('strictQuery', false);
 
 const dbConnector = async () => {
   try {
-    await mongoose.connect(config.dbURL, {
+   const mongooseConnection =  await mongoose.connect(config.dbURL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
       useFindAndModify: false
-
-    })
+    });
+    console.log(mongoose.connection.readyState);
+    return mongooseConnection
   }
   catch (error) {
     console.log('dbConnector error: ' + error.message)

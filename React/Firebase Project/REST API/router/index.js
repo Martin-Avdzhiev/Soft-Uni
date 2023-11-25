@@ -9,10 +9,12 @@ var client
 const getClient = async () => {
     if (client) {
         console.log("DB CLIENT ALREADY CONNECTED");
-    } else
+    }
+    else
         try {
             client = await dbConnector();
             console.log("DB CLIENT RECONNECTED");
+
         } catch (error) {
             console.log(error)
         }
@@ -26,6 +28,7 @@ router.use('*', async (req, res, next) => {
     } catch (error) {
         console.log(error)
     }
+
 })
 router.post('/register', authController.register);
 router.post('/login', authController.login);
