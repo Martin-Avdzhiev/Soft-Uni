@@ -10,7 +10,7 @@
         "firebase-debug.*.log"
       ],
       "rewrites": [{
-        "source": "/**",
+        "source": "/api/**",
         "function": "api"
       }]
     }
