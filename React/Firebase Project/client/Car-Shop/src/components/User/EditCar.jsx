@@ -47,16 +47,13 @@ export default function EditCar() {
 
 
     useEffect(() => {
-        console.log('hi3')
         if (!_id) {
             navigate('/login');
         }
         else {
             const getCar = getOneData('cars', carId).then(result => {
                 setValues({ ...result });
-                setIsLoading(true);
-                console.log(result)
-                console.log('hi2')
+                setIsLoading(false);
             });
         }
         return () => { clearError() }

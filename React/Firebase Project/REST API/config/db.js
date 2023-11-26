@@ -10,7 +10,6 @@ const dbConnector = async () => {
       useCreateIndex: true,
       useFindAndModify: false
     });
-    console.log(mongoose.connection.readyState);
     return mongooseConnection
   }
   catch (error) {
