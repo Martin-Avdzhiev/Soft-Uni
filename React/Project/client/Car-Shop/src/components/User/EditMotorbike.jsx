@@ -1,13 +1,27 @@
-import { useEffect, useContext } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import useForm from '../../hooks/useForm';
 import AuthContext from '../../contexts/authContext';
 
-import { updateVehicle } from '../../services/dataServices';
+import { updateVehicle, getOneData } from '../../services/dataServices';
 import '../styles/User/Edit.css';
 
-export default function EditMotorbike(){
+export default function EditMotorbike() {
+    const [values, setValues] = useState({
+        name: '',
+        price: '',
+        mileage: '',
+        city: '',
+        imageUrl: '',
+        type: '',
+        engine: ''
+    });
+    const {
+        usename,
+        _id,
+        clearError
+    } = useContext(AuthContext);
     const navigate = useNavigate();
     const { motorbikeId } = useParams();
     const isFormValid = () => {
@@ -16,29 +30,29 @@ export default function EditMotorbike(){
 
     const onEditMotorbikeSubmit = async (values) => {
         const result = await updateVehicle('motorbikes', motorbikeId, { ...values, owner: _id });
-         navigate(`/user/${_id}`);
+        navigate(`/user/${_id}`);
     }
 
-    const {
-        usename,
-        _id,
-        clearError
-    } = useContext(AuthContext);
+    const onChange = (e) => {
+        setValues(state => ({
+            ...state,
+            [e.target.name]: e.target.value
+        }));
+    }
 
-    const { values, onChange, onSubmit } = useForm(onEditMotorbikeSubmit,
-        {
-            name: '',
-            price: '',
-            mileage: '',
-            city: '',
-            imageUrl: '',
-            engine: ''
-        }
-    );
+    const onSubmit = (e) => {
+        e.preventDefault();
+        onEditMotorbikeSubmit(values);
+    }
 
     useEffect(() => {
         if (!_id) {
             navigate('/login');
+        }
+        else {
+            const getCar = getOneData('motorbikes', motorbikeId).then(result => {
+                setValues({ ...result });
+            });
         }
         return () => { clearError() }
     }, [])

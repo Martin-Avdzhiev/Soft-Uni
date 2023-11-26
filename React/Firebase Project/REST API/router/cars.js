@@ -61,8 +61,6 @@ router.delete('/:id', async (req, res) => {
 
 router.get('/', async (req, res) => {
     try {
-        console.log(mongoose.connection.readyState);
-        console.log(process.env.CONNECTION)
         const allCars = await CarModel.find();
         return res.status(200).send(allCars);
     } catch (error) {

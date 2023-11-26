@@ -7,14 +7,10 @@ const dbConnector = require('../config/db');
 
 var client
 const getClient = async () => {
-    if (client) {
-        console.log("DB CLIENT ALREADY CONNECTED");
-    }
-    else
+    if(!client)
         try {
             client = await dbConnector();
             console.log("DB CLIENT RECONNECTED");
-
         } catch (error) {
             console.log(error)
         }

@@ -1,13 +1,22 @@
-import { useEffect, useContext } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import useForm from '../../hooks/useForm';
 import AuthContext from '../../contexts/authContext';
 
-import { updateVehicle } from '../../services/dataServices';
+import { updateVehicle, getOneData } from '../../services/dataServices';
 import '../styles/User/Edit.css';
 export default function EditCar() {
     const navigate = useNavigate();
+    const [values, setValues] = useState({
+        name: '',
+        price: '',
+        mileage: '',
+        city: '',
+        imageUrl: '',
+        type: '',
+        engine: ''
+    });
     const { carId } = useParams();
     const isFormValid = () => {
         return values.username.trim() !== '' && values.password.trim() !== '';
@@ -22,22 +31,28 @@ export default function EditCar() {
         usename,
         _id,
         clearError
-    } = useContext(AuthContext)
-    const { values, onChange, onSubmit } = useForm(onEditCarSubmit,
-        {
-            name: '',
-            price: '',
-            mileage: '',
-            city: '',
-            imageUrl: '',
-            type: '',
-            engine: ''
-        }
-    );
+    } = useContext(AuthContext);
+
+    const onChange = (e) => {
+        setValues(state => ({
+            ...state,
+            [e.target.name]: e.target.value
+        }));
+    }
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        onEditCarSubmit(values);
+    }
 
     useEffect(() => {
         if (!_id) {
             navigate('/login');
+        }
+        else {
+            const getCar = getOneData('cars', carId).then(result => {
+                setValues({ ...result });
+            });
         }
         return () => { clearError() }
     }, [])

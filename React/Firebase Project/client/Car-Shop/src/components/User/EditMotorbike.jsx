@@ -3,14 +3,20 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import AuthContext from '../../contexts/authContext';
 
-import { updateVehicle } from '../../services/dataServices';
-import { getOneData } from '../../services/dataServices';
+import { updateVehicle, getOneData } from '../../services/dataServices';
 import '../styles/User/Edit.css';
 
 export default function EditMotorbike() {
+    const [values, setValues] = useState({
+        name: '',
+        price: '',
+        mileage: '',
+        city: '',
+        imageUrl: '',
+        engine: ''
+    });
     const navigate = useNavigate();
     const { motorbikeId } = useParams();
-    const [values, setValues] = useState({});
     const isFormValid = () => {
         return values.username.trim() !== '' && values.password.trim() !== '';
     };
@@ -55,7 +61,7 @@ export default function EditMotorbike() {
         <div className="edit-container">
             <h2>Edit Motorbike</h2>
             <form className="edit-form" onSubmit={onSubmit}>
-                <label htmlFor="motorbike-name">Motorbike Name:</label>
+                <label htmlFor="name">Motorbike Name:</label>
                 <input
                     type="text"
                     id="name"
@@ -65,7 +71,7 @@ export default function EditMotorbike() {
                     required
                 />
 
-                <label htmlFor="motorbike-price">Motorbike Price:</label>
+                <label htmlFor="price">Motorbike Price:</label>
                 <input
                     type="number"
                     id="price"
@@ -75,7 +81,7 @@ export default function EditMotorbike() {
                     required
                 />
 
-                <label htmlFor="motorbike-mileage">Motorbike Mileage:</label>
+                <label htmlFor="mileage">Motorbike Mileage:</label>
                 <input
                     type="number"
                     id="mileage"
@@ -85,7 +91,7 @@ export default function EditMotorbike() {
                     required
                 />
 
-                <label htmlFor="motorbike-city">Motorbike City:</label>
+                <label htmlFor="city">Motorbike City:</label>
                 <input
                     type="text"
                     id="city"
@@ -95,7 +101,7 @@ export default function EditMotorbike() {
                     required
                 />
 
-                <label htmlFor="motorbikeImage">Image:</label>
+                <label htmlFor="imageUrl">Image:</label>
                 <input
                     type="text"
                     id="imageUrl"
@@ -104,10 +110,10 @@ export default function EditMotorbike() {
                     value={values.imageUrl}
                     required />
 
-                <label htmlFor="motorbikeEngine">Engine:</label>
+                <label htmlFor="engine">Engine:</label>
                 <input
                     type="text"
-                    id="type"
+                    id="engine"
                     name="engine"
                     onChange={onChange}
                     value={values.engine}
