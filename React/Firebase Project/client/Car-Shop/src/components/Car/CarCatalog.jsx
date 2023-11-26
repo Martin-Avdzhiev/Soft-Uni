@@ -8,7 +8,6 @@ export default function CarCatalog() {
     useEffect(() => {
         getAllData('cars').then(result => setCars(result))
         .catch(error => console.log(error));
-        console.log(process.env.NODE_ENV)
     }, [])
     return (
         <div className="cars-container">

@@ -1,6 +1,6 @@
 
 
-const baseUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://us-central1-car-shop-6b1fb.cloudfunctions.net/api';
+const baseUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000/api' : 'https://us-central1-car-shop-6b1fb.cloudfunctions.net/api';
 
 
 const getAllData = async (type) => {

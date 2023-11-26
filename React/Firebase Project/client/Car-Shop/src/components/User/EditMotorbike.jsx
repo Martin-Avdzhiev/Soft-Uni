@@ -1,53 +1,60 @@
-import { useEffect, useContext } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import useForm from '../../hooks/useForm';
 import AuthContext from '../../contexts/authContext';
 
 import { updateVehicle } from '../../services/dataServices';
+import { getOneData } from '../../services/dataServices';
 import '../styles/User/Edit.css';
 
-export default function EditMotorbike(){
+export default function EditMotorbike() {
     const navigate = useNavigate();
     const { motorbikeId } = useParams();
+    const [values, setValues] = useState({});
     const isFormValid = () => {
         return values.username.trim() !== '' && values.password.trim() !== '';
     };
 
     const onEditMotorbikeSubmit = async (values) => {
         const result = await updateVehicle('motorbikes', motorbikeId, { ...values, owner: _id });
-         navigate(`/user/${_id}`);
+        navigate(`/user/${_id}`);
     }
 
     const {
-        usename,
+        username,
         _id,
         clearError
     } = useContext(AuthContext);
 
-    const { values, onChange, onSubmit } = useForm(onEditMotorbikeSubmit,
-        {
-            name: '',
-            price: '',
-            mileage: '',
-            city: '',
-            imageUrl: '',
-            engine: ''
-        }
-    );
+    const onChange = (e) => {
+        setValues(state => ({
+            ...state,
+            [e.target.name]: e.target.value
+        }));
+    }
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        onEditMotorbikeSubmit(values);
+    }
 
     useEffect(() => {
         if (!_id) {
             navigate('/login');
         }
+        else {
+            const getMotorbike = getOneData('motorbikes', motorbikeId).then(result => {
+                setValues({ ...result });
+            });
+        }
         return () => { clearError() }
     }, [])
+
 
     return (
         <div className="edit-container">
             <h2>Edit Motorbike</h2>
             <form className="edit-form" onSubmit={onSubmit}>
-
                 <label htmlFor="motorbike-name">Motorbike Name:</label>
                 <input
                     type="text"

@@ -17,7 +17,7 @@ app.use(cors({
   credentials: true
 }));
 
-if (process.env.NODE_ENV === 'development') {
+if (config.port == 3000) {
   app.use('/api', apiRouter);
   app.use(errorHandler);
   app.listen(config.port, console.log(`Listening on port ${config.port}!`));
