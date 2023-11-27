@@ -43,43 +43,43 @@ export default function CreateCarOffer() {
             <div className="add-vehicle-form-container">
                 <h2>Create New Car Offer</h2>
                 <form onSubmit={onSubmit}>
-                    <label htmlFor="carName">Name:</label>
+                    <label htmlFor="name">Name:</label>
                     <input 
                     type="text" 
-                    id="carName" 
+                    id="name" 
                     name="name"
                     onChange={onChange}
                     value={values.name}
                     required />
 
-                    <label htmlFor="carPrice">Price:</label>
+                    <label htmlFor="price">Price:</label>
                     <input
                         type="number"
-                        id="carPrice"
+                        id="price"
                         name="price"
                         onChange={onChange}
                         value={values.price}
                         required />
 
-                    <label htmlFor="carMileage">Mileage:</label>
+                    <label htmlFor="mileage">Mileage:</label>
                     <input
                         type="number"
-                        id="carMileage"
+                        id="mileage"
                         name="mileage"
                         onChange={onChange}
                         value={values.mileage}
                         required />
 
-                    <label htmlFor="carCity">City:</label>
+                    <label htmlFor="city">City:</label>
                     <input
                         type="text"
-                        id="carCity"
+                        id="city"
                         name="city"
                         onChange={onChange}
                         value={values.city}
                         required />
 
-                    <label htmlFor="carImage">Image:</label>
+                    <label htmlFor="imageUrl">Image:</label>
                     <input
                         type="text"
                         id="imageUrl"
@@ -88,7 +88,7 @@ export default function CreateCarOffer() {
                         value={values.imageUrl}
                         required />
 
-                    <label htmlFor="carType">Type of fuel:</label>
+                    <label htmlFor="type">Type of fuel:</label>
                     <input
                         type="text"
                         id="type"
@@ -97,10 +97,10 @@ export default function CreateCarOffer() {
                         value={values.type}
                         required />
 
-                    <label htmlFor="carEngine">Engine:</label>
+                    <label htmlFor="engine">Engine:</label>
                     <input
                         type="text"
-                        id="type"
+                        id="engine"
                         name="engine"
                         onChange={onChange}
                         value={values.engine}

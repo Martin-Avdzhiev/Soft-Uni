@@ -1,9 +1,14 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '../styles/User/UserProfile.css';
+
 import AuthContext from '../../contexts/authContext';
+
 import { getProfileInfo } from '../../services/authServices';
 import { deleteVehicle } from '../../services/dataServices';
+
+import Spinner from '../Spinner';
+
+import '../styles/User/UserProfile.css';
 export default function UserProfile() {
     const navigate = useNavigate();
     const [userInfo, setUserInfo] = useState({});
@@ -11,6 +16,7 @@ export default function UserProfile() {
     const [motorbikes, setMotorbikes] = useState([]);
     const [isModalOpen, setModalOpen] = useState(false);
     const [vehicleIdToDelete, setVehicleIdToDelete] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     const {
         _id
     } = useContext(AuthContext);
@@ -27,27 +33,28 @@ export default function UserProfile() {
     }
 
     const deleteOneVehicle = async () => {
-        
-         const result = await deleteVehicle(vehicleIdToDelete[0], vehicleIdToDelete[1]);
-         if(vehicleIdToDelete[0] == 'cars'){
-             const filteredCars = cars.filter(x => x._id !== vehicleIdToDelete[1]);
-             setCars(filteredCars);
-         }
-         else if(vehicleIdToDelete[0] == 'motorbikes') {
+
+        const result = await deleteVehicle(vehicleIdToDelete[0], vehicleIdToDelete[1]);
+        if (vehicleIdToDelete[0] == 'cars') {
+            const filteredCars = cars.filter(x => x._id !== vehicleIdToDelete[1]);
+            setCars(filteredCars);
+        }
+        else if (vehicleIdToDelete[0] == 'motorbikes') {
             const filteredMotorbikes = motorbikes.filter(x => x._id !== vehicleIdToDelete[1]);
             setMotorbikes(filteredMotorbikes);
-         }
+        }
         setModalOpen(false);
     }
 
     useEffect(() => {
-        if(!_id){
+        if (!_id) {
             navigate('/login')
         }
         getProfileInfo(_id).then(result => {
-             setUserInfo(result);
-             setCars(result.ownCars);
-             setMotorbikes(result.ownMotorbikes)
+            setUserInfo(result);
+            setCars(result.ownCars);
+            setMotorbikes(result.ownMotorbikes);
+            setIsLoading(false);
         });
     }, [])
     return (
@@ -72,46 +79,47 @@ export default function UserProfile() {
                         </Link>
                     </div>
                 </div>
-                <div className="vehicles-wrapper">
-                    <div className="vehicle-section">
-                        <p className='offers'>Your car offers:</p>
-                        {cars?.map(car => (
-                            <div className="vehicle" key={car._id}>
-                                <div className="vehicle-image">
-                                    <img src={car.imageUrl} alt={car.name} />
+                {isLoading ? <Spinner/> : (
+                    <div className="vehicles-wrapper">
+                        <div className="vehicle-section">
+                            <p className='offers'>Your car offers:</p>
+                            {cars?.map(car => (
+                                <div className="vehicle" key={car._id}>
+                                    <div className="vehicle-image">
+                                        <img src={car.imageUrl} alt={car.name} />
+                                    </div>
+                                    <div className="vehicle-info">
+                                        <p>{car.name}</p>
+                                    </div>
+                                    <div className="vehicle-buttons">
+                                        <button className="edit-button" onClick={() => navigateToeditPage('cars', car._id)}>Edit</button>
+                                        <button className="delete-button" onClick={() => openModal('cars', car._id)}>Delete</button>
+                                    </div>
                                 </div>
-                                <div className="vehicle-info">
-                                    <p>{car.name}</p>
+                            ))}
+                        </div>
+                        <div className="vehicle-section">
+                            <p className='offers'>Your motorbike offers:</p>
+                            {motorbikes?.map(motorbike => (
+                                <div className="vehicle" key={motorbike._id}>
+                                    <div className="vehicle-image">
+                                        <img
+                                            src={motorbike.imageUrl}
+                                            alt={motorbike.name}
+                                        />
+                                    </div>
+                                    <div className="vehicle-info">
+                                        <p>{motorbike.name}</p>
+                                    </div>
+                                    <div className="vehicle-buttons">
+                                        <button className="edit-button" onClick={() => navigateToeditPage('motorbikes', motorbike._id)}>Edit</button>
+                                        <button className="delete-button" onClick={() => openModal('motorbikes', motorbike._id)}>Delete</button>
+                                    </div>
                                 </div>
-                                <div className="vehicle-buttons">
-                                    <button className="edit-button" onClick={() => navigateToeditPage('cars', car._id)}>Edit</button>
-                                    <button className="delete-button" onClick={() => openModal('cars', car._id)}>Delete</button>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
-                    <div className="vehicle-section">
-                        <p className='offers'>Your motorbike offers:</p>
-                        {motorbikes?.map(motorbike => (
-                            <div className="vehicle" key={motorbike._id}>
-                                <div className="vehicle-image">
-                                    <img
-                                        src={motorbike.imageUrl}
-                                        alt={motorbike.name}
-                                    />
-                                </div>
-                                <div className="vehicle-info">
-                                    <p>{motorbike.name}</p>
-                                </div>
-                                <div className="vehicle-buttons">
-                                    <button className="edit-button" onClick={() => navigateToeditPage('motorbikes', motorbike._id)}>Edit</button>
-                                    <button className="delete-button" onClick={() => openModal('motorbikes', motorbike._id)}>Delete</button>
-                                </div>
-                            </div>
-                        ))}
-
-                    </div>
-                </div>
+                )}
             </div>
             <div className={`modal ${isModalOpen ? ' open' : ''}`}>
                 <div className="modal-content">

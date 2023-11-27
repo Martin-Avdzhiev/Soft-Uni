@@ -44,46 +44,46 @@ export default function CreateMotorbikeOffer() {
             <div className="add-vehicle-form-container">
                 <h2>Create New Motorbike Offer</h2>
                 <form onSubmit={onSubmit}>
-                    <label htmlFor="motorbikeName">Name:</label>
+                    <label htmlFor="name">Name:</label>
                     <input
                         type="text"
-                        id="motorbikeName"
+                        id="name"
                         name="name"
                         value={values.name}
                         onChange={onChange}
                         required
                     />
 
-                    <label htmlFor="motorbikePrice">Price:</label>
+                    <label htmlFor="price">Price:</label>
                     <input type="number"
-                        id="motorbikePrice"
+                        id="price"
                         name="price"
                         value={values.price}
                         onChange={onChange}
                         required
                     />
 
-                    <label htmlFor="motorbikeMileage">Mileage:</label>
+                    <label htmlFor="mileage">Mileage:</label>
                     <input
                         type="number"
-                        id="motorbikeMileage"
+                        id="mileage"
                         name="mileage"
                         value={values.mileage}
                         onChange={onChange}
                         required
                     />
 
-                    <label htmlFor="motorbikeCity">City:</label>
+                    <label htmlFor="city">City:</label>
                     <input
                         type="text"
-                        id="motorbikeCity"
+                        id="city"
                         name="city"
                         value={values.city}
                         onChange={onChange}
                         required
                     />
 
-                    <label htmlFor="motorbikeCity">Image:</label>
+                    <label htmlFor="imageUrl">Image:</label>
                     <input
                         type="text"
                         id="imageUrl"
@@ -92,7 +92,7 @@ export default function CreateMotorbikeOffer() {
                         onChange={onChange}
                         required />
 
-                    <label htmlFor="motorbikeCity">Engine:</label>
+                    <label htmlFor="engine">Engine:</label>
                     <input
                         type="text"
                         id="engine"
