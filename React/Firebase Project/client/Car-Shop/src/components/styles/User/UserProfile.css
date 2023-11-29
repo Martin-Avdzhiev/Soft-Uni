@@ -1,7 +1,7 @@
 .user-container {
   max-width: 800px;
   margin: 50px auto;
-  background-color: #fff;
+  background-color: #bababa;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -114,7 +114,7 @@
 }
 
 .user-container .create-buttons button {
-  background-color: #2ecc71;
+  background-color: #3498db;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -125,7 +125,7 @@
 }
 
 .user-container .create-buttons button:hover {
-  background-color: #27ae60;
+  background-color: #3498db;
 }
 
 .modal {

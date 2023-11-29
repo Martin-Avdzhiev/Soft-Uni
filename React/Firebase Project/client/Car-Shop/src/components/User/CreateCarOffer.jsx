@@ -50,6 +50,7 @@ export default function CreateCarOffer() {
                     name="name"
                     onChange={onChange}
                     value={values.name}
+                    placeholder="Name"
                     required />
 
                     <label htmlFor="price">Price:</label>
@@ -59,6 +60,7 @@ export default function CreateCarOffer() {
                         name="price"
                         onChange={onChange}
                         value={values.price}
+                        placeholder="$"
                         required />
 
                     <label htmlFor="mileage">Mileage:</label>
@@ -68,6 +70,7 @@ export default function CreateCarOffer() {
                         name="mileage"
                         onChange={onChange}
                         value={values.mileage}
+                        placeholder="Miles"
                         required />
 
                     <label htmlFor="city">City:</label>
@@ -77,6 +80,7 @@ export default function CreateCarOffer() {
                         name="city"
                         onChange={onChange}
                         value={values.city}
+                        placeholder="City"
                         required />
 
                     <label htmlFor="imageUrl">Image:</label>
@@ -86,6 +90,7 @@ export default function CreateCarOffer() {
                         name="imageUrl"
                         onChange={onChange}
                         value={values.imageUrl}
+                        placeholder="Image url"
                         required />
 
                     <label htmlFor="type">Type of fuel:</label>
@@ -95,6 +100,7 @@ export default function CreateCarOffer() {
                         name="type"
                         onChange={onChange}
                         value={values.type}
+                        placeholder="Fuel"
                         required />
 
                     <label htmlFor="engine">Engine:</label>
@@ -104,6 +110,7 @@ export default function CreateCarOffer() {
                         name="engine"
                         onChange={onChange}
                         value={values.engine}
+                        placeholder="Engine"
                         required />
 
                     <button type="submit" disabled={!isFormValid}>Create Offer</button>

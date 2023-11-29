@@ -9,7 +9,7 @@
 }
 
 .welcome h3 {
-  color: rgb(198, 197, 197);
+  color: #c6c5c5;
   font-style: italic;
   margin: 1em 0 0 0;
 }
@@ -61,4 +61,8 @@
 .welcome-motorbike img {
   width: 30em;
   height: 20em;
+}
+
+.welcome .dont-have-account{
+  margin-bottom: 0.2em;
 }

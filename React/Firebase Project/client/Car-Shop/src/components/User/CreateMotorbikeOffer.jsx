@@ -51,6 +51,7 @@ export default function CreateMotorbikeOffer() {
                         name="name"
                         value={values.name}
                         onChange={onChange}
+                        placeholder="Name"
                         required
                     />
 
@@ -60,6 +61,7 @@ export default function CreateMotorbikeOffer() {
                         name="price"
                         value={values.price}
                         onChange={onChange}
+                        placeholder="$"
                         required
                     />
 
@@ -70,6 +72,7 @@ export default function CreateMotorbikeOffer() {
                         name="mileage"
                         value={values.mileage}
                         onChange={onChange}
+                        placeholder="Miles"
                         required
                     />
 
@@ -80,6 +83,7 @@ export default function CreateMotorbikeOffer() {
                         name="city"
                         value={values.city}
                         onChange={onChange}
+                        placeholder="City"
                         required
                     />
 
@@ -90,6 +94,7 @@ export default function CreateMotorbikeOffer() {
                         name="imageUrl"
                         value={values.imageUrl}
                         onChange={onChange}
+                        placeholder="Image url"
                         required />
 
                     <label htmlFor="engine">Engine:</label>
@@ -99,6 +104,7 @@ export default function CreateMotorbikeOffer() {
                         name="engine"
                         value={values.engine}
                         onChange={onChange}
+                        placeholder="Engine"
                         required />
 
                     <button type="submit" disabled={!isFormValid}>Create Offer</button>

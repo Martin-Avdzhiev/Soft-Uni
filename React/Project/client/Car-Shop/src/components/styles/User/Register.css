@@ -1,8 +1,9 @@
 .signup-form {
     max-width: 300px;
-    margin: 5em auto 0 auto;
+    margin: 3em auto 0 auto;
     border: 1px solid black;
     padding: 1.5em;
+    background-color: white;
 }
 
 .signup-form h2 {
@@ -30,6 +31,7 @@
     border: none;
     width: 100%;
     cursor: pointer;
+    margin-top: 1em;
 }
 
 .signup-form button:hover {

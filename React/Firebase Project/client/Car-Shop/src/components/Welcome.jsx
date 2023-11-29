@@ -21,7 +21,7 @@ export default function Welcome() {
                 <p>Explore our wide range of cars, motorbikes.</p>
                 {!username && (
                     <>
-                        <p>Don't have account?</p>
+                        <p className='dont-have-account'>Don't have an account?</p>
                         <Link to="/signup">SIGN UP</Link>
                     </>
                 )}

@@ -3,17 +3,17 @@
     flex-direction: column;
     flex: 1 0 auto;
     align-items: center;
-    margin-top: 3.5em;
+    margin-top: 1.5em;
 }
 .one-car {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ddd;
-    width: 34em;
+    background-color: #a6a4a4;
+    width: 25em;
     border-radius: 1em;
     padding: 1em 2em;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
 }
 
 .one-car>div:nth-child(1) {
@@ -22,7 +22,7 @@
 }
 
 .one-car img {
-    max-width: 20em;
+    max-width: 17em;
     height: auto;
     border-radius: 1em;
 }
@@ -36,5 +36,5 @@
 }
 
 .one-car .information li {
-    font-size: 26px;
+    font-size: 22px;
 }
