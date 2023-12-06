@@ -9,3 +9,9 @@ Frontend with React.
 * In client folder is the frontend part.
 * Type in terminal "npm run dev" to start the React (you must be in Car-Shop folder).
 * React is listening on port 5173.
+
+Public version
+
+* Links
+ - https://car-shop-6b1fb.web.app
+ - https://car-shop-6b1fb.firebaseapp.com
