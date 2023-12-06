@@ -36,14 +36,19 @@
   margin-bottom: 20px;
 }
 
+.user-container .no-vehicles{
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .user-container .vehicles-wrapper {
   display: flex;
   justify-content: space-between;
+  text-align: center;
 }
 
 .user-container .vehicle-section {
   flex: 1;
-  margin-right: 10px;
 }
 
 .user-container .vehicle {

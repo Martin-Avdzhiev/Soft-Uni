@@ -2,21 +2,19 @@ import { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import AuthContext from '../../contexts/authContext';
-
 import { getProfileInfo } from '../../services/authServices';
 import { deleteVehicle } from '../../services/dataServices';
-
 import Spinner from '../Spinner';
 
 import '../styles/User/UserProfile.css';
 export default function UserProfile() {
     const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(true);
     const [userInfo, setUserInfo] = useState({});
     const [cars, setCars] = useState([]);
     const [motorbikes, setMotorbikes] = useState([]);
     const [isModalOpen, setModalOpen] = useState(false);
     const [vehicleIdToDelete, setVehicleIdToDelete] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
     const {
         _id
     } = useContext(AuthContext);
@@ -63,63 +61,67 @@ export default function UserProfile() {
                 <div className="user-image">
                     <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="User Image" />
                 </div>
-                <div className="user-info">
-                    <div className="username">{userInfo.username}</div>
-                    <div className="user-details">
-                        <p>{userInfo.email}</p>
+                {isLoading ? <Spinner /> : <>
+                    <div className="user-info">
+                        <div className="username">{userInfo.username}</div>
+                        <div className="user-details">
+                            <p>{userInfo.email}</p>
+                        </div>
                     </div>
-                </div>
-                <div className='create-buttons-container'>
-                    <div className="create-buttons">
-                        <Link to="/create/car">
-                            <button className="create-car-button">Create New Car</button>
-                        </Link>
-                        <Link to="/create/motorbike">
-                            <button className="create-motorbike-button">Create New Motorbike</button>
-                        </Link>
+                    <div className='create-buttons-container'>
+                        <div className="create-buttons">
+                            <Link to="/create/car">
+                                <button className="create-car-button">Create New Car</button>
+                            </Link>
+                            <Link to="/create/motorbike">
+                                <button className="create-motorbike-button">Create New Motorbike</button>
+                            </Link>
+                        </div>
                     </div>
-                </div>
-                {isLoading ? <Spinner/> : (
                     <div className="vehicles-wrapper">
                         <div className="vehicle-section">
                             <p className='offers'>Your car offers:</p>
-                            {cars?.map(car => (
-                                <div className="vehicle" key={car._id}>
-                                    <div className="vehicle-image">
-                                        <img src={car.imageUrl} alt={car.name} />
+                            {cars.length == 0 ? <p className='no-vehicles'>You dont have car offers.</p> :
+                                cars?.map(car => (
+                                    <div className="vehicle" key={car._id}>
+                                        <div className="vehicle-image">
+                                            <img src={car.imageUrl} alt={car.name} />
+                                        </div>
+                                        <div className="vehicle-info">
+                                            <p>{car.name}</p>
+                                        </div>
+                                        <div className="vehicle-buttons">
+                                            <button className="edit-button" onClick={() => navigateToeditPage('cars', car._id)}>Edit</button>
+                                            <button className="delete-button" onClick={() => openModal('cars', car._id)}>Delete</button>
+                                        </div>
                                     </div>
-                                    <div className="vehicle-info">
-                                        <p>{car.name}</p>
-                                    </div>
-                                    <div className="vehicle-buttons">
-                                        <button className="edit-button" onClick={() => navigateToeditPage('cars', car._id)}>Edit</button>
-                                        <button className="delete-button" onClick={() => openModal('cars', car._id)}>Delete</button>
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
                         </div>
                         <div className="vehicle-section">
                             <p className='offers'>Your motorbike offers:</p>
-                            {motorbikes?.map(motorbike => (
-                                <div className="vehicle" key={motorbike._id}>
-                                    <div className="vehicle-image">
-                                        <img
-                                            src={motorbike.imageUrl}
-                                            alt={motorbike.name}
-                                        />
+                            {motorbikes.length == 0 ? <p className='no-vehicles'>You dont have motorbike offers.</p> :
+                                motorbikes?.map(motorbike => (
+                                    <div className="vehicle" key={motorbike._id}>
+                                        <div className="vehicle-image">
+                                            <img
+                                                src={motorbike.imageUrl}
+                                                alt={motorbike.name}
+                                            />
+                                        </div>
+                                        <div className="vehicle-info">
+                                            <p>{motorbike.name}</p>
+                                        </div>
+                                        <div className="vehicle-buttons">
+                                            <button className="edit-button" onClick={() => navigateToeditPage('motorbikes', motorbike._id)}>Edit</button>
+                                            <button className="delete-button" onClick={() => openModal('motorbikes', motorbike._id)}>Delete</button>
+                                        </div>
                                     </div>
-                                    <div className="vehicle-info">
-                                        <p>{motorbike.name}</p>
-                                    </div>
-                                    <div className="vehicle-buttons">
-                                        <button className="edit-button" onClick={() => navigateToeditPage('motorbikes', motorbike._id)}>Edit</button>
-                                        <button className="delete-button" onClick={() => openModal('motorbikes', motorbike._id)}>Delete</button>
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
+
                         </div>
                     </div>
-                )}
+                </>
+                }
             </div>
             <div className={`modal ${isModalOpen ? ' open' : ''}`}>
                 <div className="modal-content">
