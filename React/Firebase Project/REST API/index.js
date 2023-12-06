@@ -25,11 +25,5 @@ if (config.port == 3000) {
   app.use('/', apiRouter);
   app.use(errorHandler);
 }
-// dbConnector()
-//   .then(() => {
-//     if (process.env.NODE_ENV !== 'production') {
-//       app.listen(config.port, console.log(`Listening on port ${config.port}!`));
-//     }
-//   })
-//  .catch(console.error);
+
 exports.api = functions.https.onRequest(app);
