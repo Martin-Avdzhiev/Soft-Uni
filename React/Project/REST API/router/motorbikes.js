@@ -18,6 +18,10 @@ router.get('/:id', async (req, res) => {
 router.put('/:id', async (req, res) => {
     try {
         const updatedMotorbike = req.body;
+        const urlPattern = /^https?:\/\//;
+        if(!urlPattern.test(updatedMotorbike.imageUrl)){
+            return res.status(401).send({message: 'The image URL must start with http:// or https://'})
+        }
         const result = await MotorbikeModel.findByIdAndUpdate(req.params.id, updatedMotorbike);
         return res.status(200).send(result);
     } catch (error) {
@@ -45,6 +49,10 @@ router.delete('/:id', async (req, res) => {
 router.post('/create', async (req, res) => {
     try {
         const newMotorbike = req.body;
+        const urlPattern = /^https?:\/\//;
+        if(!urlPattern.test(newMotorbike.imageUrl)){
+            return res.status(401).send({message: 'The image URL must start with http:// or https://'})
+        }
         const owner = await userModel.findById(newMotorbike.owner);
         const newMotorbikeModel = await MotorbikeModel.create(newMotorbike);
         owner.ownMotorbikes.push(newMotorbikeModel._id);

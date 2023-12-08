@@ -8,6 +8,7 @@ import { updateVehicle, getOneData } from '../../services/dataServices';
 import '../styles/User/Edit.css';
 
 export default function EditMotorbike() {
+    const [error, setError] = useState('');
     const [values, setValues] = useState({
         name: '',
         price: '',
@@ -30,7 +31,13 @@ export default function EditMotorbike() {
 
     const onEditMotorbikeSubmit = async (values) => {
         const result = await updateVehicle('motorbikes', motorbikeId, { ...values, owner: _id });
-        navigate(`/user/${_id}`);
+        if(!result.message){
+            setError('');
+            navigate(`/user/${_id}`);
+        }
+        else {
+            setError(result.message);
+        }
     }
 
     const onChange = (e) => {
@@ -119,7 +126,7 @@ export default function EditMotorbike() {
                     onChange={onChange}
                     value={values.engine}
                     required />
-
+                {error ? <p className='edit-error'>{error}</p> : null}
                 <button type="submit" disabled={!isFormValid}>Save Changes</button>
             </form>
         </div>

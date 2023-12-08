@@ -1,4 +1,4 @@
-import { useEffect, useContext } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 import AuthContext from '../../contexts/authContext';
@@ -8,13 +8,20 @@ import { postOneVehicle } from '../../services/dataServices';
 import '../styles/User/CreateOffer.css';
 export default function CreateMotorbikeOffer() {
     const navigate = useNavigate();
+    const [error, setError] = useState('');
     const isFormValid = () => {
         return values.username.trim() !== '' && values.password.trim() !== '';
     };
 
     const onCreateMotorbikeSubmit = async (values) => {
         const result = await postOneVehicle('motorbikes', { ...values, owner: _id });
-        navigate(`/user/${_id}`);
+        if (!result.message) {
+            setError('');
+            navigate(`/user/${_id}`);
+        }
+        else {
+            setError(result.message);
+        }
     }
 
     const {
@@ -106,7 +113,7 @@ export default function CreateMotorbikeOffer() {
                         onChange={onChange}
                         placeholder="Engine"
                         required />
-
+                    {error ? <p className='create-error'>{error}</p> : null}
                     <button type="submit" disabled={!isFormValid}>Create Offer</button>
                 </form>
             </div>
