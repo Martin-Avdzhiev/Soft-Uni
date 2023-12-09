@@ -56,6 +56,7 @@ export default function CreateMotorbikeOffer() {
                         type="text"
                         id="name"
                         name="name"
+                        placeholder='Name'
                         value={values.name}
                         onChange={onChange}
                         required
@@ -65,6 +66,7 @@ export default function CreateMotorbikeOffer() {
                     <input type="number"
                         id="price"
                         name="price"
+                        placeholder='$'
                         value={values.price}
                         onChange={onChange}
                         required
@@ -75,6 +77,7 @@ export default function CreateMotorbikeOffer() {
                         type="number"
                         id="mileage"
                         name="mileage"
+                        placeholder='Miles'
                         value={values.mileage}
                         onChange={onChange}
                         required
@@ -85,6 +88,7 @@ export default function CreateMotorbikeOffer() {
                         type="text"
                         id="city"
                         name="city"
+                        placeholder='City'
                         value={values.city}
                         onChange={onChange}
                         required
@@ -95,6 +99,7 @@ export default function CreateMotorbikeOffer() {
                         type="text"
                         id="imageUrl"
                         name="imageUrl"
+                        placeholder='Image url'
                         value={values.imageUrl}
                         onChange={onChange}
                         required />
@@ -104,6 +109,7 @@ export default function CreateMotorbikeOffer() {
                         type="text"
                         id="engine"
                         name="engine"
+                        placeholder='Engine'
                         value={values.engine}
                         onChange={onChange}
                         required />

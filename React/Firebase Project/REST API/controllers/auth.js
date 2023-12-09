@@ -16,6 +16,7 @@ const removePassword = (data) => {
 function register(req, res, next) {
     const { email, username, password, repeatPassword } = req.body;
     if (username.length < 6) { return res.status(401).send({ message: 'Username must be at least 6 characters!' }) }
+    if (password.length < 6) { return res.status(401).send({ message: 'Password must be at least 6 characters!' }) }
     if (!password) { return res.status(401).send({ message: 'Password is required!' }); }
     if (!repeatPassword) { return res.status(401).send({ message: 'Repeat password is required!' }); }
     if (password != repeatPassword) {
