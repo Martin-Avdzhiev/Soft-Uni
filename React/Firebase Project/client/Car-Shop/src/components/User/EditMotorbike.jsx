@@ -73,6 +73,7 @@ export default function EditMotorbike() {
                     type="text"
                     id="name"
                     name="name"
+                    placeholder='Name'
                     onChange={onChange}
                     value={values.name}
                     required
@@ -83,6 +84,7 @@ export default function EditMotorbike() {
                     type="number"
                     id="price"
                     name="price"
+                    placeholder='$'
                     onChange={onChange}
                     value={values.price}
                     required
@@ -93,6 +95,7 @@ export default function EditMotorbike() {
                     type="number"
                     id="mileage"
                     name="mileage"
+                    placeholder='Miles'
                     onChange={onChange}
                     value={values.mileage}
                     required
@@ -103,6 +106,7 @@ export default function EditMotorbike() {
                     type="text"
                     id="city"
                     name="city"
+                    placeholder='City'
                     onChange={onChange}
                     value={values.city}
                     required
@@ -113,6 +117,7 @@ export default function EditMotorbike() {
                     type="text"
                     id="imageUrl"
                     name="imageUrl"
+                    placeholder='Image url'
                     onChange={onChange}
                     value={values.imageUrl}
                     required />
@@ -122,6 +127,7 @@ export default function EditMotorbike() {
                     type="text"
                     id="engine"
                     name="engine"
+                    placeholder='Engine'
                     onChange={onChange}
                     value={values.engine}
                     required />

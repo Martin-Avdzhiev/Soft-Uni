@@ -69,60 +69,66 @@ export default function EditMotorbike() {
             <h2>Edit Motorbike</h2>
             <form className="edit-form" onSubmit={onSubmit}>
 
-                <label htmlFor="motorbike-name">Motorbike Name:</label>
+                <label htmlFor="name">Motorbike Name:</label>
                 <input
                     type="text"
                     id="name"
                     name="name"
+                    placeholder='Name'
                     onChange={onChange}
                     value={values.name}
                     required
                 />
 
-                <label htmlFor="motorbike-price">Motorbike Price:</label>
+                <label htmlFor="price">Motorbike Price:</label>
                 <input
                     type="number"
                     id="price"
                     name="price"
+                    placeholder='$'
                     onChange={onChange}
                     value={values.price}
                     required
                 />
 
-                <label htmlFor="motorbike-mileage">Motorbike Mileage:</label>
+                <label htmlFor="mileage">Motorbike Mileage:</label>
                 <input
                     type="number"
                     id="mileage"
                     name="mileage"
+                    placeholder='Miles'
                     onChange={onChange}
                     value={values.mileage}
                     required
                 />
 
-                <label htmlFor="motorbike-city">Motorbike City:</label>
+                <label htmlFor="city">Motorbike City:</label>
                 <input
                     type="text"
                     id="city"
                     name="city"
+                    placeholder='City'
                     onChange={onChange}
                     value={values.city}
                     required
                 />
 
-                <label htmlFor="motorbikeImage">Image:</label>
+                <label htmlFor="imageUrl">Image:</label>
                 <input
                     type="text"
                     id="imageUrl"
                     name="imageUrl"
+                    placeholder='Image url'
                     onChange={onChange}
                     value={values.imageUrl}
                     required />
 
-                <label htmlFor="motorbikeEngine">Engine:</label>
+                <label htmlFor="engine">Engine:</label>
                 <input
                     type="text"
-                    id="type"
+                    id="engine"
                     name="engine"
+                    placeholder='Engine'
                     onChange={onChange}
                     value={values.engine}
                     required />

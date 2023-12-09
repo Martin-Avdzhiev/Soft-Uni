@@ -69,69 +69,76 @@ export default function EditCar() {
             <h2>Edit Car</h2>
             <form className="edit-form" onSubmit={onSubmit}>
 
-                <label htmlFor="car-name">Car Name:</label>
+                <label htmlFor="name">Car Name:</label>
                 <input
                     type="text"
                     id="name"
                     name="name"
+                    placeholder='Name'
                     onChange={onChange}
                     value={values.name}
                     required
                 />
 
-                <label htmlFor="car-price">Car Price:</label>
+                <label htmlFor="price">Car Price:</label>
                 <input
                     type="number"
                     id="price"
                     name="price"
+                    placeholder='$'
                     onChange={onChange}
                     value={values.price}
                     required
                 />
 
-                <label htmlFor="car-mileage">Car Mileage:</label>
+                <label htmlFor="mileage">Car Mileage:</label>
                 <input
                     type="number"
                     id="mileage"
                     name="mileage"
+                    placeholder='Miles'
                     onChange={onChange}
                     value={values.mileage}
                     required
                 />
 
-                <label htmlFor="car-city">Car City:</label>
+                <label htmlFor="city">Car City:</label>
                 <input
                     type="text"
                     id="city"
                     name="city"
+                    placeholder='City'
                     onChange={onChange}
                     value={values.city}
                     required
                 />
 
-                <label htmlFor="carImage">Image:</label>
+                <label htmlFor="imageUrl">Image:</label>
                 <input
                     type="text"
                     id="imageUrl"
                     name="imageUrl"
+                    placeholder='Image url'
                     onChange={onChange}
                     value={values.imageUrl}
                     required />
 
-                <label htmlFor="carType">Type of fuel:</label>
+                <label htmlFor="type">Type of fuel:</label>
                 <input
                     type="text"
                     id="type"
                     name="type"
+                    placeholder='Fuel'
                     onChange={onChange}
                     value={values.type}
                     required />
 
-                <label htmlFor="carEngine">Engine:</label>
+                <label htmlFor="engine">Engine:</label>
                 <input
                     type="text"
-                    id="type"
+                    id="engine"
                     name="engine"
+                    placeholder='Engine'
                     onChange={onChange}
                     value={values.engine}
                     required />
