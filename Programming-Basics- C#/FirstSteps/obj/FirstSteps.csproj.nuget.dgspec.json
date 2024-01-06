@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Soft-Uni\\Programming-Basics- C#\\FirstSteps\\FirstSteps.csproj": {}
+    "D:\\Soft-Uni\\Programming-Basics- C#\\FirstSteps\\FirstSteps.csproj": {}
   },
   "projects": {
-    "d:\\Soft-Uni\\Programming-Basics- C#\\FirstSteps\\FirstSteps.csproj": {
+    "D:\\Soft-Uni\\Programming-Basics- C#\\FirstSteps\\FirstSteps.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Soft-Uni\\Programming-Basics- C#\\FirstSteps\\FirstSteps.csproj",
+        "projectUniqueName": "D:\\Soft-Uni\\Programming-Basics- C#\\FirstSteps\\FirstSteps.csproj",
         "projectName": "FirstSteps",
-        "projectPath": "d:\\Soft-Uni\\Programming-Basics- C#\\FirstSteps\\FirstSteps.csproj",
+        "projectPath": "D:\\Soft-Uni\\Programming-Basics- C#\\FirstSteps\\FirstSteps.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "d:\\Soft-Uni\\Programming-Basics- C#\\FirstSteps\\obj\\",
+        "outputPath": "D:\\Soft-Uni\\Programming-Basics- C#\\FirstSteps\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\bin\Debug\net8.0\Inches to Centimeters.exe
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\bin\Debug\net8.0\Inches to Centimeters.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\bin\Debug\net8.0\Inches to Centimeters.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\bin\Debug\net8.0\Inches to Centimeters.dll
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\bin\Debug\net8.0\Inches to Centimeters.pdb
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\obj\Debug\net8.0\Inches to Centimeters.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\obj\Debug\net8.0\Inches to Centimeters.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\obj\Debug\net8.0\Inches to Centimeters.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\obj\Debug\net8.0\Inches to Centimeters.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\obj\Debug\net8.0\Inches to Centimeters.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\obj\Debug\net8.0\Inches to Centimeters.dll
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\obj\Debug\net8.0\refint\Inches to Centimeters.dll
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\obj\Debug\net8.0\Inches to Centimeters.pdb
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\obj\Debug\net8.0\Inches to Centimeters.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Inches to Centimeters\obj\Debug\net8.0\ref\Inches to Centimeters.dll
