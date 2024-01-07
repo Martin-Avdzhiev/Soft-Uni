@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\bin\Debug\net8.0\Supplies for School.exe
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\bin\Debug\net8.0\Supplies for School.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\bin\Debug\net8.0\Supplies for School.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\bin\Debug\net8.0\Supplies for School.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\bin\Debug\net8.0\Supplies for School.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\obj\Debug\net8.0\Supplies for School.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\obj\Debug\net8.0\Supplies for School.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\obj\Debug\net8.0\Supplies for School.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\obj\Debug\net8.0\Supplies for School.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\obj\Debug\net8.0\Supplies for School.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\obj\Debug\net8.0\Supplies for School.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\obj\Debug\net8.0\refint\Supplies for School.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\obj\Debug\net8.0\Supplies for School.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\obj\Debug\net8.0\Supplies for School.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Supplies for School\obj\Debug\net8.0\ref\Supplies for School.dll

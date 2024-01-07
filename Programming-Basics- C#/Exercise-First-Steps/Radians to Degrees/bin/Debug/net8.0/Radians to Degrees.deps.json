@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Radians to Degrees/1.0.0": {
+        "runtime": {
+          "Radians to Degrees.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Radians to Degrees/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

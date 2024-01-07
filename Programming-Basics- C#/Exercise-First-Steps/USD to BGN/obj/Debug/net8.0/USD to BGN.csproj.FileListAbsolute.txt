@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\bin\Debug\net8.0\USD to BGN.exe
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\bin\Debug\net8.0\USD to BGN.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\bin\Debug\net8.0\USD to BGN.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\bin\Debug\net8.0\USD to BGN.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\bin\Debug\net8.0\USD to BGN.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\obj\Debug\net8.0\USD to BGN.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\obj\Debug\net8.0\USD to BGN.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\obj\Debug\net8.0\USD to BGN.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\obj\Debug\net8.0\USD to BGN.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\obj\Debug\net8.0\USD to BGN.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\obj\Debug\net8.0\USD to BGN.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\obj\Debug\net8.0\refint\USD to BGN.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\obj\Debug\net8.0\USD to BGN.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\obj\Debug\net8.0\USD to BGN.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\USD to BGN\obj\Debug\net8.0\ref\USD to BGN.dll

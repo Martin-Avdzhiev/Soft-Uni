@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\bin\Debug\net8.0\World Swimming Record.exe
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\bin\Debug\net8.0\World Swimming Record.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\bin\Debug\net8.0\World Swimming Record.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\bin\Debug\net8.0\World Swimming Record.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\bin\Debug\net8.0\World Swimming Record.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\obj\Debug\net8.0\World Swimming Record.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\obj\Debug\net8.0\World Swimming Record.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\obj\Debug\net8.0\World Swimming Record.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\obj\Debug\net8.0\World Swimming Record.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\obj\Debug\net8.0\World Swimming Record.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\obj\Debug\net8.0\World Swimming Record.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\obj\Debug\net8.0\refint\World Swimming Record.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\obj\Debug\net8.0\World Swimming Record.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\obj\Debug\net8.0\World Swimming Record.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\World Swimming Record\obj\Debug\net8.0\ref\World Swimming Record.dll

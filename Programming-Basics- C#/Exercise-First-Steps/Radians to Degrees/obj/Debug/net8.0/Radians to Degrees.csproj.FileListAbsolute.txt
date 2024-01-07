@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\bin\Debug\net8.0\Radians to Degrees.exe
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\bin\Debug\net8.0\Radians to Degrees.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\bin\Debug\net8.0\Radians to Degrees.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\bin\Debug\net8.0\Radians to Degrees.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\bin\Debug\net8.0\Radians to Degrees.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\obj\Debug\net8.0\Radians to Degrees.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\obj\Debug\net8.0\Radians to Degrees.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\obj\Debug\net8.0\Radians to Degrees.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\obj\Debug\net8.0\Radians to Degrees.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\obj\Debug\net8.0\Radians to Degrees.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\obj\Debug\net8.0\Radians to Degrees.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\obj\Debug\net8.0\refint\Radians to Degrees.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\obj\Debug\net8.0\Radians to Degrees.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\obj\Debug\net8.0\Radians to Degrees.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Radians to Degrees\obj\Debug\net8.0\ref\Radians to Degrees.dll
