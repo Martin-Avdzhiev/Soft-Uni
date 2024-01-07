@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\bin\Debug\net8.0\Lunch Break.exe
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\bin\Debug\net8.0\Lunch Break.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\bin\Debug\net8.0\Lunch Break.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\bin\Debug\net8.0\Lunch Break.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\bin\Debug\net8.0\Lunch Break.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\obj\Debug\net8.0\Lunch Break.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\obj\Debug\net8.0\Lunch Break.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\obj\Debug\net8.0\Lunch Break.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\obj\Debug\net8.0\Lunch Break.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\obj\Debug\net8.0\Lunch Break.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\obj\Debug\net8.0\Lunch Break.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\obj\Debug\net8.0\refint\Lunch Break.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\obj\Debug\net8.0\Lunch Break.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\obj\Debug\net8.0\Lunch Break.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Lunch Break\obj\Debug\net8.0\ref\Lunch Break.dll
