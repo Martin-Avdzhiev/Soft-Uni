@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\bin\Debug\net8.0\Trade Commissions.exe
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\bin\Debug\net8.0\Trade Commissions.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\bin\Debug\net8.0\Trade Commissions.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\bin\Debug\net8.0\Trade Commissions.dll
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\bin\Debug\net8.0\Trade Commissions.pdb
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\obj\Debug\net8.0\Trade Commissions.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\obj\Debug\net8.0\Trade Commissions.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\obj\Debug\net8.0\Trade Commissions.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\obj\Debug\net8.0\Trade Commissions.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\obj\Debug\net8.0\Trade Commissions.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\obj\Debug\net8.0\Trade Commissions.dll
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\obj\Debug\net8.0\refint\Trade Commissions.dll
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\obj\Debug\net8.0\Trade Commissions.pdb
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\obj\Debug\net8.0\Trade Commissions.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Conditional Statements Advanced\Trade Commissions\obj\Debug\net8.0\ref\Trade Commissions.dll
