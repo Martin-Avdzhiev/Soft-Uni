@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\bin\Debug\net8.0\Even Powers of 2.exe
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\bin\Debug\net8.0\Even Powers of 2.deps.json
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\bin\Debug\net8.0\Even Powers of 2.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\bin\Debug\net8.0\Even Powers of 2.dll
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\bin\Debug\net8.0\Even Powers of 2.pdb
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\obj\Debug\net8.0\Even Powers of 2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\obj\Debug\net8.0\Even Powers of 2.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\obj\Debug\net8.0\Even Powers of 2.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\obj\Debug\net8.0\Even Powers of 2.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\obj\Debug\net8.0\Even Powers of 2.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\obj\Debug\net8.0\Even Powers of 2.dll
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\obj\Debug\net8.0\refint\Even Powers of 2.dll
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\obj\Debug\net8.0\Even Powers of 2.pdb
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\obj\Debug\net8.0\Even Powers of 2.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Even Powers of 2\obj\Debug\net8.0\ref\Even Powers of 2.dll
