@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\bin\Debug\net8.0\Walking.exe
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\bin\Debug\net8.0\Walking.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\bin\Debug\net8.0\Walking.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\bin\Debug\net8.0\Walking.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\bin\Debug\net8.0\Walking.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\obj\Debug\net8.0\Walking.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\obj\Debug\net8.0\Walking.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\obj\Debug\net8.0\Walking.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\obj\Debug\net8.0\Walking.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\obj\Debug\net8.0\Walking.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\obj\Debug\net8.0\Walking.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\obj\Debug\net8.0\refint\Walking.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\obj\Debug\net8.0\Walking.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\obj\Debug\net8.0\Walking.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Walking\obj\Debug\net8.0\ref\Walking.dll
