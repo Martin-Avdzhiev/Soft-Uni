@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Area of Figures/1.0.0": {
+        "runtime": {
+          "Area of Figures.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Area of Figures/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

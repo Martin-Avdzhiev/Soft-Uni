@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\bin\Debug\net8.0\Shopping.exe
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\bin\Debug\net8.0\Shopping.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\bin\Debug\net8.0\Shopping.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\bin\Debug\net8.0\Shopping.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\bin\Debug\net8.0\Shopping.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\obj\Debug\net8.0\Shopping.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\obj\Debug\net8.0\Shopping.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\obj\Debug\net8.0\Shopping.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\obj\Debug\net8.0\Shopping.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\obj\Debug\net8.0\Shopping.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\obj\Debug\net8.0\Shopping.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\obj\Debug\net8.0\refint\Shopping.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\obj\Debug\net8.0\Shopping.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\obj\Debug\net8.0\Shopping.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-Conditional Statements\Shopping\obj\Debug\net8.0\ref\Shopping.dll

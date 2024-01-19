@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\bin\Debug\net8.0\Histogram.exe
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\bin\Debug\net8.0\Histogram.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\bin\Debug\net8.0\Histogram.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\bin\Debug\net8.0\Histogram.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\bin\Debug\net8.0\Histogram.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\obj\Debug\net8.0\Histogram.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\obj\Debug\net8.0\Histogram.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\obj\Debug\net8.0\Histogram.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\obj\Debug\net8.0\Histogram.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\obj\Debug\net8.0\Histogram.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\obj\Debug\net8.0\Histogram.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\obj\Debug\net8.0\refint\Histogram.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\obj\Debug\net8.0\Histogram.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\obj\Debug\net8.0\Histogram.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Histogram\obj\Debug\net8.0\ref\Histogram.dll

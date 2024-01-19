@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\bin\Debug\net8.0\Vacation Books List.exe
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\bin\Debug\net8.0\Vacation Books List.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\bin\Debug\net8.0\Vacation Books List.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\bin\Debug\net8.0\Vacation Books List.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\bin\Debug\net8.0\Vacation Books List.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\obj\Debug\net8.0\Vacation Books List.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\obj\Debug\net8.0\Vacation Books List.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\obj\Debug\net8.0\Vacation Books List.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\obj\Debug\net8.0\Vacation Books List.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\obj\Debug\net8.0\Vacation Books List.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\obj\Debug\net8.0\Vacation Books List.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\obj\Debug\net8.0\refint\Vacation Books List.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\obj\Debug\net8.0\Vacation Books List.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\obj\Debug\net8.0\Vacation Books List.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise-First-Steps\Vacation Books List\obj\Debug\net8.0\ref\Vacation Books List.dll

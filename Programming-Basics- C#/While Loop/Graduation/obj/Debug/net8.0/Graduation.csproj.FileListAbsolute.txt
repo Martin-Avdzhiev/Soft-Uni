@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\bin\Debug\net8.0\Graduation.exe
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\bin\Debug\net8.0\Graduation.deps.json
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\bin\Debug\net8.0\Graduation.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\bin\Debug\net8.0\Graduation.dll
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\bin\Debug\net8.0\Graduation.pdb
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\obj\Debug\net8.0\Graduation.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\obj\Debug\net8.0\Graduation.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\obj\Debug\net8.0\Graduation.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\obj\Debug\net8.0\Graduation.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\obj\Debug\net8.0\Graduation.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\obj\Debug\net8.0\Graduation.dll
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\obj\Debug\net8.0\refint\Graduation.dll
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\obj\Debug\net8.0\Graduation.pdb
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\obj\Debug\net8.0\Graduation.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\While Loop\Graduation\obj\Debug\net8.0\ref\Graduation.dll

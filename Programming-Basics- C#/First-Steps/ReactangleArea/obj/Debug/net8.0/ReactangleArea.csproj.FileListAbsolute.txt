@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\bin\Debug\net8.0\ReactangleArea.exe
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\bin\Debug\net8.0\ReactangleArea.deps.json
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\bin\Debug\net8.0\ReactangleArea.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\bin\Debug\net8.0\ReactangleArea.dll
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\bin\Debug\net8.0\ReactangleArea.pdb
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\obj\Debug\net8.0\ReactangleArea.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\obj\Debug\net8.0\ReactangleArea.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\obj\Debug\net8.0\ReactangleArea.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\obj\Debug\net8.0\ReactangleArea.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\obj\Debug\net8.0\ReactangleArea.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\obj\Debug\net8.0\ReactangleArea.dll
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\obj\Debug\net8.0\refint\ReactangleArea.dll
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\obj\Debug\net8.0\ReactangleArea.pdb
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\obj\Debug\net8.0\ReactangleArea.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\ReactangleArea\obj\Debug\net8.0\ref\ReactangleArea.dll

@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\bin\Debug\net8.0\FirstSteps.exe
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\bin\Debug\net8.0\FirstSteps.deps.json
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\bin\Debug\net8.0\FirstSteps.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\bin\Debug\net8.0\FirstSteps.dll
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\bin\Debug\net8.0\FirstSteps.pdb
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\obj\Debug\net8.0\FirstSteps.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\obj\Debug\net8.0\FirstSteps.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\obj\Debug\net8.0\FirstSteps.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\obj\Debug\net8.0\FirstSteps.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\obj\Debug\net8.0\FirstSteps.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\obj\Debug\net8.0\FirstSteps.dll
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\obj\Debug\net8.0\refint\FirstSteps.dll
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\obj\Debug\net8.0\FirstSteps.pdb
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\obj\Debug\net8.0\FirstSteps.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\FirstSteps\obj\Debug\net8.0\ref\FirstSteps.dll

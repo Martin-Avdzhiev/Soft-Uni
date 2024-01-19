@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\bin\Debug\net8.0\Coins.exe
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\bin\Debug\net8.0\Coins.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\bin\Debug\net8.0\Coins.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\bin\Debug\net8.0\Coins.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\bin\Debug\net8.0\Coins.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\obj\Debug\net8.0\Coins.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\obj\Debug\net8.0\Coins.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\obj\Debug\net8.0\Coins.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\obj\Debug\net8.0\Coins.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\obj\Debug\net8.0\Coins.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\obj\Debug\net8.0\Coins.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\obj\Debug\net8.0\refint\Coins.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\obj\Debug\net8.0\Coins.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\obj\Debug\net8.0\Coins.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise - While Loop\Coins\obj\Debug\net8.0\ref\Coins.dll

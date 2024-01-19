@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\bin\Debug\net8.0\Number sequence.exe
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\bin\Debug\net8.0\Number sequence.deps.json
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\bin\Debug\net8.0\Number sequence.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\bin\Debug\net8.0\Number sequence.dll
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\bin\Debug\net8.0\Number sequence.pdb
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\obj\Debug\net8.0\Number sequence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\obj\Debug\net8.0\Number sequence.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\obj\Debug\net8.0\Number sequence.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\obj\Debug\net8.0\Number sequence.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\obj\Debug\net8.0\Number sequence.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\obj\Debug\net8.0\Number sequence.dll
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\obj\Debug\net8.0\refint\Number sequence.dll
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\obj\Debug\net8.0\Number sequence.pdb
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\obj\Debug\net8.0\Number sequence.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\For Loop\Number sequence\obj\Debug\net8.0\ref\Number sequence.dll

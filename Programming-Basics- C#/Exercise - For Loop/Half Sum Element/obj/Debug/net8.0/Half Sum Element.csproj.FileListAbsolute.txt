@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\bin\Debug\net8.0\Half Sum Element.exe
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\bin\Debug\net8.0\Half Sum Element.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\bin\Debug\net8.0\Half Sum Element.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\bin\Debug\net8.0\Half Sum Element.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\bin\Debug\net8.0\Half Sum Element.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\obj\Debug\net8.0\Half Sum Element.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\obj\Debug\net8.0\Half Sum Element.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\obj\Debug\net8.0\Half Sum Element.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\obj\Debug\net8.0\Half Sum Element.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\obj\Debug\net8.0\Half Sum Element.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\obj\Debug\net8.0\Half Sum Element.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\obj\Debug\net8.0\refint\Half Sum Element.dll
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\obj\Debug\net8.0\Half Sum Element.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\obj\Debug\net8.0\Half Sum Element.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Exercise - For Loop\Half Sum Element\obj\Debug\net8.0\ref\Half Sum Element.dll

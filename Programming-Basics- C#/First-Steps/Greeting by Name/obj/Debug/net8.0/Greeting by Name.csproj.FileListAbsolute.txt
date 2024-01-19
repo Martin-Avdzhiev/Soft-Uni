@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\bin\Debug\net8.0\Greeting by Name.exe
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\bin\Debug\net8.0\Greeting by Name.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\bin\Debug\net8.0\Greeting by Name.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\bin\Debug\net8.0\Greeting by Name.dll
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\bin\Debug\net8.0\Greeting by Name.pdb
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\obj\Debug\net8.0\Greeting by Name.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\obj\Debug\net8.0\Greeting by Name.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\obj\Debug\net8.0\Greeting by Name.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\obj\Debug\net8.0\Greeting by Name.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\obj\Debug\net8.0\Greeting by Name.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\obj\Debug\net8.0\Greeting by Name.dll
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\obj\Debug\net8.0\refint\Greeting by Name.dll
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\obj\Debug\net8.0\Greeting by Name.pdb
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\obj\Debug\net8.0\Greeting by Name.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Greeting by Name\obj\Debug\net8.0\ref\Greeting by Name.dll
