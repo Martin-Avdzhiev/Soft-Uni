@@ -1,4 +1,4 @@
-function createCalculator() {
+export default function createCalculator() {
 
     let value = 0;
     
@@ -14,4 +14,4 @@ function createCalculator() {
     
     }
 
-    module.exports = createCalculator;
+    //module.exports = createCalculator;

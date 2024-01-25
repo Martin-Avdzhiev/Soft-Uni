@@ -4,12 +4,12 @@
   "description": "",
   "main": "sumNumbers.js",
   "scripts": {
-    "test": "mocha ./*.test.js"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "chai": "^4.3.7",
+  "devDependencies": {
+    "chai": "^5.0.0",
     "mocha": "^10.2.0"
   }
 }

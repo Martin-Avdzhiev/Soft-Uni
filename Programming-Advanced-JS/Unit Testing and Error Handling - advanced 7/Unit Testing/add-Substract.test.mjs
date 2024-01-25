@@ -1,5 +1,7 @@
-const createCalculator = require('./add-Substract');
-const expect = require('chai').expect;
+import * as chai from 'chai';
+const expect = chai.expect;
+import createCalculator from './add-Substract.mjs';
+//const createCalculator = require('./add-Substract');
 
 describe('Calculator', function (){
     let value = null;
