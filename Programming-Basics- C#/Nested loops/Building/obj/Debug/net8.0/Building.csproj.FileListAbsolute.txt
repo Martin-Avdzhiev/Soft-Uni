@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\bin\Debug\net8.0\Building.exe
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\bin\Debug\net8.0\Building.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\bin\Debug\net8.0\Building.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\bin\Debug\net8.0\Building.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\bin\Debug\net8.0\Building.pdb
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\obj\Debug\net8.0\Building.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\obj\Debug\net8.0\Building.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\obj\Debug\net8.0\Building.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\obj\Debug\net8.0\Building.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\obj\Debug\net8.0\Building.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\obj\Debug\net8.0\Building.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\obj\Debug\net8.0\refint\Building.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\obj\Debug\net8.0\Building.pdb
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\obj\Debug\net8.0\Building.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Building\obj\Debug\net8.0\ref\Building.dll

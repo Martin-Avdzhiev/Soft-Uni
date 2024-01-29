@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\bin\Debug\net8.0\Sum Prime Non Prime.exe
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\bin\Debug\net8.0\Sum Prime Non Prime.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\bin\Debug\net8.0\Sum Prime Non Prime.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\bin\Debug\net8.0\Sum Prime Non Prime.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\bin\Debug\net8.0\Sum Prime Non Prime.pdb
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\obj\Debug\net8.0\Sum Prime Non Prime.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\obj\Debug\net8.0\Sum Prime Non Prime.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\obj\Debug\net8.0\Sum Prime Non Prime.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\obj\Debug\net8.0\Sum Prime Non Prime.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\obj\Debug\net8.0\Sum Prime Non Prime.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\obj\Debug\net8.0\Sum Prime Non Prime.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\obj\Debug\net8.0\refint\Sum Prime Non Prime.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\obj\Debug\net8.0\Sum Prime Non Prime.pdb
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\obj\Debug\net8.0\Sum Prime Non Prime.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Sum Prime Non Prime\obj\Debug\net8.0\ref\Sum Prime Non Prime.dll

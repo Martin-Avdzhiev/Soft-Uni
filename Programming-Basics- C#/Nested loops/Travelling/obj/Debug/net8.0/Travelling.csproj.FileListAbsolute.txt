@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\bin\Debug\net8.0\Travelling.exe
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\bin\Debug\net8.0\Travelling.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\bin\Debug\net8.0\Travelling.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\bin\Debug\net8.0\Travelling.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\bin\Debug\net8.0\Travelling.pdb
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\obj\Debug\net8.0\Travelling.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\obj\Debug\net8.0\Travelling.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\obj\Debug\net8.0\Travelling.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\obj\Debug\net8.0\Travelling.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\obj\Debug\net8.0\Travelling.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\obj\Debug\net8.0\Travelling.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\obj\Debug\net8.0\refint\Travelling.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\obj\Debug\net8.0\Travelling.pdb
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\obj\Debug\net8.0\Travelling.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested loops\Travelling\obj\Debug\net8.0\ref\Travelling.dll

@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\bin\Debug\net8.0\Equal Sums Even Odd Position.exe
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\bin\Debug\net8.0\Equal Sums Even Odd Position.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\bin\Debug\net8.0\Equal Sums Even Odd Position.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\bin\Debug\net8.0\Equal Sums Even Odd Position.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\bin\Debug\net8.0\Equal Sums Even Odd Position.pdb
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\obj\Debug\net8.0\Equal Sums Even Odd Position.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\obj\Debug\net8.0\Equal Sums Even Odd Position.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\obj\Debug\net8.0\Equal Sums Even Odd Position.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\obj\Debug\net8.0\Equal Sums Even Odd Position.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\obj\Debug\net8.0\Equal Sums Even Odd Position.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\obj\Debug\net8.0\Equal Sums Even Odd Position.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\obj\Debug\net8.0\refint\Equal Sums Even Odd Position.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\obj\Debug\net8.0\Equal Sums Even Odd Position.pdb
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\obj\Debug\net8.0\Equal Sums Even Odd Position.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Equal Sums Even Odd Position\obj\Debug\net8.0\ref\Equal Sums Even Odd Position.dll
