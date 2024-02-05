@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\bin\Debug\net8.0\Train The Trainers.exe
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\bin\Debug\net8.0\Train The Trainers.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\bin\Debug\net8.0\Train The Trainers.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\bin\Debug\net8.0\Train The Trainers.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\bin\Debug\net8.0\Train The Trainers.pdb
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\obj\Debug\net8.0\Train The Trainers.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\obj\Debug\net8.0\Train The Trainers.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\obj\Debug\net8.0\Train The Trainers.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\obj\Debug\net8.0\Train The Trainers.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\obj\Debug\net8.0\Train The Trainers.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\obj\Debug\net8.0\Train The Trainers.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\obj\Debug\net8.0\refint\Train The Trainers.dll
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\obj\Debug\net8.0\Train The Trainers.pdb
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\obj\Debug\net8.0\Train The Trainers.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Nested-Loops-Exercise\Train The Trainers\obj\Debug\net8.0\ref\Train The Trainers.dll
