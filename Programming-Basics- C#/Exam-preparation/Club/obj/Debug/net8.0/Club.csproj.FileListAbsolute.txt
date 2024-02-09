@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\bin\Debug\net8.0\Club.exe
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\bin\Debug\net8.0\Club.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\bin\Debug\net8.0\Club.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\bin\Debug\net8.0\Club.dll
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\bin\Debug\net8.0\Club.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\obj\Debug\net8.0\Club.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\obj\Debug\net8.0\Club.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\obj\Debug\net8.0\Club.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\obj\Debug\net8.0\Club.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\obj\Debug\net8.0\Club.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\obj\Debug\net8.0\Club.dll
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\obj\Debug\net8.0\refint\Club.dll
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\obj\Debug\net8.0\Club.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\obj\Debug\net8.0\Club.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Exam-preparation\Club\obj\Debug\net8.0\ref\Club.dll
