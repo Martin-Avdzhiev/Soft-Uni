@@ -1,0 +1,15 @@
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\bin\Debug\net8.0\Unique PIN Codes.exe
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\bin\Debug\net8.0\Unique PIN Codes.deps.json
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\bin\Debug\net8.0\Unique PIN Codes.runtimeconfig.json
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\bin\Debug\net8.0\Unique PIN Codes.dll
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\bin\Debug\net8.0\Unique PIN Codes.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\obj\Debug\net8.0\Unique PIN Codes.GeneratedMSBuildEditorConfig.editorconfig
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\obj\Debug\net8.0\Unique PIN Codes.AssemblyInfoInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\obj\Debug\net8.0\Unique PIN Codes.AssemblyInfo.cs
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\obj\Debug\net8.0\Unique PIN Codes.csproj.CoreCompileInputs.cache
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\obj\Debug\net8.0\Unique PIN Codes.sourcelink.json
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\obj\Debug\net8.0\Unique PIN Codes.dll
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\obj\Debug\net8.0\refint\Unique PIN Codes.dll
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\obj\Debug\net8.0\Unique PIN Codes.pdb
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\obj\Debug\net8.0\Unique PIN Codes.genruntimeconfig.cache
+D:\Soft-Uni\Programming-Basics- C#\Exam\Unique PIN Codes\obj\Debug\net8.0\ref\Unique PIN Codes.dll
