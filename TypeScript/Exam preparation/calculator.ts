@@ -1,6 +1,6 @@
 type Operator = '+' | '-' | '*' | '/';
 
-function calculator(x: number, operator: Operator, y: number): string {
+function calculator(x: number, operator: Operator, y: number): string | Error {
     switch (operator) {
         case '+':
             return (x + y).toFixed(2);
